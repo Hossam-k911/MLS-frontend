@@ -1,0 +1,48 @@
+<img class="wave" src="assets/img/wave.png">
+<link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+<div class="container">
+  <div class="img">
+
+  </div>
+  <div class="login-container">
+    <form>
+      <img src="assets/img/doctor.svg">
+      <h2>Doctoroid</h2>
+      <div class="input-div">
+        <div class="i">
+          <i class="fas fa-user"></i>
+
+        </div>
+        <div>
+          <!-- <h5>Email</h5> -->
+          <input
+        id="email"
+        matInput
+        placeholder="email"
+        type="text"
+        (keyup)="handleTextInput($event)"
+      />
+        </div>
+      </div>
+      <div class="input-div">
+        <div class="i">
+          <i class="fas fa-user"></i>
+
+        </div>
+        <div>
+          <!-- <h5>Password</h5> -->
+          <input
+        id="password"
+        matInput
+        placeholder="password"
+        type="password"
+        (keyup)="handleTextInput($event)"
+      />
+        </div>
+      </div>
+
+      <button (click)="handleSignIn()" class="btn btn-outline-success">SignIn</button>
+    </form>
+  </div>
+</div>
+<script type="text/javascript" src="assets/js/main.js"></script>
