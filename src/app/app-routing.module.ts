@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { SigninComponent } from './pages/signin/signin.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { ErrorComponent } from './pages/error/error.component';
+import { PatientsComponentComponent } from './components/patients-component/patients-component.component';
 
 
 const routes: Routes = [
@@ -13,9 +14,15 @@ const routes: Routes = [
     path: "signin", component: SigninComponent
   },
   {
-    path: "home", component: DashboardComponent
+    path: "home", component: DashboardComponent,
+    children:
+      [
+        { path: 'patients', component: PatientsComponentComponent },
+
+      ]
 
   },
+
   {
     path: "error", component: ErrorComponent
   },
@@ -23,7 +30,8 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes,
+    { enableTracing: true })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

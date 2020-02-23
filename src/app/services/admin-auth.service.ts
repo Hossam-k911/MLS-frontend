@@ -1,11 +1,14 @@
 import { Injectable } from '@angular/core';
-import {HttpClient, HttpHeaders} from '@angular/common/http'
+import { HttpClient, HttpHeaders } from '@angular/common/http'
+
 @Injectable({
   providedIn: 'root'
 })
 export class AdminAuthService {
   BASE_URL = 'https://lms-doctoroid.herokuapp.com'
   loggedIn = false
+  // token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1ODIyOTU2MzR9.avj8QE2unqucuqvj4XdgTW7HH9LvYFowG4lxgb558fw'
+  token = localStorage.getItem('x-auth-token')
   constructor(public myHttpClient: HttpClient) { }
 
   userSignUp(data) {
@@ -19,11 +22,15 @@ export class AdminAuthService {
     };
     return this.myHttpClient.post(this.BASE_URL + '/dashboard/signin', JSON.stringify(data), httpOptions)
   }
-  getUserData(id) {
+  getPatients() {
     const httpOptions = {
-      headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
-      withCredentials: true
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        'x-auth-token': this.token
+      }),
+      withCredentials: true,
+
     };
-    return this.myHttpClient.get(`${this.BASE_URL}/getpatients/${id}`, httpOptions)
+    return this.myHttpClient.get(`${this.BASE_URL}/getpatients/`, httpOptions)
   }
 }

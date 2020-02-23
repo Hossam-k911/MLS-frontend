@@ -1,0 +1,35 @@
+<div class="container">
+
+  <table class=" table table-bordered table-dark">
+    <thead>
+      <tr>
+        <th>firstName</th>
+        <th>lastName</th>
+        <th>email</th>
+        <th>phone</th>
+        <th>gender</th>
+        <th>date</th>
+
+
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let p of patients">
+        <td>{{p.firstName}}</td>
+        <td>{{p.lastName}}</td>
+        <td>{{p.email}}</td>
+        <td>{{p.phone}}</td>
+        <td>{{p.gender}}</td>
+        <td>{{p.date}}</td>
+        <!-- <td>
+          <button (click)=""></button>
+        </td> -->
+
+
+
+
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -10,6 +10,7 @@ import { HttpResponse } from '@angular/common/http'
 export class SigninComponent implements OnInit {
   public email = ''
   public password = ''
+  public token = ''
 
   constructor(public myAdminAuthService: AdminAuthService, public myRouter: Router) { }
 
@@ -26,6 +27,7 @@ export class SigninComponent implements OnInit {
 
     }
   }
+
   handleSignIn() {
     const { email, password } = this
     if (!email || !password) {
@@ -35,9 +37,11 @@ export class SigninComponent implements OnInit {
         email, password
       }
       this.myAdminAuthService.userSignIn(data).subscribe((response: any) => {
-
+        localStorage.setItem('x-auth-token', response.token)
+        this.token = response.token;
         this.myAdminAuthService.loggedIn = true
         this.myRouter.navigate(['home'])
+        // console.log(this.token);
       })
     }
 
