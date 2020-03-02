@@ -4,7 +4,7 @@ import { SigninComponent } from './pages/signin/signin.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { ErrorComponent } from './pages/error/error.component';
 import { PatientsComponentComponent } from './components/patients-component/patients-component.component';
-
+import { RequestsComponent } from './components/requests/requests.component'
 
 const routes: Routes = [
   {
@@ -18,6 +18,8 @@ const routes: Routes = [
     children:
       [
         { path: 'patients', component: PatientsComponentComponent },
+        { path: 'requests', component: RequestsComponent },
+
 
       ]
 

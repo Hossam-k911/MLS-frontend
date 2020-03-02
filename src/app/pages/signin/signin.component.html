@@ -1,36 +1,38 @@
-<img class="wave" src="assets/img/wave.png">
-<link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
-<div class="container">
-  <div class="img">
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="    col-lg-4 col-md-6 col-sm-6 mt-5 ">
+        <form class="fo p-4">
+          <div class="form-group">
+            <h2 class="text-center animated fadeInDown delay-2s">Doctoroid</h2>
+
+            <label class="email " for="exampleInputEmail1"><i class="fas fa-envelope fa-lg "></i> Email </label>
+            <input type="email" class="form-control" id="email" aria-describedby="emailHelp "
+              (keyup)="handleTextInput($event)">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1"><i class="fas fa-lock fa-lg pr-1"></i>Password</label>
+            <input type="password" class="form-control" id="password" (keyup)="handleTextInput($event)">
+          </div>
+
+          <button (click)="handleSignIn()" class="btn btn-outline-success btn-lg btn-block text-uppercase">sign
+            in</button>
+          <small id="emailHelp" class="form-text text-muted">Dashboard</small>
+        </form>
+
+
+      </div>
+      <div class="mt-5  col-lg-6 col-md-6 col-sm-6 colom-right ">
+        <img src="assets/img/Group 3003.svg" class="pic-one animated fadeIn">
+        <img src="assets/img/Group 3004.svg" class="pic-two animated fadeInLeft delay-1s">
+        <img src="assets/img/Group 3005.svg" class="pic-three animated fadeInRight delay-1s">
+        <img src="assets/img/Group 3006.svg" class="pic-four animated fadeInDown delay-2s">
+      </div>
+    </div>
 
   </div>
-  <div class="login-container">
-    <form>
-      <img src="assets/img/doctor.svg">
-      <h2>Doctoroid</h2>
-      <div class="input-div">
-        <div class="i">
-          <i class="fas fa-user"></i>
-
-        </div>
-        <div>
-          <!-- <h5>Email</h5> -->
-          <input id="email" matInput placeholder="email" type="text" (keyup)="handleTextInput($event)" />
-        </div>
-      </div>
-      <div class="input-div">
-        <div class="i">
-          <i class="fas fa-user"></i>
-
-        </div>
-        <div>
-          <!-- <h5>Password</h5> -->
-          <input id="password" matInput placeholder="password" type="password" (keyup)="handleTextInput($event)" />
-        </div>
-      </div>
-
-      <button (click)="handleSignIn()" class="btn btn-outline-success">SignIn</button>
-    </form>
+  <div class="wave">
+    <img class="pic-wave animated fadeInLeftBig" src="assets/img/wave.png">
   </div>
-</div>
-<script type="text/javascript" src="assets/js/main.js"></script>
+
+</section>

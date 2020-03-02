@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="83.248" height="126.514" viewBox="0 0 83.248 126.514">
+  <g id="Group_3006" data-name="Group 3006" transform="translate(760.042 -2335.764)">
+    <g id="Group_3002" data-name="Group 3002" transform="translate(-760.047 2159.997)">
+      <path id="Path_9093" data-name="Path 9093" d="M97,506.34c.137.555.3,1.1.465,1.647v-1.276h2.883v5.12H98.8c.043.123.09.249.141.36h32.971V506.34Zm6.846,5.492h-2.883v-5.12h2.883Zm3.484,0h-2.883v-5.12h2.883Zm3.492,0H107.94v-5.12h2.883Zm3.488,0h-2.883v-5.12h2.883Zm3.492,0H114.92v-5.12H117.8Zm3.492,0h-2.883v-5.12h2.883Zm3.488,0H121.9v-5.12h2.883Zm3.488,0h-2.883v-5.12h2.883Zm3.492,0h-2.883v-5.12h2.883Z" transform="translate(-67.481 -330.573)" fill="#5fe5bc" opacity="0.1"/>
+      <path id="Path_9094" data-name="Path 9094" d="M119.54,553.7c.094.115.18.245.27.36h1.906v2.461l.616.721v-3.2h2.883v5.167H124.03c.115.119.227.245.36.36h21.919V553.7Zm9.174,5.513h-2.883v-5.146h2.883Zm3.492,0h-2.883v-5.146h2.883Zm3.492,0h-2.883v-5.146H135.7Zm3.488,0H136.3v-5.146h2.883Zm3.488,0h-2.883v-5.146h2.883Zm3.492,0h-2.883v-5.146h2.883Z" transform="translate(-81.899 -360.867)" fill="#5fe5bc" opacity="0.1"/>
+      <path id="Path_9095" data-name="Path 9095" d="M172.93,601.06c.331.187.667.36,1,.544v-.18h2.883v1.625c.209.09.407.187.613.281v-1.906h2.883v3.121a1.19,1.19,0,0,0,.169.061V601.06Z" transform="translate(-116.051 -391.162)" fill="#5fe5bc" opacity="0.1"/>
+      <ellipse id="Ellipse_492" data-name="Ellipse 492" cx="35.111" cy="5.639" rx="35.111" ry="5.639" transform="translate(13.03 291.003)" fill="#5fe5bc" opacity="0.1"/>
+      <rect id="Rectangle_1962" data-name="Rectangle 1962" width="2.259" height="50.869" transform="translate(47.013 188.61)" fill="#535461"/>
+      <path id="Path_9179" data-name="Path 9179" d="M136.792,676.6l-.144,2.292-.2,3.243-.083,1.348-.2,3.243-.086,1.348-.2,3.243L133.6,728.1a6.227,6.227,0,0,1-6.216,5.845H115.539a6.223,6.223,0,0,1-6.216-5.87l-2.281-36.78-.2-3.243-.083-1.348-.205-3.243-.083-1.348-.2-3.243-.144-2.292a3.243,3.243,0,0,1,3.221-3.427h24.222a3.243,3.243,0,0,1,3.218,3.452Z" transform="translate(-73.318 -437.275)" fill="#3f3d56"/>
+      <path id="Path_9180" data-name="Path 9180" d="M120.956,670.52l-.2,3.236H90.782l-.2-3.236Z" transform="translate(-57.627 -428.905)" fill="#9d9cb5"/>
+      <path id="Path_9181" data-name="Path 9181" d="M121.177,683.24l-.2,3.236H91.572l-.2-3.236Z" transform="translate(-58.133 -437.041)" fill="#9d9cb5"/>
+      <path id="Path_9182" data-name="Path 9182" d="M121.4,695.97l-.2,3.232H92.362l-.2-3.232Z" transform="translate(-58.638 -445.184)" fill="#9d9cb5"/>
+      <path id="Path_9183" data-name="Path 9183" d="M45.469,577.053c13.16,9.52,18.64,24.409,18.64,24.409s-15.855-.544-29.018-10.064S16.44,567,16.44,567,32.295,567.533,45.469,577.053Z" transform="translate(-15.95 -369.375)" fill="#5fe5bc"/>
+      <path id="Path_9184" data-name="Path 9184" d="M16.44,567s16.457,9.135,21.736,16.7S64.095,601.47,64.095,601.47" transform="translate(-15.95 -369.375)" fill="none" stroke="#535461" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="Path_9185" data-name="Path 9185" d="M92.494,531.957a31.9,31.9,0,0,1,10.147,13.282,31.879,31.879,0,0,1-15.794-5.473A32.088,32.088,0,0,1,76.7,526.48,31.9,31.9,0,0,1,92.494,531.957Z" transform="translate(-54.496 -343.455)" fill="#5fe5bc"/>
+      <path id="Path_9186" data-name="Path 9186" d="M76.7,526.48s8.958,4.973,11.833,9.088,14.107,9.671,14.107,9.671" transform="translate(-54.496 -343.455)" fill="none" stroke="#535461" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="Path_9187" data-name="Path 9187" d="M159.877,556.291c-8.227,9.041-9.967,20.856-9.967,20.856s11.6-2.847,19.819-11.891S179.7,544.4,179.7,544.4,168.1,547.25,159.877,556.291Z" transform="translate(-101.326 -354.918)" fill="#5fe5bc"/>
+      <path id="Path_9188" data-name="Path 9188" d="M179.7,544.41s-10.716,9.268-13.441,15.653-16.352,17.091-16.352,17.091" transform="translate(-101.326 -354.925)" fill="none" stroke="#535461" stroke-miterlimit="10" stroke-width="2"/>
+    </g>
+  </g>
+</svg>

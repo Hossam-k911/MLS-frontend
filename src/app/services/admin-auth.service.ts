@@ -32,4 +32,15 @@ export class AdminAuthService {
     };
     return this.myHttpClient.get(`${this.BASE_URL}/getpatients/`, httpOptions)
   }
+  getRequests() {
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        'x-auth-token': this.token
+      }),
+      withCredentials: true,
+
+    };
+    return this.myHttpClient.get(`${this.BASE_URL}/getreq`, httpOptions)
+  }
 }

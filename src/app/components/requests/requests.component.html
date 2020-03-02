@@ -1,0 +1,30 @@
+<div class="container">
+
+  <table class=" table table-bordered table-dark">
+    <thead>
+      <tr>
+        <th>status</th>
+        <th>date</th>
+        <th>test</th>
+        <th>Name</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let p of requests">
+        <td>{{p.req_status}}</td>
+        <td>{{p.req_date}}</td>
+        <td>{{p.req_test}}</td>
+        <td>{{p.req_p_name}}</td>
+
+        <td>
+          <button>Show</button>
+        </td>
+
+
+
+
+      </tr>
+    </tbody>
+  </table>
+</div>
