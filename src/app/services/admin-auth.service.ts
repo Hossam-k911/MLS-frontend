@@ -6,8 +6,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http'
 })
 export class AdminAuthService {
   BASE_URL = 'https://lms-doctoroid.herokuapp.com'
-  loggedIn = false
-  // token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1ODIyOTU2MzR9.avj8QE2unqucuqvj4XdgTW7HH9LvYFowG4lxgb558fw'
+  loggedIn = false;
   token = localStorage.getItem('x-auth-token')
   constructor(public myHttpClient: HttpClient) { }
 
