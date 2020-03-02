@@ -12,9 +12,12 @@ export class RequestsComponent implements OnInit {
 
 
   ngOnInit() {
+
     this.myAdminAuthService.getRequests().subscribe((response: any) => {
       this.requests = response;
     })
+
+
   }
 
 }

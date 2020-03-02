@@ -5,7 +5,7 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { ErrorComponent } from './pages/error/error.component';
 import { PatientsComponentComponent } from './components/patients-component/patients-component.component';
 import { RequestsComponent } from './components/requests/requests.component'
-
+import { HospitalComponent } from './components/hospital/hospital.component'
 const routes: Routes = [
   {
     path: "", component: SigninComponent
@@ -19,7 +19,7 @@ const routes: Routes = [
       [
         { path: 'patients', component: PatientsComponentComponent },
         { path: 'requests', component: RequestsComponent },
-
+        { path: 'hospital', component: HospitalComponent },
 
       ]
 

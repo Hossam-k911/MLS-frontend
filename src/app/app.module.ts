@@ -22,6 +22,7 @@ import { ContentComponent } from './components/content/content.component';
 import { HeaderComponent } from './components/header/header.component';
 import { SideBarComponent } from './components/side-bar/side-bar.component';
 import { RequestsComponent } from './components/requests/requests.component';
+import { HospitalComponent } from './components/hospital/hospital.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { RequestsComponent } from './components/requests/requests.component';
     ContentComponent,
     HeaderComponent,
     SideBarComponent,
-    RequestsComponent
+    RequestsComponent,
+    HospitalComponent
   ],
   imports: [
     BrowserModule,
