@@ -1,5 +1,6 @@
 <div class="container">
 
+<<<<<<< HEAD
   <table class=" table table-bordered table-dark">
     <thead>
       <tr>
@@ -27,11 +28,34 @@
         <td>
           <button>Check</button>
         </td>
+=======
+    <table class=" table table-bordered table-dark">
+        <thead>
+            <tr>
+                <th>status</th>
+                <th>date</th>
+                <th>test</th>
+                <th>Name</th>
+                <th> nBb</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let p of requests">
+                <td>{{p.req_status}}</td>
+                <td>{{p.req_date}}</td>
+                <td>{{p.req_test}}</td>
+                <!-- <td>{{p.req_p_name}}</td> -->
+
+                <td>
+                    <button>Show</button>
+                </td>
+>>>>>>> 8aec986936518315e92040b8b3724d4ece8b74ea
 
 
 
 
-      </tr>
-    </tbody>
-  </table>
+            </tr>
+        </tbody>
+    </table>
 </div>
