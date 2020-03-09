@@ -8,6 +8,8 @@ export class AdminAuthService {
   BASE_URL = 'https://lms-doctoroid.herokuapp.com'
   loggedIn = false;
   token = localStorage.getItem('x-auth-token')
+  public selectedRequest: any = {}
+
   constructor(public myHttpClient: HttpClient) { }
 
   userSignUp(data) {
