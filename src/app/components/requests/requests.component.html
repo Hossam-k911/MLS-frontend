@@ -1,82 +1,88 @@
 <div class="container">
 
-    <table class=" table table-trapped mt-3">
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Phone</th>
-                <th>Time</th>
-                <th>Date</th>
-                <th>Medical Analysis</th>
-                <th>Edit</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let p of requests">
-                <td>{{p.req_p_name}}</td>
-                <td>{{p.req_p_phone}}</td>
-                <td>{{p.req_time}}</td>
-                <td>{{p.req_date}}</td>
-                <td>{{p.req_test}}</td>
-                <td>
+  <table class=" table table-trapped mt-3">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Phone</th>
+        <th>Time</th>
+        <th>Date</th>
+        <th>Medical Analysis</th>
+        <th>Edit</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let p of requests">
+        <td>{{p.req_p_name}}</td>
+        <td>{{p.req_p_phone}}</td>
+        <td>{{p.req_time}}</td>
+        <td>{{p.req_date}}</td>
+        <td>{{p.req_test}}</td>
+        <td>
 
-                    <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-primary" (click)="getcurrentUser(p)" data-toggle="modal" data-target=".bd-example-modal-lg">Data</button>
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-primary" (click)="getcurrentUser(p)" data-toggle="modal"
+            data-target=".bd-example-modal-lg">Data</button>
 
-                </td>
+        </td>
 
-            </tr>
-        </tbody>
-    </table>
-    <!-- Modal   -->
+      </tr>
+    </tbody>
+  </table>
+  <!-- Modal   -->
 
-    <<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <div class="modal-header" style="background-color: turquoise; ">
-                    <h5 class="modal-title" style="margin-left: auto;"> Time : {{selectedRequest.req_time}} Date : {{selectedRequest.req_date}}
-                    </h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+  <<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header" style="background-color: turquoise; ">
+          <h5 class="modal-title" style="margin-left: auto;"> Time : {{selectedRequest.req_time}} Date :
+            {{selectedRequest.req_date}}
+          </h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
-                </div>
-                <div class="modal-body">
-                    <div class="contaniner-fluid">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <h5>Name : {{selectedRequest.req_p_name}} </h5>
-                                <h5> Phone : {{selectedRequest.req_p_phone}}</h5>
-                                <h5> Test : {{selectedRequest.req_test}} </h5>
-                            </div>
-                            <div class="col-md-6">
-                                <h5>Name : {{selectedRequest.req_p_name}} </h5>
-                                <h5> Phone : {{selectedRequest.req_p_phone}}</h5>
-                                <h5> Test : {{selectedRequest.req_test}} </h5>
-                            </div>
-                        </div>
-
-                        <hr class="solid">
-                        <div class="row">
-                            <div class="col-md-8">
-                                <h5>Name : {{selectedRequest.req_p_name}} </h5>
-                                <h5> Phone : {{selectedRequest.req_p_phone}}</h5>
-                                <h5> Test : {{selectedRequest.req_test}} </h5>
-
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="contaniner-fluid mt-5">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <button type="button" class="btn btn-danger btn-lg btn-block" data-dismiss="modal">rejection</button>
-                            </div>
-                            <div class="col-md-6">
-                                <button type="button" class="btn btn-primary btn-lg btn-block">Accept</button>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
         </div>
+        <div class="modal-body">
+          <div class="contaniner-fluid">
+            <div class="row">
+              <div class="col-md-6">
+                <h5>Name : {{selectedRequest.req_p_name}} </h5>
+                <h5> Phone : {{selectedRequest.req_p_phone}}</h5>
+                <h5> Test : {{selectedRequest.req_test}} </h5>
+                <h5>Status : {{selectedRequest.req_status}}</h5>
+              </div>
+              <div class="col-md-6">
+                <h5>Name : {{selectedRequest.req_p_name}} </h5>
+                <h5> Phone : {{selectedRequest.req_p_phone}}</h5>
+                <h5> Test : {{selectedRequest.req_test}} </h5>
+              </div>
+            </div>
+
+            <hr class="solid">
+            <div class="row">
+              <div class="col-md-8">
+                <h5>Name : {{selectedRequest.req_p_name}} </h5>
+                <h5> Phone : {{selectedRequest.req_p_phone}}</h5>
+                <h5> Test : {{selectedRequest.req_test}} </h5>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="contaniner-fluid mt-5">
+            <div class="row">
+              <div class="col-md-6">
+                <button type="button" (click)="RejectedStatus()" class="btn btn-danger btn-lg btn-block"
+                  data-dismiss="modal">Reject</button>
+              </div>
+              <div class="col-md-6">
+                <button (click)="AcceptedStatus()" type="button" class="btn btn-primary btn-lg btn-block"
+                  data-dismiss="modal">Accept</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>

@@ -75,6 +75,6 @@ export class AdminAuthService {
       headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
 
     };
-    return this.myHttpClient.put(this.BASE_URL + '/editreq', JSON.stringify(data), httpOptions)
+    return this.myHttpClient.post(this.BASE_URL + '/editreq', JSON.stringify(data), httpOptions)
   }
 }
