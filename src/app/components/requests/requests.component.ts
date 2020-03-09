@@ -10,9 +10,12 @@ export class RequestsComponent implements OnInit {
   requests: any
   selectedRequest: any = {}
   status: any = ''
+  req_id: any = ''
 
   getcurrentUser(user): void {
     this.selectedRequest = user;
+    this.req_id = user._id;
+    debugger
 
   }
   constructor(public myAdminAuthService: AdminAuthService) { }
@@ -23,13 +26,18 @@ export class RequestsComponent implements OnInit {
     this.myAdminAuthService.getRequests().subscribe((response: any) => {
       this.requests = response;
 
-      // this.name = response.req_p_name;
+
+
     })
 
 
 
   }
   AcceptedStatus(event) {
+    const { req_id } = this
+    const data = {
+      req_id
+    }
 
   }
   RejectedStatus(event) {
@@ -39,14 +47,3 @@ export class RequestsComponent implements OnInit {
 
 }
 
-
-
-
-
-// interface IreqDetails {
-//   // req_p_name: string;
-//   req_time: string;
-//   req_date: string;
-//   req_test: string;
-//   req_status: string;
-// }
