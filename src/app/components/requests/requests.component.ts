@@ -7,35 +7,25 @@ import { AdminAuthService } from 'src/app/services/admin-auth.service';
   styleUrls: ['./requests.component.css']
 })
 export class RequestsComponent implements OnInit {
-  requests: any
-  // time: String = ''
-  // userId: any
+  requests: any = [];
+  Request: any = {};
+  index: number;
   constructor(public myAdminAuthService: AdminAuthService) { }
 
-  @Input() reqDetails: IreqDetails = {
-    name: '',
-    phone: '',
-    time: '',
-    date: '',
-    test: '',
-    status: ''
 
-  }
   ngOnInit() {
 
     this.myAdminAuthService.getRequests().subscribe((response: any) => {
       this.requests = response;
-
+      this.index = this.requests.length
+      // this.name = response.req_p_name;
     })
 
-
-
   }
 
-  handleProfileNavigation() {
-    this.myAdminAuthService.selectedRequest = this.reqDetails
-    // this.MyRouter.navigate(['/countries/profile', this.countryDetails],{skipLocationChange:true})
-    // this.MyRouter.navigate(['/countries/profile'])
+  handleProfileNavigation(row) {
+    this.Request = row;
+
   }
 
 }
@@ -44,11 +34,10 @@ export class RequestsComponent implements OnInit {
 
 
 
-interface IreqDetails {
-  name: string;
-  phone: string;
-  time: string;
-  date: string;
-  test: string;
-  status: string;
-}
+// interface IreqDetails {
+//   // req_p_name: string;
+//   req_time: string;
+//   req_date: string;
+//   req_test: string;
+//   req_status: string;
+// }
