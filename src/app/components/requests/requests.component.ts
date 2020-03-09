@@ -17,7 +17,8 @@ export class RequestsComponent implements OnInit {
     phone: '',
     time: '',
     date: '',
-    test: ''
+    test: '',
+    status: ''
 
   }
   ngOnInit() {
@@ -49,4 +50,5 @@ interface IreqDetails {
   time: string;
   date: string;
   test: string;
+  status: string;
 }
