@@ -8,8 +8,13 @@ import { AdminAuthService } from 'src/app/services/admin-auth.service';
 })
 export class RequestsComponent implements OnInit {
   requests: any
+  selectedRequest :any = {}
   // time: String = ''
   // userId: any
+  getcurrentUser(user) : void {
+    this.selectedRequest = user;
+    
+  }
   constructor(public myAdminAuthService: AdminAuthService) { }
 
   @Input() reqDetails: IreqDetails = {
