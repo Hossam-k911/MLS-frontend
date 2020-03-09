@@ -7,9 +7,13 @@ import { AdminAuthService } from 'src/app/services/admin-auth.service';
   styleUrls: ['./requests.component.css']
 })
 export class RequestsComponent implements OnInit {
-  requests: any = [];
-  Request: any = {};
-  index: number;
+  requests: any
+  selectedRequest: any = {}
+
+  getcurrentUser(user): void {
+    this.selectedRequest = user;
+
+  }
   constructor(public myAdminAuthService: AdminAuthService) { }
 
 
@@ -17,16 +21,12 @@ export class RequestsComponent implements OnInit {
 
     this.myAdminAuthService.getRequests().subscribe((response: any) => {
       this.requests = response;
-      this.index = this.requests.length
+
       // this.name = response.req_p_name;
     })
 
   }
 
-  handleProfileNavigation(row) {
-    this.Request = row;
-
-  }
 
 }
 
