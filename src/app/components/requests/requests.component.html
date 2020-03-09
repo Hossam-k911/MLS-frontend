@@ -1,56 +1,32 @@
 <div class="container">
 
-<<<<<<< HEAD
-  <table class=" table table-bordered table-dark">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Phone</th>
-
-
-        <th>Time</th>
-        <th>Date</th>
-
-        <th>Medical Analysis</th>
-
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let p of requests">
-        <td>{{p.req_p_name}}</td>
-        <td>{{p.req_p_phone}}</td>
-        <td>{{p.req_time}}</td>
-        <td>{{p.req_date}}</td>
-
-        <td>{{p.req_test}}</td>
-
-
-        <td>
-          <button>Check</button>
-        </td>
-=======
     <table class=" table table-bordered table-dark">
         <thead>
             <tr>
-                <th>status</th>
-                <th>date</th>
-                <th>test</th>
                 <th>Name</th>
-                <th> nBb</th>
+                <th>Phone</th>
+
+
+                <th>Time</th>
+                <th>Date</th>
+
+                <th>Medical Analysis</th>
 
             </tr>
         </thead>
         <tbody>
             <tr *ngFor="let p of requests">
-                <td>{{p.req_status}}</td>
+                <td>{{p.req_p_name}}</td>
+                <td>{{p.req_p_phone}}</td>
+                <td>{{p.req_time}}</td>
                 <td>{{p.req_date}}</td>
+
                 <td>{{p.req_test}}</td>
-                <!-- <td>{{p.req_p_name}}</td> -->
+
 
                 <td>
-                    <button>Show</button>
+                    <button>Check</button>
                 </td>
->>>>>>> 8aec986936518315e92040b8b3724d4ece8b74ea
 
 
 

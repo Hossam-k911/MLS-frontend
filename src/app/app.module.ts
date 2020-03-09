@@ -1,19 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
-
 import { NgModule } from '@angular/core';
-
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-
 import { AppRoutingModule } from './app-routing.module';
-
 import { AppComponent } from './app.component';
-
 import { SigninComponent } from './pages/signin/signin.component';
-
 import { ErrorComponent } from './pages/error/error.component';
-
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
-
 import { FormsModule } from '@angular/forms'
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -23,6 +15,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { SideBarComponent } from './components/side-bar/side-bar.component';
 import { RequestsComponent } from './components/requests/requests.component';
 import { HospitalComponent } from './components/hospital/hospital.component';
+import { MedicinesComponent } from './components/medicines/medicines.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +28,8 @@ import { HospitalComponent } from './components/hospital/hospital.component';
     HeaderComponent,
     SideBarComponent,
     RequestsComponent,
-    HospitalComponent
+    HospitalComponent,
+    MedicinesComponent
   ],
   imports: [
     BrowserModule,
