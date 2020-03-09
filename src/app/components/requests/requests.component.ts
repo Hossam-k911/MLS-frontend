@@ -9,6 +9,7 @@ import { AdminAuthService } from 'src/app/services/admin-auth.service';
 export class RequestsComponent implements OnInit {
   requests: any
   selectedRequest: any = {}
+  status: any = ''
 
   getcurrentUser(user): void {
     this.selectedRequest = user;
@@ -24,6 +25,14 @@ export class RequestsComponent implements OnInit {
 
       // this.name = response.req_p_name;
     })
+
+
+
+  }
+  AcceptedStatus(event) {
+
+  }
+  RejectedStatus(event) {
 
   }
 
