@@ -15,8 +15,7 @@ export class RequestsComponent implements OnInit {
   getcurrentUser(user): void {
     this.selectedRequest = user;
     this.req_id = user._id;
-    debugger
-
+  
   }
   constructor(public myAdminAuthService: AdminAuthService) { }
 
