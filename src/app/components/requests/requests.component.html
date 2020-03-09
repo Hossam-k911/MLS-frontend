@@ -1,61 +1,37 @@
 <div class="container">
 
-  <table class=" table table-bordered table-dark">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Phone</th>
+    <table class=" table table-bordered table-dark">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Phone</th>
 
 
-        <th>Time</th>
-        <th>Date</th>
+                <th>Time</th>
+                <th>Date</th>
 
-        <th>Medical Analysis</th>
+                <th>Medical Analysis</th>
 
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let p of requests">
-        <td id="name">{{p.req_p_name}}</td>
-        <td>{{p.req_p_phone}}</td>
-        <td>{{p.req_time}}</td>
-        <td>{{p.req_date}}</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let p of requests">
+                <td>{{p.req_p_name}}</td>
+                <td>{{p.req_p_phone}}</td>
+                <td>{{p.req_time}}</td>
+                <td>{{p.req_date}}</td>
 
-        <td>{{p.req_test}}</td>
+                <td>{{p.req_test}}</td>
 
 
-        <td>
-          <!-- Button trigger modal -->
-          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter"
-            (click)="handleProfileNavigation()">
-            Check
-          </button>
+                <td>
+                    <button>Check</button>
+                </td>
 
-        </td>
 
-      </tr>
-    </tbody>
-  </table>
-  <!-- Modal -->
-  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
-    aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header" style="background-color: turquoise; ">
-          <h5 class="modal-title" style="margin-left: auto;"> Time
 
-          </h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body" style=" margin:auto; color:DodgerBlue;">
-          Name
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
-        </div>
-      </div>
-    </div>
-  </div>
+
+            </tr>
+        </tbody>
+    </table>
+</div>

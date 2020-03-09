@@ -58,4 +58,17 @@ export class AdminAuthService {
   }
 
 
+  getMediciensinfo() {
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        'x-auth-token': this.token
+      }),
+      withCredentials: true,
+
+    };
+    return this.myHttpClient.get(`${this.BASE_URL}/getmedicines`, httpOptions)
+  }
+
+
 }
