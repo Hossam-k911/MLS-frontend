@@ -8,7 +8,7 @@
                 <th>Time</th>
                 <th>Date</th>
                 <th>Medical Analysis</th>
-                <th class="p-3">Edite</th>
+                <th>Edit</th>
             </tr>
         </thead>
         <tbody>
@@ -21,9 +21,7 @@
                 <td>
 
                     <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-primary" (click)="getcurrentUser(p)" data-toggle="modal" data-target="#exampleModalCenter" (click)="handleProfileNavigation()">
-            Check
-          </button>
+                    <button type="button" class="btn btn-primary" (click)="getcurrentUser(p)" data-toggle="modal" data-target=".bd-example-modal-lg">Data</button>
 
                 </td>
 
@@ -32,23 +30,53 @@
     </table>
     <!-- Modal   -->
 
-    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
+    <<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header" style="background-color: turquoise; ">
-                    <h5 class="modal-title" style="margin-left: auto;"> Time : {{selectedRequest.req_time}}
+                    <h5 class="modal-title" style="margin-left: auto;"> Time : {{selectedRequest.req_time}} Date : {{selectedRequest.req_date}}
                     </h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
                 </div>
-                <div class="modal-body" style=" margin:auto; color:DodgerBlue;">
-                    Name : {{selectedRequest.req_p_name}}
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
+                <div class="modal-body">
+                    <div class="contaniner-fluid">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h5>Name : {{selectedRequest.req_p_name}} </h5>
+                                <h5> Phone : {{selectedRequest.req_p_phone}}</h5>
+                                <h5> Test : {{selectedRequest.req_test}} </h5>
+                            </div>
+                            <div class="col-md-6">
+                                <h5>Name : {{selectedRequest.req_p_name}} </h5>
+                                <h5> Phone : {{selectedRequest.req_p_phone}}</h5>
+                                <h5> Test : {{selectedRequest.req_test}} </h5>
+                            </div>
+                        </div>
+
+                        <hr class="solid">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <h5>Name : {{selectedRequest.req_p_name}} </h5>
+                                <h5> Phone : {{selectedRequest.req_p_phone}}</h5>
+                                <h5> Test : {{selectedRequest.req_test}} </h5>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contaniner-fluid mt-5">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <button type="button" class="btn btn-danger btn-lg btn-block" data-dismiss="modal">rejection</button>
+                            </div>
+                            <div class="col-md-6">
+                                <button type="button" class="btn btn-primary btn-lg btn-block">Accept</button>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
-    </div>

@@ -7,7 +7,7 @@ import { PatientsComponentComponent } from "./components/patients-component/pati
 import { RequestsComponent } from "./components/requests/requests.component";
 import { HospitalComponent } from "./components/hospital/hospital.component";
 import { MedicinesComponent } from "./components/medicines/medicines.component";
-import { from } from "rxjs";
+
 const routes: Routes = [
   {
     path: "",
