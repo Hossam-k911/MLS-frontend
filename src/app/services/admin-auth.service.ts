@@ -70,5 +70,11 @@ export class AdminAuthService {
     return this.myHttpClient.get(`${this.BASE_URL}/getmedicines`, httpOptions)
   }
 
+  statusChange(data) {
+    const httpOptions = {
+      headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
 
+    };
+    return this.myHttpClient.put(this.BASE_URL + '/editreq', JSON.stringify(data), httpOptions)
+  }
 }

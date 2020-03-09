@@ -10,33 +10,33 @@ import { MedicinesComponent } from "./components/medicines/medicines.component";
 
 const routes: Routes = [
   {
-    path: "",
+    path: '',
     component: SigninComponent
   },
   {
-    path: "signin",
+    path: 'signin',
     component: SigninComponent
   },
   {
-    path: "home",
+    path: 'home',
     component: DashboardComponent,
     children: [
-      { path: "patients", component: PatientsComponentComponent },
-      { path: "requests", component: RequestsComponent },
-      { path: "hospital", component: HospitalComponent },
-      { path: "Medicines", component: MedicinesComponent }
+      { path: 'patients', component: PatientsComponentComponent },
+      { path: 'requests', component: RequestsComponent },
+      { path: 'hospital', component: HospitalComponent },
+      { path: 'Medicines', component: MedicinesComponent }
     ]
   },
 
   {
-    path: "error",
+    path: 'error',
     component: ErrorComponent
   },
-  { path: "**", redirectTo: "error" }
+  { path: '**', redirectTo: 'error' }
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes, { enableTracing: true })],
   exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

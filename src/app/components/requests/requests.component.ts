@@ -8,52 +8,45 @@ import { AdminAuthService } from 'src/app/services/admin-auth.service';
 })
 export class RequestsComponent implements OnInit {
   requests: any
-  selectedRequest :any = {}
-  // time: String = ''
-  // userId: any
-  getcurrentUser(user) : void {
+  selectedRequest: any = {}
+  status: any = ''
+
+  getcurrentUser(user): void {
     this.selectedRequest = user;
-    
+
   }
   constructor(public myAdminAuthService: AdminAuthService) { }
 
-  @Input() reqDetails: IreqDetails = {
-    name: '',
-    phone: '',
-    time: '',
-    date: '',
-    test: '',
-    status: ''
 
-  }
   ngOnInit() {
 
     this.myAdminAuthService.getRequests().subscribe((response: any) => {
       this.requests = response;
 
+      // this.name = response.req_p_name;
     })
 
 
 
   }
+  AcceptedStatus(event) {
 
-  handleProfileNavigation() {
-    this.myAdminAuthService.selectedRequest = this.reqDetails
-    // this.MyRouter.navigate(['/countries/profile', this.countryDetails],{skipLocationChange:true})
-    // this.MyRouter.navigate(['/countries/profile'])
+  }
+  RejectedStatus(event) {
+
   }
 
+
 }
 
 
 
 
 
-interface IreqDetails {
-  name: string;
-  phone: string;
-  time: string;
-  date: string;
-  test: string;
-  status: string;
-}
+// interface IreqDetails {
+//   // req_p_name: string;
+//   req_time: string;
+//   req_date: string;
+//   req_test: string;
+//   req_status: string;
+// }
