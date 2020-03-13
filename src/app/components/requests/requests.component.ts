@@ -1,5 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { AdminAuthService } from 'src/app/services/admin-auth.service';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-requests',
@@ -7,34 +8,32 @@ import { AdminAuthService } from 'src/app/services/admin-auth.service';
   styleUrls: ['./requests.component.css']
 })
 export class RequestsComponent implements OnInit {
+  constructor(public myAdminAuthService: AdminAuthService, public myNgbModal: NgbModal) { }
+
   requests: any
+
   selectedRequest: any = {}
   req_status: any = ''
   accepted_status: string = 'Accepted';
   rejected_status: string = 'Rejected';
 
-  req_id: any = ''
+  req_id: any = this.selectedRequest._id;
+  p_id: any = this.selectedRequest.req_p_id;
 
-  getcurrentUser(user): void {
-    this.selectedRequest = user;
-    this.req_id = user._id;
-
+  getcurrentRowData(row): void {
+    this.selectedRequest = row;
+    this.req_id = row._id;
+    this.p_id = row.req_p_id;
 
   }
-  constructor(public myAdminAuthService: AdminAuthService) { }
+
 
 
   ngOnInit() {
-
     this.myAdminAuthService.getRequests().subscribe((response: any) => {
       this.requests = response;
 
-
-
     })
-
-
-
   }
   AcceptedStatus() {
     const { req_id, req_status } = this
@@ -43,8 +42,6 @@ export class RequestsComponent implements OnInit {
     }
     this.myAdminAuthService.statusChange(data).subscribe((response: any) => {
       this.req_status = this.accepted_status;
-
-
     })
 
 
@@ -60,6 +57,20 @@ export class RequestsComponent implements OnInit {
     })
 
   }
+
+  //deleteRequest
+  deleteRequest(data) {
+
+    const { req_id, p_id } = this
+    const reqData = { req_id, p_id }
+    this.myAdminAuthService.deleteRequest(reqData).subscribe((response: any) => {
+      this.ngOnInit();
+    })
+
+
+  }
+
+
 }
 
 

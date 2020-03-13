@@ -3,16 +3,21 @@
   <table class=" table table-trapped mt-3">
     <thead>
       <tr>
+        <th>#</th>
         <th>Name</th>
         <th>Phone</th>
         <th>Time</th>
         <th>Date</th>
         <th>Medical Analysis</th>
+        <th>Show</th>
         <th>Edit</th>
+        <th>Delete</th>
+
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let p of requests">
+      <tr *ngFor="let p of requests;  let i=index; ">
+        <td>{{i+1}}</td>
         <td>{{p.req_p_name}}</td>
         <td>{{p.req_p_phone}}</td>
         <td>{{p.req_time}}</td>
@@ -21,9 +26,21 @@
         <td>
 
           <!-- Button trigger modal -->
-          <button type="button" class="btn btn-primary" (click)="getcurrentUser(p)" data-toggle="modal"
-            data-target=".bd-example-modal-lg">Data</button>
+          <button type="button" class="btn btn-primary" (click)="getcurrentRowData(p)" data-toggle="modal"
+            data-target=".bd-example-modal-lg">Check</button>
 
+        </td>
+        <td>
+          <button type="button" class="btn btn-success">
+            Edit
+          </button>
+        </td>
+
+
+        <td>
+          <button (click)="deleteRequest(p.req_p_id,p._id)" type="button" class="btn btn-danger">
+            Delete
+          </button>
         </td>
 
       </tr>
@@ -31,7 +48,7 @@
   </table>
   <!-- Modal   -->
 
-  <<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+  <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
     aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
       <div class="modal-content">

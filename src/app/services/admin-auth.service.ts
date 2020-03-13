@@ -77,4 +77,16 @@ export class AdminAuthService {
     };
     return this.myHttpClient.post(this.BASE_URL + '/editreq', JSON.stringify(data), httpOptions)
   }
+
+
+  deleteRequest(data) {
+    const httpOptions = {
+      headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
+
+    };
+    return this.myHttpClient.post(this.BASE_URL + '/delrequest', JSON.stringify(data), httpOptions)
+  }
+
+
+
 }
