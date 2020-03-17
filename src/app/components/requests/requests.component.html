@@ -38,7 +38,7 @@
 
 
         <td>
-          <button (click)="deleteRequest(p.req_p_id,p._id)" type="button" class="btn btn-danger">
+          <button (click)="deleteRequest(deleteModel,p.req_p_id,p._id)" type="button" class="btn btn-danger">
             Delete
           </button>
         </td>
@@ -103,3 +103,25 @@
         </div>
       </div>
     </div>
+
+
+    <!--
+    <ng-template #deleteModel let-modal>
+      <div class="modal-header">
+        <h4 class="modal-title" id="modal-title"> Request Deletion</h4>
+        <button type="button" class="close" aria-describedby="modal-title" (click)="modal.dismiss('Cross click')">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>hhh</p>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-secondary" (click)="modal.dismiss('cancel click')">Cancel</button>
+        <button type="button" class="btn btn-danger" (click)="modal.dismiss('Ok click')">Ok</button>
+
+      </div>
+
+
+    </ng-template> -->

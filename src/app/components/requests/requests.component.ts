@@ -8,7 +8,10 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
   styleUrls: ['./requests.component.css']
 })
 export class RequestsComponent implements OnInit {
-  constructor(public myAdminAuthService: AdminAuthService, public myNgbModal: NgbModal) { }
+  constructor(
+    public myAdminAuthService: AdminAuthService,
+    public modelService: NgbModal,
+  ) { }
 
   requests: any
 
@@ -20,7 +23,7 @@ export class RequestsComponent implements OnInit {
   req_id: any = this.selectedRequest._id;
   p_id: any = this.selectedRequest.req_p_id;
 
-  getcurrentRowData(row): void {
+  getcurrentRowData(row) {
     this.selectedRequest = row;
     this.req_id = row._id;
     this.p_id = row.req_p_id;
@@ -58,16 +61,13 @@ export class RequestsComponent implements OnInit {
 
   }
 
-  //deleteRequest
-  deleteRequest(data) {
 
+  deleteRequest(data) {
     const { req_id, p_id } = this
     const reqData = { req_id, p_id }
     this.myAdminAuthService.deleteRequest(reqData).subscribe((response: any) => {
       this.ngOnInit();
     })
-
-
   }
 
 
