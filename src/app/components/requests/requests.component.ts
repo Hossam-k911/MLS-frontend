@@ -28,25 +28,29 @@ export class RequestsComponent implements OnInit {
   p_id: any = ''
 
   getcurrentRowData(row) {
+
+
     this.selectedRequest = row;
     this.req_id = row._id;
     this.p_id = row.req_p_id;
-    if (row) {
 
-      this.getPatientData(row._id);
-    }
 
+
+    this.getPatientData(row._id)
   }
 
-  getPatientData(id) {
-    // const { req_id } = this
-    // const reqData = { req_id }
-    this.myAdminAuthService.reqPatientData(id).subscribe((response: any) => {
+  // Adding Patient data
+  getPatientData(row) {
+    const { req_id } = this
+    const reqData = { req_id }
+
+    this.myAdminAuthService.reqPatientData(reqData).subscribe((response: any) => {
       this.patientData = response;
     })
     console.log(this.patientData)
   }
 
+  // Getting Requests and fill in table
   ngOnInit() {
     this.myAdminAuthService.getRequests().subscribe((response: any) => {
       this.requests = response;
@@ -54,6 +58,8 @@ export class RequestsComponent implements OnInit {
     })
 
   }
+
+  //Accepting and rejection status
   AcceptedStatus() {
     const { req_id, req_status } = this
     const data = {
@@ -77,7 +83,7 @@ export class RequestsComponent implements OnInit {
 
   }
 
-
+  // Request Deletion
   deleteRequest(data) {
     const { req_id, p_id } = this
     const reqData = { req_id, p_id }
@@ -85,28 +91,6 @@ export class RequestsComponent implements OnInit {
       this.ngOnInit();
     })
   }
-
-
-
-
-  // onSubmit(model) {
-  //   this.buildForm();
-  // }
-  // get f() {
-  //   return this.editForm.controls
-  // }
-
-  // buildForm() {
-  //   this.editForm = this.fb.group({
-  //     Name: [null, Validators.required],
-  //     phone: [null, Validators.required],
-  //     test: [null, Validators.required],
-  //     status: [null, Validators.required]
-
-
-
-  //   })
-  // }
 
 }
 

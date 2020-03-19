@@ -13,6 +13,7 @@ export class AdminAuthService {
     headers: new HttpHeaders({
       'Content-Type': 'application/json',
       'x-auth-token': this.token,
+      // " Access-Control-Allow-Origin": "*"
       // 'cors': 'Access-Control-Allow-Origin'
     }),
     withCredentials: true,
@@ -25,11 +26,11 @@ export class AdminAuthService {
   }
 
   userSignIn(data) {
-    const httpOptions = {
-      headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
+    // const httpOptions = {
+    //   headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
 
-    };
-    return this.myHttpClient.post(this.BASE_URL + '/dashboard/signin', JSON.stringify(data), httpOptions)
+    // };
+    return this.myHttpClient.post(this.BASE_URL + '/dashboard/signin', JSON.stringify(data), this.httpOptions)
   }
   getPatients() {
     // const httpOptions = {
