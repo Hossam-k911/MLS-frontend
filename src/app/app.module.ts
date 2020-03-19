@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { SigninComponent } from './pages/signin/signin.component';
 import { ErrorComponent } from './pages/error/error.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
-import { FormsModule } from '@angular/forms'
+import { FormsModule, FormBuilder } from '@angular/forms'
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PatientsComponentComponent } from './components/patients-component/patients-component.component';
@@ -17,6 +17,8 @@ import { RequestsComponent } from './components/requests/requests.component';
 import { HospitalComponent } from './components/hospital/hospital.component';
 import { MedicinesComponent } from './components/medicines/medicines.component';
 // import { ToastrModule, ToastContainerModule } from 'ngx-toastr'
+import { ReactiveFormsModule } from '@angular/forms'
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,6 +37,7 @@ import { MedicinesComponent } from './components/medicines/medicines.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
     NgbModule,
     HttpClientModule,
     BrowserAnimationsModule, // required animations module

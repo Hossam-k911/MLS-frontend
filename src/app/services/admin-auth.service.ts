@@ -9,7 +9,15 @@ export class AdminAuthService {
   loggedIn = false;
   token = localStorage.getItem('x-auth-token')
   public selectedRequest: any = {}
+  public httpOptions = {
+    headers: new HttpHeaders({
+      'Content-Type': 'application/json',
+      'x-auth-token': this.token,
+      // 'cors': 'Access-Control-Allow-Origin'
+    }),
+    withCredentials: true,
 
+  };
   constructor(public myHttpClient: HttpClient) { }
 
   userSignUp(data) {
@@ -24,67 +32,80 @@ export class AdminAuthService {
     return this.myHttpClient.post(this.BASE_URL + '/dashboard/signin', JSON.stringify(data), httpOptions)
   }
   getPatients() {
-    const httpOptions = {
-      headers: new HttpHeaders({
-        'Content-Type': 'application/json',
-        'x-auth-token': this.token
-      }),
-      withCredentials: true,
+    // const httpOptions = {
+    //   headers: new HttpHeaders({
+    //     'Content-Type': 'application/json',
+    //     'x-auth-token': this.token
+    //   }),
+    //   withCredentials: true,
 
-    };
-    return this.myHttpClient.get(`${this.BASE_URL}/getpatients/`, httpOptions)
+    // };
+    return this.myHttpClient.get(`${this.BASE_URL}/getpatients/`, this.httpOptions)
   }
   getRequests() {
-    const httpOptions = {
-      headers: new HttpHeaders({
-        'Content-Type': 'application/json',
-        'x-auth-token': this.token
-      }),
-      withCredentials: true,
+    // const httpOptions = {
+    //   headers: new HttpHeaders({
+    //     'Content-Type': 'application/json',
+    //     'x-auth-token': this.token
+    //   }),
+    //   withCredentials: true,
 
-    };
-    return this.myHttpClient.get(`${this.BASE_URL}/getreq`, httpOptions)
+    // };
+    return this.myHttpClient.get(`${this.BASE_URL}/getreq`, this.httpOptions)
   }
   getHospitalInfo() {
-    const httpOptions = {
-      headers: new HttpHeaders({
-        'Content-Type': 'application/json',
-        'x-auth-token': this.token
-      }),
-      withCredentials: true,
+    // const httpOptions = {
+    //   headers: new HttpHeaders({
+    //     'Content-Type': 'application/json',
+    //     'x-auth-token': this.token
+    //   }),
+    //   withCredentials: true,
 
-    };
-    return this.myHttpClient.get(`${this.BASE_URL}/hospitalinfo`, httpOptions)
+    // };
+    return this.myHttpClient.get(`${this.BASE_URL}/hospitalinfo`, this.httpOptions)
   }
 
 
   getMediciensinfo() {
-    const httpOptions = {
-      headers: new HttpHeaders({
-        'Content-Type': 'application/json',
-        'x-auth-token': this.token
-      }),
-      withCredentials: true,
+    // const httpOptions = {
+    //   headers: new HttpHeaders({
+    //     'Content-Type': 'application/json',
+    //     'x-auth-token': this.token
+    //   }),
+    //   withCredentials: true,
 
-    };
-    return this.myHttpClient.get(`${this.BASE_URL}/getmedicines`, httpOptions)
+    // };
+    return this.myHttpClient.get(`${this.BASE_URL}/getmedicines`, this.httpOptions)
   }
 
   statusChange(data) {
-    const httpOptions = {
-      headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
+    // const httpOptions = {
+    //   headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
 
-    };
-    return this.myHttpClient.post(this.BASE_URL + '/editreq', JSON.stringify(data), httpOptions)
+    // };
+    return this.myHttpClient.put(this.BASE_URL + '/editreq', JSON.stringify(data), this.httpOptions)
   }
 
 
-  deleteRequest(data) {
-    const httpOptions = {
-      headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
+  reqPatientData(id) {
+    return this.myHttpClient.post(this.BASE_URL + '/reqpatientinfo', JSON.stringify(id), this.httpOptions)
+  }
 
-    };
-    return this.myHttpClient.post(this.BASE_URL + '/delrequest', JSON.stringify(data), httpOptions)
+  deleteRequest(data) {
+    // const httpOptions = {
+    //   headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
+
+    // };
+    return this.myHttpClient.post(this.BASE_URL + '/delrequest', JSON.stringify(data), this.httpOptions)
+  }
+
+
+  editRequest(data) {
+    // const httpOptions = {
+    //   headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
+
+    // };
+    return this.myHttpClient.put(this.BASE_URL + '/editreq', JSON.stringify(data), this.httpOptions)
   }
 
 

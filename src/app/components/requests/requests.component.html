@@ -10,7 +10,7 @@
         <th>Date</th>
         <th>Medical Analysis</th>
         <th>Show</th>
-        <th>Edit</th>
+        <!-- <th>Edit</th> -->
         <th>Delete</th>
 
       </tr>
@@ -30,11 +30,12 @@
             data-target=".bd-example-modal-lg">Check</button>
 
         </td>
-        <td>
-          <button type="button" class="btn btn-success">
+        <!-- <td>
+          <button type="button" class="btn btn-success" data-target=".bd-example-modal-lg" (click)="onSubmit(editModel)"
+            data-toggle="editModel">
             Edit
           </button>
-        </td>
+        </td> -->
 
 
         <td>
@@ -103,25 +104,3 @@
         </div>
       </div>
     </div>
-
-
-    <!--
-    <ng-template #deleteModel let-modal>
-      <div class="modal-header">
-        <h4 class="modal-title" id="modal-title"> Request Deletion</h4>
-        <button type="button" class="close" aria-describedby="modal-title" (click)="modal.dismiss('Cross click')">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <p>hhh</p>
-
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-outline-secondary" (click)="modal.dismiss('cancel click')">Cancel</button>
-        <button type="button" class="btn btn-danger" (click)="modal.dismiss('Ok click')">Ok</button>
-
-      </div>
-
-
-    </ng-template> -->
