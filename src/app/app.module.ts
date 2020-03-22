@@ -16,7 +16,7 @@ import { SideBarComponent } from './components/side-bar/side-bar.component';
 import { RequestsComponent } from './components/requests/requests.component';
 import { HospitalComponent } from './components/hospital/hospital.component';
 import { MedicinesComponent } from './components/medicines/medicines.component';
-
+// import { ToastrModule, ToastContainerModule } from 'ngx-toastr'
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,6 +39,8 @@ import { MedicinesComponent } from './components/medicines/medicines.component';
     HttpClientModule,
     BrowserAnimationsModule, // required animations module
     // ToastrModule added
+    // ToastrModule,
+    // ToastContainerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

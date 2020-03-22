@@ -3,16 +3,21 @@
     <table class=" table table-trapped mt-3">
         <thead>
             <tr>
+                <th>#</th>
                 <th>Name</th>
                 <th>Phone</th>
                 <th>Time</th>
                 <th>Date</th>
                 <th>Medical Analysis</th>
+                <th>Show</th>
                 <th>Edit</th>
+                <th>Delete</th>
+
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let p of requests">
+            <tr *ngFor="let p of requests;  let i=index; ">
+                <td>{{i+1}}</td>
                 <td>{{p.req_p_name}}</td>
                 <td>{{p.req_p_phone}}</td>
                 <td>{{p.req_time}}</td>
@@ -21,16 +26,28 @@
                 <td>
 
                     <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-primary" (click)="getcurrentUser(p)" data-toggle="modal" data-target=".bd-example-modal-lg">Data</button>
+                    <button type="button" class="btn btn-primary" (click)="getcurrentRowData(p)" data-toggle="modal" data-target=".bd-example-modal-lg">Check</button>
 
+                </td>
+                <td>
+                    <button type="button" class="btn btn-success">
+            Edit
+          </button>
+                </td>
+
+
+                <td>
+                    <button (click)="deleteRequest(p.req_p_id,p._id)" type="button" class="btn btn-danger">
+            Delete
+          </button>
                 </td>
 
             </tr>
         </tbody>
     </table>
     <!-- Modal   -->
-
-    <<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <!-------------------------------------------------------------------------------------->
+    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header" style="background-color: turquoise; ">
@@ -41,42 +58,156 @@
           </button>
                 </div>
                 <div class="modal-body">
-                    <div class="contaniner-fluid">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <h5>Name : {{selectedRequest.req_p_name}} </h5>
-                                <h5> Phone : {{selectedRequest.req_p_phone}}</h5>
-                                <h5> Test : {{selectedRequest.req_test}} </h5>
+                    <div class="contaniner  ">
+                        <div class="row justify-content-md-center  mb-2">
+                            <div class=" col-1  img-r">
+                                <img src="../../../assets/img/Group 3234.svg" class="img-fluid">
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-auto title-r">
+                                <span>Patient Personal Info </span>
+                            </div>
+                        </div>
+                        <div class="row ml-3 mt-2 ">
+
+                            <div class="col-md-5  ">
                                 <h5>Name : {{selectedRequest.req_p_name}} </h5>
                                 <h5> Phone : {{selectedRequest.req_p_phone}}</h5>
-                                <h5> Test : {{selectedRequest.req_test}} </h5>
+                                <h5> Email : {{req_status.email}} </h5>
+                            </div>
+                            <div class="col-md-5 ">
+                                <h5>Birthday: {{selectedRequest.req_p_name}} </h5>
+                                <h5> SNN : {{selectedRequest.req_p_phone}}</h5>
+                                <h5> City : {{selectedRequest.req_test}} </h5>
                             </div>
                         </div>
 
                         <hr class="solid">
-                        <div class="row">
-                            <div class="col-md-8">
-                                <h5>Name : {{selectedRequest.req_p_name}} </h5>
-                                <h5> Phone : {{selectedRequest.req_p_phone}}</h5>
-                                <h5> Test : {{selectedRequest.req_test}} </h5>
 
+                        <div class="row justify-content-md-center mb-2">
+                            <div class=" col-1  img-r">
+                                <img src="../../../assets/img/Group 3235.svg" class="img-fluid">
+                            </div>
+                            <div class="col-auto title-r">
+                                <span>Patient Medical Info </span>
                             </div>
                         </div>
+
+                        <div class="row ml-3 mt-2">
+                            <div class="col-md-10">
+                                <h5><span>patient Medicine : </span>----------------- </h5>
+                                <h5>patient Requests : <span class="rrrr">-----------------------------------</span></h5>
+                            </div>
+                        </div>
+
+                        <hr class="solid">
+
+                        <div class="row justify-content-md-center  mb-2">
+                            <div class=" col-1  img-r">
+                                <img src="../../../assets/img/test.svg" class="img-fluid">
+                            </div>
+                            <div class="col-auto title-r">
+                                <span> Medical Test Info. </span>
+                            </div>
+                        </div>
+
+                        <div class="row ml-3 mt-2">
+                            <div class="col-md-6">
+                                <h5><span> Medical Category : </span> ----------</h5>
+                                <h5><span> Medical Name :  </span> ----------</h5>
+                                <h5><span> Medical Period : </span> ----------</h5>
+                            </div>
+                            <div class="col-md-6">
+                                <h5><span> Medical Perice :  </span> ----------</h5>
+                                <h5><span> Medical Desc : </span> ----------</h5>
+                            </div>
+                        </div>
+
+
                     </div>
+
+
 
                     <div class="contaniner-fluid mt-5">
                         <div class="row">
-                            <div class="col-md-6">
+                            <div class="col">
+                                <button type="button" class="btn btn-light btn-lg btn-block" data-dismiss="modal">Pending <i class="fas fa-chevron-right"></i> </button>
+                            </div>
+                            <div class="col">
                                 <button type="button" class="btn btn-danger btn-lg btn-block" data-dismiss="modal">rejection</button>
                             </div>
-                            <div class="col-md-6">
+                            <div class="col">
                                 <button type="button" class="btn btn-primary btn-lg btn-block" data-dismiss="modal">Accept</button>
                             </div>
                         </div>
                     </div>
 
                 </div>
+                <!------------------------------------------------------>
             </div>
+            <!------------------------
+            <div class="modal-body">
+                <div class="contaniner-fluid">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h5>Name : {{selectedRequest.req_p_name}} </h5>
+                            <h5> Phone : {{selectedRequest.req_p_phone}}</h5>
+                            <h5> Test : {{selectedRequest.req_test}} </h5>
+                            <h5>Status : {{selectedRequest.req_status}}</h5>
+                        </div>
+                        <div class="col-md-6">
+                            <h5>Name : {{selectedRequest.req_p_name}} </h5>
+                            <h5> Phone : {{selectedRequest.req_p_phone}}</h5>
+                            <h5> Test : {{selectedRequest.req_test}} </h5>
+                        </div>
+                        >>>>>>> f14104e883d01bd03569d3875a6f864e4ccaff61
+                    </div>
+
+                    <hr class="solid">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <h5>Name : {{selectedRequest.req_p_name}} </h5>
+                            <h5> Phone : {{selectedRequest.req_p_phone}}</h5>
+                            <h5> Test : {{selectedRequest.req_test}} </h5>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contaniner-fluid mt-5">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <button type="button" (click)="RejectedStatus()" class="btn btn-danger btn-lg btn-block" data-dismiss="modal">Reject</button>
+                        </div>
+                        <div class="col-md-6">
+                            <button (click)="AcceptedStatus()" type="button" class="btn btn-primary btn-lg btn-block" data-dismiss="modal">Accept</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+--->
+
         </div>
+    </div>
+
+
+    <!--
+    <ng-template #deleteModel let-modal>
+      <div class="modal-header">
+        <h4 class="modal-title" id="modal-title"> Request Deletion</h4>
+        <button type="button" class="close" aria-describedby="modal-title" (click)="modal.dismiss('Cross click')">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>hhh</p>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-secondary" (click)="modal.dismiss('cancel click')">Cancel</button>
+        <button type="button" class="btn btn-danger" (click)="modal.dismiss('Ok click')">Ok</button>
+
+      </div>
+
+
+    </ng-template> -->

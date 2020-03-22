@@ -1,3 +1,26 @@
 hr.solid {
     border-top: 3px solid #bbb;
 }
+
+.img-r {
+    padding-right: 2px;
+}
+
+.img-r img {
+    height: 40px;
+}
+
+.title-r {
+    padding-top: 4px;
+    padding-left: 0px;
+}
+
+.title-r span {
+    font-size: 20px;
+}
+
+.rrrr {
+    color: brown;
+    padding: 2px;
+    border-left: 3px solid #555;
+}
