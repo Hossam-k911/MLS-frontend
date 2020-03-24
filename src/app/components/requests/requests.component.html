@@ -10,8 +10,10 @@
                 <th>Date</th>
                 <th>Medical Analysis</th>
                 <th>Show</th>
-                <th>Edit</th>
                 <th>Delete</th>
+                <th></th>
+                <th>status</th>
+                <th></th>
 
             </tr>
         </thead>
@@ -26,20 +28,29 @@
                 <td>
 
                     <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-primary" (click)="getcurrentRowData(p)" data-toggle="modal" data-target=".bd-example-modal-lg">Check</button>
+                    <button type="button" class="btn btn-primary px-4" (click)="getcurrentRowData(p)" data-toggle="modal" data-target=".bd-example-modal-lg ">Check</button>
 
-                </td>
-                <td>
-                    <button type="button" class="btn btn-success">
-            Edit
-          </button>
                 </td>
 
 
                 <td>
-                    <button (click)="deleteRequest(p.req_p_id,p._id)" type="button" class="btn btn-danger">
+                    <button (click)="deleteRequest(p.req_p_id,p._id)" type="button" disabled class="btn btn-outline-danger ">
             Delete
           </button>
+                </td>
+
+
+                <td>
+                    <button class="status btn " disabled><i style=" color:#239B56 " class="fas fa-check-circle i-status"></i></button>
+                </td>
+
+                <td>
+                    <button class="status btn  " disabled><i style=" color:#922B21" class="fas fa-times i-status"></i> </button>
+                </td>
+
+
+                <td>
+                    <button class="status btn  " disabled><i style=" color:#F4D03F" class="fas fa-level-up-alt i-status"></i></button>
                 </td>
 
             </tr>
@@ -128,19 +139,7 @@
 
 
 
-                    <div class="contaniner-fluid mt-5">
-                        <div class="row">
-                            <div class="col">
-                                <button type="button" class="btn btn-light btn-lg btn-block" data-dismiss="modal">Pending <i class="fas fa-chevron-right"></i> </button>
-                            </div>
-                            <div class="col">
-                                <button type="button" class="btn btn-danger btn-lg btn-block" data-dismiss="modal">rejection</button>
-                            </div>
-                            <div class="col">
-                                <button type="button" class="btn btn-primary btn-lg btn-block" data-dismiss="modal">Accept</button>
-                            </div>
-                        </div>
-                    </div>
+
 
                 </div>
                 <!------------------------------------------------------>

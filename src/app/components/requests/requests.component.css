@@ -24,3 +24,18 @@ hr.solid {
     padding: 2px;
     border-left: 3px solid #555;
 }
+
+.status {
+    height: 40px;
+    width: 40px;
+    cursor: default;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.i-status {
+    font-size: 25px;
+}
