@@ -26,9 +26,8 @@ hr.solid {
 }
 
 .status {
-    height: 40px;
+    height: 35px;
     width: 40px;
-    cursor: default;
     border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
@@ -37,5 +36,26 @@ hr.solid {
 }
 
 .i-status {
-    font-size: 25px;
+    font-size: 20px;
+    color: rgb(144, 142, 142);
+    transition: all 0.4s;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -ms-transition: all 0.4s;
+    -o-transition: all 0.4s;
+}
+
+.i-status:hover {
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    color: darkblue;
+}
+
+.b-mod {
+    width: 100%;
+    height: 60px;
+    background-color: #39c8ba;
 }
