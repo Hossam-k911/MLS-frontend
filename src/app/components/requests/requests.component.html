@@ -26,7 +26,7 @@
         <td>
 
           <!-- Button trigger modal -->
-          <button type="button" class="btn btn-primary" (click)="getcurrentRowData(p)" data-toggle="modal"
+          <button  type="button" class="btn btn-primary" (click)="getcurrentRowData(p)" data-toggle="modal"
             data-target=".bd-example-modal-lg">Check</button>
 
         </td>
@@ -34,7 +34,7 @@
 
 
         <td>
-          <button (click)="deleteRequest(p.req_p_id,p._id)" type="button" class="btn btn-danger">
+          <button  (click)="deleteRequest(p.req_p_id,p._id)" type="button" class="btn btn-danger">
             Delete
           </button>
         </td>
@@ -95,7 +95,7 @@
             <div class="row ml-3 mt-2">
               <div class="col-md-10">
                 <h5><span>patient Medicine : </span>{{patientData.medicines_name}}</h5>
-                <h5>patient Requests : <span class="rrrr"></span>{{patientData.requests_name}}</h5>
+
                 <h5>patient Answers : <span class="rrrr"></span>{{selectedRequest.req_answers}}</h5>
 
               </div>
