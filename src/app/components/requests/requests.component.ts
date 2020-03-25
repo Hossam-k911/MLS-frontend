@@ -98,7 +98,7 @@ export class RequestsComponent implements OnInit {
   }
 
   // Request Deletion
-  deleteRequest(data) {
+  deleteRequest() {
     const { req_id, p_id } = this
     const reqData = { req_id, p_id }
     this.myAdminAuthService.deleteRequest(reqData).subscribe((response: any) => {
