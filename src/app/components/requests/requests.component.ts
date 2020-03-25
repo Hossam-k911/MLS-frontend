@@ -23,6 +23,7 @@ export class RequestsComponent implements OnInit {
   req_status: any = ''
   accepted_status: string = 'Accepted';
   rejected_status: string = 'Rejected';
+  pending_status: string = 'Pending';
 
   req_id: any = ''
   p_id: any = ''
@@ -71,6 +72,18 @@ export class RequestsComponent implements OnInit {
 
 
   }
+  PendingStatus() {
+    const { req_id, req_status } = this
+    const data = {
+      req_id, req_status
+    }
+    this.myAdminAuthService.statusChange(data).subscribe((response: any) => {
+      this.req_status = this.pending_status;
+      console.log(req_status);
+    })
+
+
+  }
   RejectedStatus() {
     const { req_id, req_status } = this
     const data = {
@@ -78,6 +91,7 @@ export class RequestsComponent implements OnInit {
     }
     this.myAdminAuthService.statusChange(data).subscribe((response: any) => {
       this.req_status = this.rejected_status;
+      console.log(req_status);
 
     })
 
@@ -92,8 +106,8 @@ export class RequestsComponent implements OnInit {
     })
   }
 
-  
-  
+
+
 
 
 
