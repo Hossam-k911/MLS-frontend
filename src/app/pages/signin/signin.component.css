@@ -1,47 +1,48 @@
 .fo {
-  border: 3px solid rgba(79, 194, 89, 0.918);
-  box-shadow: 1px 1px rgba(79, 194, 89, 0.918);
-  border-radius: 4%;
+    border: 3px solid rgba(79, 194, 89, 0.918);
+    box-shadow: 1px 1px rgba(79, 194, 89, 0.918);
+    border-radius: 4%;
 }
 
 .wave {
-  width: 100%;
-  height: 138px;
+    margin-top: 70px;
+    width: 100%;
+    height: 138px;
 }
 
 .pic-wave {
-  width: 100%;
-  height: 100%;
+    width: 100%;
+    height: 100%;
 }
 
 .colom-right {
-  height: 450px;
-  margin: auto;
-  position: relative;
+    height: 450px;
+    margin: auto;
+    position: relative;
 }
 
 .pic-one {
-  width: 100%;
-  position: absolute;
+    width: 100%;
+    position: absolute;
 }
 
 .pic-two {
-  width: 20%;
-  position: absolute;
-  bottom: 20px;
-  left: 30%;
+    width: 20%;
+    position: absolute;
+    bottom: 20px;
+    left: 30%;
 }
 
 .pic-three {
-  width: 20%;
-  position: absolute;
-  bottom: 20px;
-  right: 30px;
+    width: 20%;
+    position: absolute;
+    bottom: 20px;
+    right: 30px;
 }
 
 .pic-four {
-  width: 15%;
-  position: absolute;
-  bottom: 10px;
-  left: 10%;
+    width: 15%;
+    position: absolute;
+    bottom: 10px;
+    left: 10%;
 }
