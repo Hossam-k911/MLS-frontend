@@ -1,7 +1,9 @@
+//imports
 import { Component, OnInit } from '@angular/core';
 import { AdminAuthService } from 'src/app/services/admin-auth.service';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms'
+//configurations
 @Component({
   selector: 'app-requests',
   templateUrl: './requests.component.html',
@@ -16,27 +18,33 @@ export class RequestsComponent implements OnInit {
     public fb: FormBuilder
   ) { }
 
-  requests: any
 
+  // Initialization
+  requests: any
   selectedRequest: any = {}
   patientData: any = {}
   req_status: any = ''
   accepted_status: string = 'Accepted';
   rejected_status: string = 'Rejected';
   pending_status: string = 'Pending';
-
   req_id: any = ''
   p_id: any = ''
 
+
+
+  // Getting Requests and fill in table
+  ngOnInit() {
+    this.myAdminAuthService.getRequests().subscribe((response: any) => {
+      this.requests = response;
+
+    })
+
+  }
+
   getcurrentRowData(row) {
-
-
     this.selectedRequest = row;
     this.req_id = row._id;
     this.p_id = row.req_p_id;
-
-
-
     this.getPatientData(row._id)
   }
 
@@ -51,16 +59,8 @@ export class RequestsComponent implements OnInit {
     console.log(this.patientData)
   }
 
-  // Getting Requests and fill in table
-  ngOnInit() {
-    this.myAdminAuthService.getRequests().subscribe((response: any) => {
-      this.requests = response;
 
-    })
-
-  }
-
-  //Accepting and rejection status
+  //(accept-penting-reject ) status
   AcceptedStatus() {
     const { req_id, req_status } = this
     const data = {
@@ -68,6 +68,10 @@ export class RequestsComponent implements OnInit {
     }
     this.myAdminAuthService.statusChange(data).subscribe((response: any) => {
       this.req_status = this.accepted_status;
+      this.ngOnInit();
+      // console.log(this.req_status);
+
+
     })
 
 
@@ -79,7 +83,9 @@ export class RequestsComponent implements OnInit {
     }
     this.myAdminAuthService.statusChange(data).subscribe((response: any) => {
       this.req_status = this.pending_status;
-      console.log(req_status);
+      this.ngOnInit();
+      // console.log(this.req_status);
+      // this.ngOnInit();
     })
 
 
@@ -91,7 +97,10 @@ export class RequestsComponent implements OnInit {
     }
     this.myAdminAuthService.statusChange(data).subscribe((response: any) => {
       this.req_status = this.rejected_status;
-      console.log(req_status);
+      this.ngOnInit();
+      // console.log(this.req_status);
+      // this.ngOnInit();
+
 
     })
 
