@@ -1,41 +1,33 @@
-<div class="container-fluid" style="display: inline;">
-    <div class="row">
-        <nav class="col-md-2 d-none d-md-block bg-light sidebar">
-            <div class="sidebar-sticky">
-                <ul class="nav flex-column">
+<nav>
+    <div class="containar fluid">
+        <div class="row">
+            <div class=" col-2 ">
+                <div class="sileder">
+                    <ul>
+                        <li class="item">
+                            <a class="nav-link mt-4" [routerLink]="['/home/patients']">
+                                <i class="far fa-user sileder-icon"> </i> Patients
+                            </a>
+                        </li>
+                        <li class="item">
+                            <a class="nav-link" [routerLink]="['/home/requests']">
+                                <i class="far fa-question-circle sileder-icon"></i> Requests
+                            </a>
+                        </li>
+                        <li class="item">
+                            <a class="nav-link" [routerLink]="['/home/Medicines']">
+                                <i class="far fa-file-alt sileder-icon"></i> Medicines
+                            </a>
+                        </li>
+                        <li class="item">
+                            <a class="nav-link" [routerLink]="['/home/hospital']">
+                                <i class="far fa-hospital sileder-icon"></i> Hospital
+                            </a>
+                        </li>
+                    </ul>
 
-                    <li class="nav-item">
-                        <a class="nav-link " [routerLink]="['/home/patients']">
-                             Patients
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" [routerLink]="['/home/requests']">
-                             Requests
-                        </a>
-                    </li>
-
-
-                    <li class="nav-item">
-                        <a class="nav-link" [routerLink]="['/home/Medicines']">
-                             Medicines
-                        </a>
-                    </li>
-
-
-
-                    <li class="nav-item">
-                        <a class="nav-link" [routerLink]="['/home/hospital']">
-                            Hospital
-                        </a>
-                    </li>
-
-                </ul>
-
-
-
+                </div>
             </div>
-        </nav>
-
+        </div>
     </div>
-</div>
+</nav>

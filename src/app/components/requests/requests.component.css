@@ -57,5 +57,11 @@ hr.solid {
 .b-mod {
     width: 100%;
     height: 60px;
-    background-color: #39c8ba;
+    background-color: #19769f;
+}
+
+.sppp {
+    margin: 5px;
+    font-size: 22px;
+    color: darkslategray;
 }
