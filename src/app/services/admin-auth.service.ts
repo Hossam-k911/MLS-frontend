@@ -16,7 +16,7 @@ export class AdminAuthService {
       // " Access-Control-Allow-Origin": "*"
       // 'cors': 'Access-Control-Allow-Origin'
     }),
-    withCredentials: true,
+    // withCredentials: true,
 
   };
   constructor(public myHttpClient: HttpClient) { }
@@ -76,10 +76,9 @@ export class AdminAuthService {
     return this.myHttpClient.post(this.BASE_URL + '/addmedicine', JSON.stringify(data), this.httpOptions)
   }
   deleteMedicine(data) {
-
+    console.log("id : ", data);
     return this.myHttpClient.post(this.BASE_URL + '/delmedicine', JSON.stringify(data), this.httpOptions)
   }
-
 
 
 }

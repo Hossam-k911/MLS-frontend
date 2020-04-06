@@ -8,6 +8,7 @@ import { AdminAuthService } from "../../services/admin-auth.service";
 })
 export class MedicinesComponent implements OnInit {
   medicinesData: any;
+  m_id: any;
   constructor(public myAdminAuthService: AdminAuthService) { }
 
   ngOnInit() {
@@ -22,12 +23,18 @@ export class MedicinesComponent implements OnInit {
   }
   //delete medicine
   deleteMedicine(data) {
-    debugger;
-    this.myAdminAuthService.deleteMedicine(data).subscribe((Response: any) => {
+    this.m_id = data
+    const { m_id } = this
+    const reqData = { m_id };
+    // console.log(m_id)
+    this.myAdminAuthService.deleteMedicine(reqData).subscribe((Response: any) => {
       console.log(Response);
+      this.ngOnInit()
     },
       err => {
+
         console.log(err);
+        // console.log('Error response');
       }
 
 
