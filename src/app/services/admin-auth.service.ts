@@ -12,7 +12,7 @@ export class AdminAuthService {
   public httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json',
-      'x-auth-token': this.token,
+      // 'x-auth-token': this.token,
       // " Access-Control-Allow-Origin": "*"
       // 'cors': 'Access-Control-Allow-Origin'
     }),
@@ -70,6 +70,14 @@ export class AdminAuthService {
   editRequest(data) {
 
     return this.myHttpClient.put(this.BASE_URL + '/editreq', JSON.stringify(data), this.httpOptions)
+  }
+  addMedicine(data) {
+
+    return this.myHttpClient.post(this.BASE_URL + '/addmedicine', JSON.stringify(data), this.httpOptions)
+  }
+  deleteMedicine(data) {
+
+    return this.myHttpClient.post(this.BASE_URL + '/delmedicine', JSON.stringify(data), this.httpOptions)
   }
 
 

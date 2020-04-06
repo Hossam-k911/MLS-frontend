@@ -8,11 +8,30 @@ import { AdminAuthService } from "../../services/admin-auth.service";
 })
 export class MedicinesComponent implements OnInit {
   medicinesData: any;
-  constructor(public myAdminAuthService: AdminAuthService) {}
+  constructor(public myAdminAuthService: AdminAuthService) { }
 
   ngOnInit() {
+    this.getMedicines();
+  }
+  //getMedicines
+  getMedicines() {
     this.myAdminAuthService.getMediciensinfo().subscribe((Response: any) => {
       this.medicinesData = Response;
     });
+
+  }
+  //delete medicine
+  deleteMedicine(data) {
+    debugger;
+    this.myAdminAuthService.deleteMedicine(data).subscribe((Response: any) => {
+      console.log(Response);
+    },
+      err => {
+        console.log(err);
+      }
+
+
+    )
+
   }
 }
