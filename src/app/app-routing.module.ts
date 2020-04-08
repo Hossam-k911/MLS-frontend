@@ -7,45 +7,44 @@ import { PatientsComponentComponent } from "./components/patients-component/pati
 import { RequestsComponent } from "./components/requests/requests.component";
 import { HospitalComponent } from "./components/hospital/hospital.component";
 import { MedicinesComponent } from "./components/medicines-list/medicines.component";
-import { AddMedicineComponent } from './components/add-medicine/add-medicine.component';
-import { EditMedicineComponent } from './components/edit-medicine/edit-medicine.component';
+import { AddMedicineComponent } from "./components/add-medicine/add-medicine.component";
+import { EditMedicineComponent } from "./components/edit-medicine/edit-medicine.component";
 
 const routes: Routes = [
   {
-    path: '',
+    path: "",
     component: SigninComponent
   },
   {
-    path: 'signin',
+    path: "signin",
     component: SigninComponent
   },
   {
-    path: 'home',
+    path: "home",
     component: DashboardComponent,
     children: [
-      { path: 'patients', component: PatientsComponentComponent },
-      { path: 'requests', component: RequestsComponent },
-      { path: 'hospital', component: HospitalComponent },
+      { path: "patients", component: PatientsComponentComponent },
+      { path: "requests", component: RequestsComponent },
+      { path: "hospital", component: HospitalComponent },
       {
-        path: 'Medicines', component: MedicinesComponent
+        path: "Medicines",
+        component: MedicinesComponent
       },
-      { path: 'addmedicine', component: AddMedicineComponent },
-      { path: 'editmedicine/:id', component: EditMedicineComponent }
+      { path: "addmedicine", component: AddMedicineComponent },
 
-
-
+      { path: "editmedicine/:id", component: EditMedicineComponent }
     ]
   },
 
   {
-    path: 'error',
+    path: "error",
     component: ErrorComponent
   },
-  { path: '**', redirectTo: 'error' }
+  { path: "**", redirectTo: "error" }
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes, { enableTracing: true })],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
