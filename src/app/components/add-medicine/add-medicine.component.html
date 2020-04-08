@@ -1,1 +1,38 @@
-<p>add-medicine works!</p>
+<section>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <button [routerLink]="['../Medicines']" class="btn btn-light b-back mt-2 "> <i
+                        class="fas fa-arrow-left pr-2"></i>Back</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 col-12 mt-4 ">
+                <form id="form-medicine" class="form-med">
+                    <div class="form-group">
+                        <label for="Medicine"> Medicine</label>
+                        <input type="text" class="form-control" id="Medicine" name="Medicine">
+
+                        <label for="Description"> Description</label>
+                        <input type="text" class="form-control" id="Description" name="Description">
+                        <div class="row">
+                            <div class="col">
+                                <label for="Quantity"> Description</label>
+                                <input type="number" class="form-control" placeholder=" 2 ,3 or more" id="Quantity" name="Quantity">
+                            </div>
+                            <div class="col">
+                                <label for="Price"> Price</label>
+                                <input type="number" class="form-control" id="Price" placeholder="000" name="Price">
+                            </div>
+                        </div>
+
+                    </div>
+                    <button type="submit" class="btn btn-info ">
+                        Submit
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</section>
