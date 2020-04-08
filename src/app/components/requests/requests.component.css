@@ -65,3 +65,7 @@ hr.solid {
     font-size: 22px;
     color: darkslategray;
 }
+
+.modal-title {
+    color: #fff !important;
+}
