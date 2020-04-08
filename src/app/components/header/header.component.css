@@ -1,52 +1,52 @@
 .container-fluid {
-    background-color: #19769f;
-    padding-bottom: 10px;
+  background-color: #19769f;
+  padding-bottom: 10px;
 }
 
 .logo {
-    color: blanchedalmond;
-    padding: 0px 10px;
-    font-family: "Anton", sans-serif;
+  color: blanchedalmond;
+  padding: 0px 10px;
+  font-family: "Anton", sans-serif;
 }
 
 .smal {
-    position: absolute;
-    top: 40px;
-    left: 59%;
+  position: absolute;
+  top: 40px;
+  left: 59%;
 }
 
 .search-box {
-    background-color: #fff;
-    height: 50px;
-    width: 100%;
-    padding: 0px 10px 0px 5px;
-    border-radius: 20px;
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    -ms-border-radius: 20px;
-    -o-border-radius: 20px;
-    overflow: hidden;
+  background-color: #fff;
+  height: 50px;
+  width: 100%;
+  padding: 0px 10px 0px 5px;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  overflow: hidden;
 }
 
 .input {
-    padding: 0px;
-    border: none;
-    width: 90%;
-    height: 100%;
+  padding: 0px;
+  border: none;
+  width: 90%;
+  height: 100%;
 }
 
 .searsh-icon {
-    color: #19769f;
-    font-size: 20px;
-    padding-left: 20px;
+  color: #19769f;
+  font-size: 20px;
+  padding-left: 20px;
 }
 
 .btn-logout {
-    height: 45px;
-    width: 110px;
-    border-radius: 20px;
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    -ms-border-radius: 20px;
-    -o-border-radius: 20px;
+  height: 45px;
+  width: 110px;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
 }

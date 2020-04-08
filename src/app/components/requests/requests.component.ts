@@ -55,7 +55,6 @@ export class RequestsComponent implements OnInit {
       });
     console.log(this.patientData);
   }
-
   //(accept-penting-reject ) status
   AcceptedStatus() {
     const { req_id, req_status } = this;

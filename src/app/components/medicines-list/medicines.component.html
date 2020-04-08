@@ -39,7 +39,8 @@
               <a href="#" class="btn btn-default text primary" [routerLink]="['']"> <i class="fa fa-eye"></i></a>
               <a href="#" class="btn btn-default text success" [routerLink]="['../editmedicine',m._id]"> <i
                   class="fa fa-edit"></i></a>
-              <a href="javascript:;" class="btn btn-default text-danger" data-toggle="modal" data-target="#delModal">
+              <a href="javascript:;" (click)="matchId(m._id)" class="btn btn-default text-danger" data-toggle="modal"
+                data-target="#delModal">
                 <i class="fas fa-trash"></i></a>
 
 
@@ -59,15 +60,12 @@
                     </div>
                     <div class="modal-footer">
                       <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
-                      <button type="button" (click)="deleteMedicine(m._id)" data-dismiss="modal"
+                      <button type="button" (click)="deleteMedicine()" data-dismiss="modal"
                         class="btn btn-primary">Delete</button>
                     </div>
                   </div>
                 </div>
               </div>
-
-
-
 
             </td>
           </tr>

@@ -28,7 +28,7 @@
         <td>
 
           <!-- Button trigger modal -->
-          <button type="button" class="btn btn-primary px-4" (click)="getcurrentRowData(p,p._id)" data-toggle="modal"
+          <button type="button" class="btn btn-primary px-4" (click)="getcurrentRowData(p)" data-toggle="modal"
             data-target=".bd-example-modal-lg ">Check</button>
 
         </td>
@@ -55,7 +55,7 @@
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
-                  <button type="button" (click)="deleteRequest(p._id,selectedRequest._id)" data-dismiss="modal"
+                  <button type="button" (click)="deleteRequest()" data-dismiss="modal"
                     class="btn btn-primary">Delete</button>
                 </div>
               </div>
@@ -152,7 +152,7 @@
     <div class="modal-dialog modal-lg" role="document">
       <div class="modal-content">
         <div class="modal-header" style="background-color: #19769F
-                ; ">
+              ; ">
           <h5 class="modal-title" style="margin-left: auto;"> Time : {{selectedRequest.req_time}} Date :
             {{selectedRequest.req_date}}
           </h5>
@@ -172,7 +172,7 @@
             </div>
             <div class="row ml-3 mt-2 ">
 
-              <div class="col-md-5  ">
+              <div class="col-md-7  ">
                 <h5>Name : {{selectedRequest.req_p_name}} </h5>
                 <h5> Phone : {{selectedRequest.req_p_phone}}</h5>
                 <h5> Email : {{patientData.email}} </h5>
@@ -257,22 +257,22 @@
 
 
   <!--
-    <ng-template #deleteModel let-modal>
-      <div class="modal-header">
-        <h4 class="modal-title" id="modal-title"> Request Deletion</h4>
-        <button type="button" class="close" aria-describedby="modal-title" (click)="modal.dismiss('Cross click')">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <p>hhh</p>
+  <ng-template #deleteModel let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-title"> Request Deletion</h4>
+      <button type="button" class="close" aria-describedby="modal-title" (click)="modal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <p>hhh</p>
 
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-outline-secondary" (click)="modal.dismiss('cancel click')">Cancel</button>
-        <button type="button" class="btn btn-danger" (click)="modal.dismiss('Ok click')">Ok</button>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-outline-secondary" (click)="modal.dismiss('cancel click')">Cancel</button>
+      <button type="button" class="btn btn-danger" (click)="modal.dismiss('Ok click')">Ok</button>
 
-      </div>
+    </div>
 
 
-    </ng-template> -->
+  </ng-template> -->

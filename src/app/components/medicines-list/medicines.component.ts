@@ -21,9 +21,14 @@ export class MedicinesComponent implements OnInit {
     });
 
   }
+  matchId(id) {
+    this.m_id = id;
+    console.log(this.m_id)
+    console.log(id);
+  }
   //delete medicine
-  deleteMedicine(data) {
-    this.m_id = data
+  deleteMedicine() {
+    // this.m_id = data
     const { m_id } = this
     const reqData = { m_id };
     // console.log(m_id)

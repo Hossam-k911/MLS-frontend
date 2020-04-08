@@ -26,6 +26,7 @@ export class SigninComponent implements OnInit {
       case 'password': { this.password = text; break; }
 
     }
+
   }
 
   handleSignIn() {
