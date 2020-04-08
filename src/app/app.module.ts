@@ -15,9 +15,11 @@ import { HeaderComponent } from './components/header/header.component';
 import { SideBarComponent } from './components/side-bar/side-bar.component';
 import { RequestsComponent } from './components/requests/requests.component';
 import { HospitalComponent } from './components/hospital/hospital.component';
-import { MedicinesComponent } from './components/medicines/medicines.component';
+import { MedicinesComponent } from './components/medicines-list/medicines.component';
 // import { ToastrModule, ToastContainerModule } from 'ngx-toastr'
-import { ReactiveFormsModule } from '@angular/forms'
+import { ReactiveFormsModule } from '@angular/forms';
+import { AddMedicineComponent } from './components/add-medicine/add-medicine.component'
+import { EditMedicineComponent } from './components/edit-medicine/edit-medicine.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,9 @@ import { ReactiveFormsModule } from '@angular/forms'
     SideBarComponent,
     RequestsComponent,
     HospitalComponent,
-    MedicinesComponent
+    MedicinesComponent,
+    AddMedicineComponent,
+    EditMedicineComponent
   ],
   imports: [
     BrowserModule,
