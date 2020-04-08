@@ -1,8 +1,7 @@
 //imports
 import { Component, OnInit } from "@angular/core";
 import { AdminAuthService } from "src/app/services/admin-auth.service";
-import { NgbModal } from "@ng-bootstrap/ng-bootstrap";
-import { FormGroup, FormBuilder, Validators } from "@angular/forms";
+
 //configurations
 declare var $: any;
 @Component({
@@ -11,13 +10,11 @@ declare var $: any;
   styleUrls: ["./requests.component.css"]
 })
 export class RequestsComponent implements OnInit {
-  editForm: FormGroup;
-  submitted: boolean;
+
   constructor(
     public myAdminAuthService: AdminAuthService,
-    public modelService: NgbModal,
-    public fb: FormBuilder
-  ) {}
+
+  ) { }
 
   // Initialization
   requests: any;
@@ -32,11 +29,13 @@ export class RequestsComponent implements OnInit {
 
   // Getting Requests and fill in table
   ngOnInit() {
+    this.getRequests();
+  }
+  getRequests() {
     this.myAdminAuthService.getRequests().subscribe((response: any) => {
       this.requests = response;
     });
   }
-
   getcurrentRowData(row) {
     this.selectedRequest = row;
     this.req_id = row._id;
