@@ -11,25 +11,28 @@
         <form id="form-medicine" class="form-med">
           <div class="form-group">
             <label for="Medicine"> Medicine</label>
-            <input type="text" id="name" class="form-control" name=" Medicine">
+            <input type="text" id="name" class="form-control" name=" Medicine" value="{{medicineInfo.medicine_Name}}"
+              (keyup)="handleTextInput($event)">
 
             <label for="Description"> Description</label>
             <input type="text" id="description" class="form-control" name="
-              Description">
-            <div class="row">
+              Description" value="{{medicineInfo.medicine_Description}}" (keyup)="handleTextInput($event)">
+            <div class=" row">
               <div class="col">
                 <label for="Quantity"> Quantity</label>
                 <input type="number" id="quantity" class="form-control" placeholder=" 2
-                  ,3 or more" name="Quantity">
+                  ,3 or more" name="Quantity" value="{{medicineInfo.medicine_Quantity}}"
+                  (keyup)="handleTextInput($event)">
               </div>
-              <div class="col">
+              <div class=" col">
                 <label for="Price"> Price</label>
-                <input type="number" id="price" class="form-control" placeholder=" 000" name="Price">
+                <input type="number" id="price" class="form-control" placeholder=" 000" name="Price"
+                  value="{{medicineInfo.medicine_Price}}" (keyup)="handleTextInput($event)">
               </div>
             </div>
 
           </div>
-          <button type="submit" class="btn btn-info ">
+          <button type=" submit" class="btn btn-info " (click)="onSubmit()">
             Submit
           </button>
         </form>
