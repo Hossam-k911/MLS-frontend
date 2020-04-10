@@ -2,38 +2,41 @@
     box-sizing: border-box;
     list-style: none;
     text-decoration: none;
+    padding: 0;
+    margin: 0;
 }
 
 .sileder {
-    margin-top: 3px;
+    margin-top: 2px;
     position: fixed;
     height: 99%;
-    width: 15%;
+    width: 13%;
     background-color: #19769f;
     border-bottom-right-radius: 20px;
     border-top-right-radius: 20px;
 }
 
 .item {
-    font-size: 22px;
-    padding: 8px 0px;
+    font-size: 20px;
+    padding: 10px 0px;
     border-bottom: solid 1px #fff;
 }
 
 .nav-link {
     color: #fff;
-    transition: all 0.5s;
-    -webkit-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    -ms-transition: all 0.5s;
-    -o-transition: all 0.5s;
+    transition: all 0.1s;
+    -webkit-transition: all 0.1s;
+    -moz-transition: all 0.1s;
+    -ms-transition: all 0.1s;
+    -o-transition: all 0.1s;
 }
 
 .sileder-icon {
+    margin-left: 10px;
     font-size: 20px;
     color: #fff;
 }
 
 .nav-link:hover {
-    color: rgb(214, 210, 191);
+    color: rgb(199, 196, 184);
 }
