@@ -75,6 +75,15 @@ export class AdminAuthService {
 
     return this.myHttpClient.post(this.BASE_URL + '/addmedicine', JSON.stringify(data), this.httpOptions)
   }
+  editMedicine(data, id) {
+
+    return this.myHttpClient.put(this.BASE_URL + `/editmedicine/${id} `, JSON.stringify(data), this.httpOptions)
+  }
+  getMedicine(id) {
+
+    return this.myHttpClient.get(this.BASE_URL + `/getMedicinebyid/${id} `, this.httpOptions)
+  }
+
   deleteMedicine(data) {
     console.log("id : ", data);
     return this.myHttpClient.post(this.BASE_URL + '/delmedicine', JSON.stringify(data), this.httpOptions)
