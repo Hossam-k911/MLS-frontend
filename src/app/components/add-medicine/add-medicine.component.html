@@ -1,41 +1,45 @@
 <section>
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col">
-        <button [routerLink]="['../Medicines']" class="btn btn-light b-back mt-2 "> <i
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <button [routerLink]="['../Medicines']" class="btn btn-light b-back mt-2 "> <i
             class="fas fa-arrow-left pr-2"></i>Back</button>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-12 col-12 mt-4 ">
-        <form id="form-medicine" class="form-med">
-          <div class="form-group">
-            <label for="Medicine"> Medicine</label>
-            <input type="text" id="name" class="form-control" (keyup)="handleTextInput($event)" name=" Medicine">
-
-            <label for="Description"> Description</label>
-            <input type="text" id="description" class="form-control" (keyup)="handleTextInput($event)" name="
-              Description">
-            <div class="row">
-              <div class="col">
-                <label for="Quantity"> Quantity</label>
-                <input type="number" id="quantity" class="form-control" (keyup)="handleTextInput($event) " placeholder=" 2
-                  ,3 or more" name="Quantity">
-              </div>
-              <div class="col">
-                <label for="Price"> Price</label>
-                <input type="number" id="price" class="form-control" (keyup)="handleTextInput($event)"
-                  placeholder=" 000" name="Price">
-              </div>
             </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 col-12 mt-4 ">
+                <form id="form-medicine" class="form-med">
+                    <div class="form-group">
+                        <label for="Medicine"> Medicine</label>
+                        <input type="text" id="name" class="form-control" (keyup)="handleTextInput($event)" name=" Medicine">
 
-          </div>
-          <button type="submit" class="btn btn-info " (click)="onSubmit()">
+                        <label for="Description"> Description</label>
+                        <input type="text" id="description" class="form-control" (keyup)="handleTextInput($event)" name="
+              Description">
+
+                        <label for="Description"> Image URL </label>
+                        <input type="text" id="imageURL" class="form-control" (keyup)="handleTextInput($event)" name="
+              Description">
+
+                        <div class="row">
+                            <div class="col">
+                                <label for="Quantity"> Quantity</label>
+                                <input type="number" id="quantity" class="form-control" (keyup)="handleTextInput($event) " placeholder=" 2
+                  ,3 or more" name="Quantity">
+                            </div>
+                            <div class="col">
+                                <label for="Price"> Price</label>
+                                <input type="number" id="price" class="form-control" (keyup)="handleTextInput($event)" placeholder=" 000" name="Price">
+                            </div>
+                        </div>
+
+                    </div>
+                    <button type="submit" class="btn btn-info " (click)="onSubmit()">
             Submit
           </button>
-        </form>
-      </div>
+                </form>
+            </div>
+        </div>
     </div>
-  </div>
 
 </section>
