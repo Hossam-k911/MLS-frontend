@@ -17,6 +17,12 @@
             <label for="Description"> Description</label>
             <input type="text" id="description" class="form-control" name="
               Description" value="{{medicineInfo.medicine_Description}}" (keyup)="handleTextInput($event)">
+            <label for="Description"> Image URL </label>
+            <input type="text" id="imageURL" class="form-control" (keyup)="handleTextInput($event)" name="
+              Description" value="{{medicineInfo.medicine_ImageUrl}}">
+
+
+            <img src="{{medicineInfo.medicine_ImageUrl}}" class="img-float">
             <div class=" row">
               <div class="col">
                 <label for="Quantity"> Quantity</label>
