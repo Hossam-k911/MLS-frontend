@@ -19,8 +19,8 @@
             <tr>
               <th scope="col">#</th>
               <th scope="col">Medicine</th>
-              <th scope="col">Description</th>
               <th scope="col">Quantity</th>
+              <th scope="col">Description</th>
               <th scope="col">Price</th>
               <th scope="col">Actions</th>
 
@@ -30,14 +30,15 @@
           <tbody>
             <tr *ngFor="let m of medicinesData let i=index;">
               <td>{{i+1}}</td>
-              <td>{{m.medicine_Name}}</td>
+              <!-- <td>{{m.medicine_Name}}</td> -->
+              <td> {{(m.medicine_Name.length >50) ? (m.medicine_Name|slice:0:50)+'...':m.medicine_Name}}</td>
               <td>{{m.medicine_Price}}</td>
               <td>
                 {{(m.medicine_Description.length >50) ? (m.medicine_Description|slice:0:50)+'...':m.medicine_Description}}
               </td>
               <td>{{m.medicine_Quantity}}</td>
               <td style="width: 180px;">
-                <a href="#" class="btn btn-default text primary" [routerLink]="['']"> <i class="fa fa-eye"></i></a>
+                <!-- <i href="#" class="btn btn-default text primary" [routerLink]="['']"> <i class="fa fa-eye"></i></a> -->
                 <a href="#" class="btn btn-default text success" [routerLink]="['../editmedicine',m._id]"> <i
                     class="fa fa-edit"></i></a>
                 <a href="javascript:;" (click)="matchId(m._id)" class="btn btn-default text-danger" data-toggle="modal"
