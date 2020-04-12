@@ -16,7 +16,7 @@ export class EditMedicineComponent implements OnInit {
   public medicine_Quantity: any
   public medicine_Price: any
   public medicine_ImageUrl: any
-
+  public medicine_Unit: any
   constructor(
     public myActivatedRoute: ActivatedRoute,
     public myRouter: Router,
@@ -49,15 +49,15 @@ export class EditMedicineComponent implements OnInit {
       case 'quantity': { this.medicine_Quantity = text; break; }
       case 'price': { this.medicine_Price = text; break; }
       case 'imageURL': { this.medicine_ImageUrl = text; break; }
-
+      case 'unit': { this.medicine_Unit = text; break; }
 
     }
     console.log(event);
   }
 
   onSubmit() {
-    const { medicine_Name, medicine_Description, medicine_Quantity, medicine_Price, medicine_ImageUrl } = this
-    const medicineData = { medicine_Name, medicine_Description, medicine_Quantity, medicine_Price, medicine_ImageUrl };
+    const { medicine_Name, medicine_Description, medicine_Quantity, medicine_Price, medicine_ImageUrl, medicine_Unit } = this
+    const medicineData = { medicine_Name, medicine_Description, medicine_Quantity, medicine_Price, medicine_ImageUrl, medicine_Unit };
 
     this.myAdminAuthService.editMedicine(medicineData, this.m_id).subscribe((Response: any) => {
       this.myRouter.navigate(['home/Medicines'])

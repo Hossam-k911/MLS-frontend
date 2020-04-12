@@ -35,6 +35,11 @@
                 <input type="number" id="price" class="form-control" placeholder=" 000" name="Price"
                   value="{{medicineInfo.medicine_Price}}" (keyup)="handleTextInput($event)">
               </div>
+              <div class="col">
+                <label for="Price"> Unit</label>
+                <input type="number" id="unit" class="form-control" (keyup)="handleTextInput($event)" placeholder=" 000"
+                  name="Price" value="{{medicineInfo.medicine_Unit}}">
+              </div>
             </div>
 
           </div>
