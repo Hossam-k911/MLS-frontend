@@ -6,9 +6,12 @@ import { ErrorComponent } from "./pages/error/error.component";
 import { PatientsComponentComponent } from "./components/patients-component/patients-component.component";
 import { RequestsComponent } from "./components/requests/requests.component";
 import { HospitalComponent } from "./components/hospital/hospital.component";
-import { MedicinesComponent } from "./components/medicines-list/medicines.component";
-import { AddMedicineComponent } from "./components/add-medicine/add-medicine.component";
-import { EditMedicineComponent } from "./components/edit-medicine/edit-medicine.component";
+import { MedicinesComponent } from "./components/Medicines/list-medicine/medicines.component";
+import { AddMedicineComponent } from "./components/Medicines/add-medicine/add-medicine.component";
+import { EditMedicineComponent } from "./components/Medicines/edit-medicine/edit-medicine.component";
+import { MedicalCategoriesComponent } from './components/Categories/list-category/medical-categories.component';
+import { AddCategoryComponent } from './components/Categories/add-category/add-category.component';
+import { EditCategoryComponent } from './components/Categories/edit-category/edit-category.component';
 
 const routes: Routes = [
   {
@@ -32,7 +35,11 @@ const routes: Routes = [
       },
       { path: "addmedicine", component: AddMedicineComponent },
 
-      { path: "editmedicine/:id", component: EditMedicineComponent }
+      { path: "editmedicine/:id", component: EditMedicineComponent },
+      { path: "category", component: MedicalCategoriesComponent },
+      { path: "addcategory", component: AddCategoryComponent },
+      { path: "editcategory/:id", component: EditCategoryComponent },
+
     ]
   },
 

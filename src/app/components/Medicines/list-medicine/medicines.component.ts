@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { AdminAuthService } from "../../services/admin-auth.service";
+import { AdminAuthService } from "../../../services/admin-auth.service";
 
 @Component({
   selector: "app-medicines",

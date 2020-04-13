@@ -57,13 +57,13 @@
                         </button>
                       </div>
                       <div class="modal-body">
-                        <span class="sppp ">Are you Sure delete request.</span>
-                        <small class="form-text text-muted">Check request before doing anything </small>
+                        <span class="sppp ">Are you Sure delete Medicine : {{m.medicine_Name}} </span>
+                        <!-- <small class="form-text text-muted">Check request before doing anything </small> -->
                       </div>
                       <div class="modal-footer">
                         <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
                         <button type="button" (click)="deleteMedicine()" data-dismiss="modal"
-                          class="btn btn-primary">Delete</button>
+                          class="btn btn-danger">Delete</button>
                       </div>
                     </div>
                   </div>

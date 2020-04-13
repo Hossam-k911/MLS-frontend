@@ -15,11 +15,14 @@ import { HeaderComponent } from './components/header/header.component';
 import { SideBarComponent } from './components/side-bar/side-bar.component';
 import { RequestsComponent } from './components/requests/requests.component';
 import { HospitalComponent } from './components/hospital/hospital.component';
-import { MedicinesComponent } from './components/medicines-list/medicines.component';
+import { MedicinesComponent } from './components/Medicines/list-medicine/medicines.component';
 // import { ToastrModule, ToastContainerModule } from 'ngx-toastr'
 import { ReactiveFormsModule } from '@angular/forms';
-import { AddMedicineComponent } from './components/add-medicine/add-medicine.component'
-import { EditMedicineComponent } from './components/edit-medicine/edit-medicine.component';
+import { AddMedicineComponent } from './components/Medicines/add-medicine/add-medicine.component'
+import { EditMedicineComponent } from './components/Medicines/edit-medicine/edit-medicine.component';
+import { MedicalCategoriesComponent } from './components/Categories/list-category/medical-categories.component';
+import { AddCategoryComponent } from './components/Categories/add-category/add-category.component';
+import { EditCategoryComponent } from './components/Categories/edit-category/edit-category.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +38,10 @@ import { EditMedicineComponent } from './components/edit-medicine/edit-medicine.
     HospitalComponent,
     MedicinesComponent,
     AddMedicineComponent,
-    EditMedicineComponent
+    EditMedicineComponent,
+    MedicalCategoriesComponent,
+    AddCategoryComponent,
+    EditCategoryComponent
   ],
   imports: [
     BrowserModule,
