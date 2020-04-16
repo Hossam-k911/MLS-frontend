@@ -13,3 +13,11 @@
 .b-back {
   padding: 8px 25px;
 }
+
+.emPic {
+  background-color: red;
+}
+.img-medUrl {
+  padding: 0px;
+  margin: 0px;
+}

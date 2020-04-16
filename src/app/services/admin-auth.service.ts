@@ -89,5 +89,12 @@ export class AdminAuthService {
     return this.myHttpClient.post(this.BASE_URL + '/delmedicine', JSON.stringify(data), this.httpOptions)
   }
 
+  listCategories() {
+
+    return this.myHttpClient.get(this.BASE_URL + `/listcategories `, this.httpOptions)
+  }
+  deleteCategory(data) {
+    return this.myHttpClient.post(this.BASE_URL + '/delcategory', JSON.stringify(data), this.httpOptions)
+  }
 
 }

@@ -67,8 +67,27 @@
                                     </div>
                                 </div>
 
+<<<<<<< HEAD:src/app/components/medicines-list/medicines.component.html
                             </td>
                         </tr>
+=======
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <span class="sppp ">Are you Sure delete Medicine : {{m.medicine_Name}} </span>
+                        <!-- <small class="form-text text-muted">Check request before doing anything </small> -->
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" (click)="deleteMedicine()" data-dismiss="modal"
+                          class="btn btn-danger">Delete</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+>>>>>>> 00b0c1629831c5068ed643e9f80cb3c5903f924f:src/app/components/Medicines/list-medicine/medicines.component.html
 
                     </tbody>
                 </table>
