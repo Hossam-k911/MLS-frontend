@@ -23,6 +23,7 @@ import { EditMedicineComponent } from './components/Medicines/edit-medicine/edit
 import { MedicalCategoriesComponent } from './components/Categories/list-category/medical-categories.component';
 import { AddCategoryComponent } from './components/Categories/add-category/add-category.component';
 import { EditCategoryComponent } from './components/Categories/edit-category/edit-category.component';
+import { AddTestComponent } from './components/Categories/add-test/add-test.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { EditCategoryComponent } from './components/Categories/edit-category/edi
     EditMedicineComponent,
     MedicalCategoriesComponent,
     AddCategoryComponent,
-    EditCategoryComponent
+    EditCategoryComponent,
+    AddTestComponent
   ],
   imports: [
     BrowserModule,

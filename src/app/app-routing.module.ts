@@ -12,6 +12,7 @@ import { EditMedicineComponent } from "./components/Medicines/edit-medicine/edit
 import { MedicalCategoriesComponent } from './components/Categories/list-category/medical-categories.component';
 import { AddCategoryComponent } from './components/Categories/add-category/add-category.component';
 import { EditCategoryComponent } from './components/Categories/edit-category/edit-category.component';
+import { AddTestComponent } from './components/Categories/add-test/add-test.component';
 
 const routes: Routes = [
   {
@@ -39,7 +40,7 @@ const routes: Routes = [
       { path: "category", component: MedicalCategoriesComponent },
       { path: "addcategory", component: AddCategoryComponent },
       { path: "editcategory/:id", component: EditCategoryComponent },
-
+      { path: "addtest/:id", component: AddTestComponent }
     ]
   },
 

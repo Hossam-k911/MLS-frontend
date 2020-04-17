@@ -20,32 +20,26 @@ export class MedicalCategoriesComponent implements OnInit {
   listCategories() {
     this.myAdminAuthService.listCategories().subscribe((Response: any) => {
       this.category = Response;
-      console.log(this.category);
+
     })
   }
 
   matchId(id) {
     this.cat_id = id;
-    console.log(this.cat_id)
-    console.log(id);
   }
   deleteCategory() {
     // this.m_id = data
     const { cat_id } = this
     const reqData = { cat_id };
-    // console.log(m_id)
     this.myAdminAuthService.deleteCategory(reqData).subscribe((Response: any) => {
-      console.log(Response);
       this.ngOnInit()
     },
-      err => {
-
-        console.log(err);
-        // console.log('Error response');
-      }
-
-
+      err => { console.log(err); }
     )
-
   }
+
+
+
+
+
 }
