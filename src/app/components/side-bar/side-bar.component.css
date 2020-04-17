@@ -9,15 +9,17 @@
 .sileder {
     margin-top: 2px;
     position: fixed;
-    height: 99%;
-    width: 13%;
+    top: 11.6%;
+    height: 90%;
+    width: 12%;
     background-color: #19769f;
     border-bottom-right-radius: 20px;
     border-top-right-radius: 20px;
+    z-index: 1;
 }
 
 .item {
-    font-size: 20px;
+    font-size: 18px;
     padding: 10px 0px;
     border-bottom: solid 1px #fff;
 }
