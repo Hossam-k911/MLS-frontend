@@ -14,7 +14,9 @@ export class AddTestComponent implements OnInit {
   public test_period: any
   public test_price: any
   public test_description: any
-  public test_questions: any = []
+  public test_precautions_en: any
+  public test_precautions_ar: any
+
   public cat_id: any
 
   ngOnInit() {
@@ -31,15 +33,15 @@ export class AddTestComponent implements OnInit {
       case 'period': { this.test_period = text; break; }
       case 'description': { this.test_description = text; break; }
       case 'price': { this.test_price = text; break; }
-      case 'Q1': { this.test_questions[0] = text; break; }
-      case 'Q2': { this.test_questions[1] = text; break; }
-      case 'Q3': { this.test_questions[2] = text; break; }
+      case 'en': { this.test_precautions_en = text; break; }
+      case 'ar': { this.test_precautions_ar = text; break; }
+
     }
 
   }
   onSubmit() {
-    const { cat_id, test_title, test_price, test_period, test_description, test_questions } = this
-    const CategoryData = { cat_id, test_title, test_price, test_period, test_description, test_questions };
+    const { cat_id, test_title, test_price, test_period, test_description, test_precautions_en, test_precautions_ar } = this
+    const CategoryData = { cat_id, test_title, test_price, test_period, test_description, test_precautions_en, test_precautions_ar };
 
     this.myAdminAuthService.addTest(CategoryData).subscribe((Response: any) => {
       this.myRouter.navigate([`home/editcategory/${this.cat_id}`])
