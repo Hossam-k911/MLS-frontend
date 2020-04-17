@@ -96,5 +96,20 @@ export class AdminAuthService {
   deleteCategory(data) {
     return this.myHttpClient.post(this.BASE_URL + '/delcategory', JSON.stringify(data), this.httpOptions)
   }
+  addCategory(data) {
+
+    return this.myHttpClient.post(this.BASE_URL + '/addcategory', JSON.stringify(data), this.httpOptions)
+  }
+  getCategory(id) {
+
+    return this.myHttpClient.get(this.BASE_URL + `/getcategorybyid/${id} `, this.httpOptions)
+  }
+  deleteTest(data) {
+    return this.myHttpClient.post(this.BASE_URL + '/deltest', JSON.stringify(data), this.httpOptions)
+  }
+  addTest(data) {
+
+    return this.myHttpClient.post(this.BASE_URL + '/addtest', JSON.stringify(data), this.httpOptions)
+  }
 
 }

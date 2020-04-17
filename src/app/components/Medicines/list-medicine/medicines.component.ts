@@ -31,15 +31,15 @@ export class MedicinesComponent implements OnInit {
     // this.m_id = data
     const { m_id } = this
     const reqData = { m_id };
-    // console.log(m_id)
+
     this.myAdminAuthService.deleteMedicine(reqData).subscribe((Response: any) => {
-      console.log(Response);
+
       this.ngOnInit()
     },
       err => {
 
         console.log(err);
-        // console.log('Error response');
+
       }
 
 

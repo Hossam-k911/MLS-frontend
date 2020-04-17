@@ -29,11 +29,11 @@
                         <td>{{i+1}}</td>
                         <td>{{c.category_title}}</td>
 
-                        <td>{{(c.category_imgLink.length >40) ? (c.category_imgLink|slice:0:50)+'...':c.category_imgLink}}</td>
+                        <td>{{c.category_imgLink}}</td>
 
                         <td style="width: 180px;">
                             <!-- <i href="#" class="btn btn-default text primary" [routerLink]="['']"> <i class="fa fa-eye"></i></a> -->
-                            <a href="#" class="btn btn-default text success" [routerLink]="['../',c._id]">
+                            <a href="#" class="btn btn-default text success" [routerLink]="['../editcategory',c._id]">
                                 <i class="fa fa-eye"></i></a>
                             <a href="javascript:;" (click)="matchId(c._id)" class="btn btn-default text-danger" data-toggle="modal" data-target="#delModal">
                                 <i class="fas fa-trash"></i></a>
@@ -49,7 +49,7 @@
                       </button>
                                         </div>
                                         <div class="modal-body">
-                                            <span class="sppp ">Are you Sure delete Medicine : </span>
+                                            <span class="sppp ">Are you Sure delete Category : </span>
                                             <!-- <small class="form-text text-muted">Check request before doing anything </small> -->
                                         </div>
                                         <div class="modal-footer">

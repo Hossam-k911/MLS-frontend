@@ -229,8 +229,55 @@
                     <div class="b-mod"> </div>
                 </div>
             </div>
+
+
+            <hr class="solid">
+
+            <div class="row justify-content-md-center mb-2">
+                <div class=" col-1  img-r">
+                    <img src="../../../assets/img/Group 3235.svg" class="img-fluid">
+                </div>
+                <div class="col-auto title-r">
+                    <span>Patient Medical Info </span>
+                </div>
+            </div>
+
+            <div class="row ml-3 mt-2">
+                <div class="col-md-10">
+                    <h5><span>patient Medicine : </span>{{patientData.medicines_name}}</h5>
+
+                    <h5>patient comment : <span class="rrrr"></span>{{selectedRequest.req_comment}}</h5>
+
+                </div>
+            </div>
+
+            <hr class="solid">
+
+            <div class="row justify-content-md-center  mb-2">
+                <div class=" col-1  img-r">
+                    <img src="../../../assets/img/test.svg" class="img-fluid">
+                </div>
+                <div class="col-auto title-r">
+                    <span> Medical Test Info. </span>
+                </div>
+            </div>
+
+            <div class="row ml-3 mt-2">
+                <div class="col-md-6">
+                    <h5><span> Medical Category : </span>{{selectedRequest.req_category}}</h5>
+                    <h5><span> Medical Name : </span> {{selectedRequest.req_test}}</h5>
+                    <h5><span> Medical Period : </span> {{selectedRequest.req_testPeriod}}</h5>
+                </div>
+                <div class="col-md-6">
+                    <h5><span> Medical Price : </span> {{selectedRequest.req_testPrice}}</h5>
+                    <h5><span> Medical Desc : </span>{{selectedRequest.req_testDesc}}</h5>
+                    <h5><span> Medical Status : </span>{{selectedRequest.req_status}}</h5>
+
+                </div>
+            </div>
         </div>
     </div>
+</div>
 </div>
 
 
