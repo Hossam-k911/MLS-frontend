@@ -1,11 +1,11 @@
-<div class="container-fluid ">
+<div class="container-fluid">
     <div class="row">
-        <div class="col-md-3 col-2 d-flex flex-row-reverse  ">
+        <div class="col-md-3 col-2 d-flex flex-row-reverse">
             <h3>Requests</h3>
         </div>
     </div>
-    <div class="row d-flex flex-row-reverse">
-        <table class="  table table-hover table-trapped mt-3 mr-2 col-md-10  col-sm-6 col-5 ">
+    <div class="row d-flex flex-row-revers ">
+        <table class="  table table-hover table-trapped mt-3 ml-3">
             <thead>
                 <tr>
                     <th>#</th>
@@ -144,11 +144,11 @@
         </table>
         <!-- Modal   -->
         <!-------------------------------------------------------------------------------------->
-        <div class="  fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
                     <div class="modal-header" style="background-color: #19769F
-              ; ">
+                 ; ">
                         <h5 class="modal-title" style="margin-left: auto;"> Time : {{selectedRequest.req_time}} Date : {{selectedRequest.req_date}}
                         </h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -195,7 +195,7 @@
                                 <div class="col-md-10">
                                     <h5><span>patient Medicine : </span>{{patientData.medicines_name}}</h5>
 
-                                    <h5>patient Answers : <span class="rrrr"></span>{{selectedRequest.req_answers}}</h5>
+                                    <h5>patient comment : <span class="rrrr"></span>{{selectedRequest.req_comment}}</h5>
 
                                 </div>
                             </div>
@@ -226,62 +226,17 @@
                             </div>
                         </div>
                     </div>
-                    <div class="b-mod"> </div>
-                </div>
-            </div>
+                    <div class="b-mod">
 
-
-            <hr class="solid">
-
-            <div class="row justify-content-md-center mb-2">
-                <div class=" col-1  img-r">
-                    <img src="../../../assets/img/Group 3235.svg" class="img-fluid">
-                </div>
-                <div class="col-auto title-r">
-                    <span>Patient Medical Info </span>
-                </div>
-            </div>
-
-            <div class="row ml-3 mt-2">
-                <div class="col-md-10">
-                    <h5><span>patient Medicine : </span>{{patientData.medicines_name}}</h5>
-
-                    <h5>patient comment : <span class="rrrr"></span>{{selectedRequest.req_comment}}</h5>
-
-                </div>
-            </div>
-
-            <hr class="solid">
-
-            <div class="row justify-content-md-center  mb-2">
-                <div class=" col-1  img-r">
-                    <img src="../../../assets/img/test.svg" class="img-fluid">
-                </div>
-                <div class="col-auto title-r">
-                    <span> Medical Test Info. </span>
-                </div>
-            </div>
-
-            <div class="row ml-3 mt-2">
-                <div class="col-md-6">
-                    <h5><span> Medical Category : </span>{{selectedRequest.req_category}}</h5>
-                    <h5><span> Medical Name : </span> {{selectedRequest.req_test}}</h5>
-                    <h5><span> Medical Period : </span> {{selectedRequest.req_testPeriod}}</h5>
-                </div>
-                <div class="col-md-6">
-                    <h5><span> Medical Price : </span> {{selectedRequest.req_testPrice}}</h5>
-                    <h5><span> Medical Desc : </span>{{selectedRequest.req_testDesc}}</h5>
-                    <h5><span> Medical Status : </span>{{selectedRequest.req_status}}</h5>
-
+                    </div>
                 </div>
             </div>
         </div>
+
     </div>
+
+
 </div>
-</div>
-
-
-
 
 
 
@@ -297,22 +252,22 @@
 
 
 <!--
-  <ng-template #deleteModel let-modal>
-    <div class="modal-header">
-      <h4 class="modal-title" id="modal-title"> Request Deletion</h4>
-      <button type="button" class="close" aria-describedby="modal-title" (click)="modal.dismiss('Cross click')">
-        <span aria-hidden="true">&times;</span>
-      </button>
-    </div>
-    <div class="modal-body">
-      <p>hhh</p>
-
-    </div>
-    <div class="modal-footer">
-      <button type="button" class="btn btn-outline-secondary" (click)="modal.dismiss('cancel click')">Cancel</button>
-      <button type="button" class="btn btn-danger" (click)="modal.dismiss('Ok click')">Ok</button>
-
-    </div>
-
-
-  </ng-template> -->
+     <ng-template #deleteModel let-modal>
+       <div class="modal-header">
+         <h4 class="modal-title" id="modal-title"> Request Deletion</h4>
+         <button type="button" class="close" aria-describedby="modal-title" (click)="modal.dismiss('Cross click')">
+           <span aria-hidden="true">&times;</span>
+         </button>
+       </div>
+       <div class="modal-body">
+         <p>hhh</p>
+   
+       </div>
+       <div class="modal-footer">
+         <button type="button" class="btn btn-outline-secondary" (click)="modal.dismiss('cancel click')">Cancel</button>
+         <button type="button" class="btn btn-danger" (click)="modal.dismiss('Ok click')">Ok</button>
+   
+       </div>
+   
+   
+     </ng-template> -->
