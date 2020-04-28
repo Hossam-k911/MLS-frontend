@@ -25,6 +25,7 @@ import { AddCategoryComponent } from './components/Categories/add-category/add-c
 import { EditCategoryComponent } from './components/Categories/edit-category/edit-category.component';
 import { AddTestComponent } from './components/Categories/add-test/add-test.component';
 import { HospitalEditComponent } from './components/hospital/hospital-edit/hospital-edit.component';
+import { TestComponent } from './components/test/test.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { HospitalEditComponent } from './components/hospital/hospital-edit/hospi
     AddCategoryComponent,
     EditCategoryComponent,
     AddTestComponent,
-    HospitalEditComponent
+    HospitalEditComponent,
+    TestComponent
   ],
   imports: [
     BrowserModule,
