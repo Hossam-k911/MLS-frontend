@@ -111,5 +111,12 @@ export class AdminAuthService {
 
     return this.myHttpClient.post(this.BASE_URL + '/addtest', JSON.stringify(data), this.httpOptions)
   }
+  editHospital(data) {
 
+    return this.myHttpClient.put(this.BASE_URL + `/edithospital `, JSON.stringify(data), this.httpOptions)
+  }
+  getHospital() {
+
+    return this.myHttpClient.get(this.BASE_URL + `/gethospital `, this.httpOptions)
+  }
 }

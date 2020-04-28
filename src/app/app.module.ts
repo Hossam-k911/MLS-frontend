@@ -14,7 +14,7 @@ import { ContentComponent } from './components/content/content.component';
 import { HeaderComponent } from './components/header/header.component';
 import { SideBarComponent } from './components/side-bar/side-bar.component';
 import { RequestsComponent } from './components/requests/requests.component';
-import { HospitalComponent } from './components/hospital/hospital.component';
+import { HospitalComponent } from './components/hospital/hospital-view/hospital.component';
 import { MedicinesComponent } from './components/Medicines/list-medicine/medicines.component';
 // import { ToastrModule, ToastContainerModule } from 'ngx-toastr'
 import { ReactiveFormsModule } from '@angular/forms';
@@ -24,6 +24,7 @@ import { MedicalCategoriesComponent } from './components/Categories/list-categor
 import { AddCategoryComponent } from './components/Categories/add-category/add-category.component';
 import { EditCategoryComponent } from './components/Categories/edit-category/edit-category.component';
 import { AddTestComponent } from './components/Categories/add-test/add-test.component';
+import { HospitalEditComponent } from './components/hospital/hospital-edit/hospital-edit.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { AddTestComponent } from './components/Categories/add-test/add-test.comp
     MedicalCategoriesComponent,
     AddCategoryComponent,
     EditCategoryComponent,
-    AddTestComponent
+    AddTestComponent,
+    HospitalEditComponent
   ],
   imports: [
     BrowserModule,

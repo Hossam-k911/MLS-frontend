@@ -20,6 +20,7 @@
               <th scope="col">#</th>
               <th scope="col">Title</th>
               <th scope="col">Url</th>
+              <th scope="col">Description</th>
               <th scope="col">Actions</th>
 
 
@@ -32,8 +33,9 @@
               <td>{{i+1}}</td>
               <td>{{c.category_title}}</td>
 
-              <td>{{c.category_imgLink}}</td>
 
+              <td>{{c.category_imgLink}}</td>
+              <td>{{c.category_description}}</td>
               <td style="width: 180px;">
                 <!-- <i href="#" class="btn btn-default text primary" [routerLink]="['']"> <i class="fa fa-eye"></i></a> -->
                 <a href="#" class="btn btn-default text success" [routerLink]="['../editcategory',c._id]">

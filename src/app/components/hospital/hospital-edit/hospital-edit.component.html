@@ -1,0 +1,68 @@
+<section>
+  <div class="container-fluid">
+    <div class="row">
+
+      <div class="col">
+        <button [routerLink]="['../../hospital']" class="btn btn-light b-back mt-2 "> <i
+            class="fas fa-arrow-left pr-2"></i>Back</button>
+      </div>
+
+    </div>
+    <div class="row">
+      <div class="col-md-12 col-12 mt-4 ">
+        <form id="form-medicine" class="form-med">
+          <div class="form-group">
+            <label for="Medicine"> Hospital Name</label>
+            <input type="text" id="name" class="form-control" name=" Medicine" value="{{hospitalData.hospital_name}}"
+              (keyup)="handleTextInput($event)">
+
+            <label for=" Description"> Website</label>
+            <input type="text" id="website" class="form-control" name="
+              Description" value="{{hospitalData.hospital_website}}" (keyup)="handleTextInput($event)">
+            <label for=" Description"> Phone </label>
+            <input type="text" id="phone" class="form-control" name="
+              Description" value="{{hospitalData.hospital_phone}}" (keyup)="handleTextInput($event)">
+            <label for=" Description"> Location </label>
+            <input type="text" id="location" class="form-control" name="
+                Description" value="{{hospitalData.hospital_location}}" (keyup)="handleTextInput($event)">
+
+            <label for=" Description"> ItManager </label>
+            <input type="text" id="it" class="form-control" name="
+                Description" value="{{hospitalData.hospital_itManager}}" (keyup)="handleTextInput($event)">
+
+            <label for=" Description"> GeneralManager </label>
+            <input type="text" id="gm" class="form-control" name="
+                Description" value="{{hospitalData.hospital_generalManager}}" (keyup)="handleTextInput($event)">
+
+            <label for=" Description"> FB </label>
+            <input type="text" id="fb" class="form-control" name="
+                Description" value="{{hospitalData.hospital_facebook}}" (keyup)="handleTextInput($event)">
+
+            <label for=" Description"> Email </label>
+            <input type="text" id="email" class="form-control" name="
+                    Description" value="{{hospitalData.hospital_email}}" (keyup)="handleTextInput($event)">
+
+            <label for=" Description"> AdminstrationManager </label>
+            <input type="text" id="am" class="form-control" name="
+                        Description" value="{{hospitalData.hospital_adminstratonManager}}"
+              (keyup)="handleTextInput($event)">
+
+            <label for=" Description"> PurchasingManager </label>
+            <input type="text" id="pm" class="form-control" name="
+                                    Description" value="{{hospitalData.hospital_PurchasingManager}}"
+              (keyup)="handleTextInput($event)">
+
+            <label for=" Description"> MarketingManager </label>
+            <input type="text" id="mm" class="form-control" name="
+                                    Description" value="{{hospitalData.hospital_MarketingManager}}"
+              (keyup)="handleTextInput($event)">
+          </div>
+          <button type=" submit" class="btn btn-info " (click)="onSubmit()">
+            Submit
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+</section>
