@@ -1,254 +1,242 @@
-<div class="container ml-3 mt-3">
-  <div class="row">
-    <div class="col-md-6">
-      <h3>Requests</h3>
-    </div>
-
-  </div>
-
-
-
-  <div class="container">
-
-    <table class=" table table-hover table-trapped mt-3 ml-3">
-      <thead>
-        <tr>
-          <th>#</th>
-          <th>Name</th>
-          <th>Phone</th>
-          <th>Time</th>
-          <th>Date</th>
-          <th>Medical Analysis</th>
-          <th>Show</th>
-          <th>Delete</th>
-          <th></th>
-          <th>status</th>
-          <th></th>
-
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let p of requests;  let i=index; ">
-          <td>{{i+1}}</td>
-          <td>{{p.req_p_name}}</td>
-          <td>{{p.req_p_phone}}</td>
-          <td>{{p.req_time}}</td>
-          <td>{{p.req_date}}</td>
-          <td>{{p.req_test}}</td>
-          <td>
-
-            <!-- Button trigger modal -->
-            <button type="button" class="btn btn-primary px-4" (click)="getcurrentRowData(p)" data-toggle="modal"
-              data-target=".bd-example-modal-lg ">Check</button>
-
-          </td>
-
-
-          <td>
-            <button type="button" class="btn btn-outline-danger" data-toggle="modal" data-target="#staticBackdrop">
-              Delete
-            </button>
-
-            <div class="modal fade" id="staticBackdrop" data-backdrop="static" tabindex="-1" role="dialog"
-              aria-labelledby="staticBackdropLabel" aria-hidden="true">
-              <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                  <div class="modal-header">
-
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
-                  </div>
-                  <div class="modal-body">
-                    <span class="sppp ">Are you Sure delete request.</span>
-                    <small class="form-text text-muted">Check request before doing anything </small>
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" (click)="deleteRequest()" data-dismiss="modal"
-                      class="btn btn-primary">Delete</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </td>
-
-
-          <td>
-            <button data-toggle="modal" data-target="#staticBackdrop" (click)="AcceptedStatus()" class="status btn "><i
-                style="color: darkgreen;" class="far fa-calendar-check i-status"></i></button>
-            <div class="modal fade" id="staticBackdrop" data-backdrop="static" tabindex="-1" role="dialog"
-              aria-labelledby="staticBackdropLabel" aria-hidden="true">
-              <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                  <div class="modal-header">
-
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
-                  </div>
-                  <div class="modal-body">
-                    <span class="sppp">Are you Sure accept request.</span>
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">accept</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </td>
-
-          <td>
-            <button data-toggle="modal" data-target="#staticBackdrop" (click)="RejectedStatus() "
-              class="status btn  "><i style="color:darkred; " class=" fas fa-calendar-times i-status"></i>
-            </button>
-            <div class="modal fade" id="staticBackdrop" data-backdrop="static" tabindex="-1" role="dialog"
-              aria-labelledby="staticBackdropLabel" aria-hidden="true">
-              <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                  <div class="modal-header">
-
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
-                  </div>
-                  <div class="modal-body">
-                    <span class="sppp">Are you Sure reject request.</span>
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Reject</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </td>
-
-
-          <td>
-            <button data-toggle="modal" data-target="#staticBackdrop" (click)="PendingStatus()" class="status btn "> <i
-                class="fas fa-exclamation-circle i-status"></i>
-            </button>
-            <div class="modal fade" id="staticBackdrop" data-backdrop="static" tabindex="-1" role="dialog"
-              aria-labelledby="staticBackdropLabel" aria-hidden="true">
-              <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
-                  </div>
-                  <div class="modal-body">
-                    <span class="sppp">Are you Sure panding request.</span>
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">panding</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </td>
-
-        </tr>
-      </tbody>
-    </table>
-    <!-- Modal   -->
-    <!-------------------------------------------------------------------------------------->
-    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
-      aria-hidden="true">
-      <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-          <div class="modal-header" style="background-color: #19769F
-              ; ">
-            <h5 class="modal-title" style="margin-left: auto;"> Time : {{selectedRequest.req_time}} Date :
-              {{selectedRequest.req_date}}
-            </h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <div class="contaniner  ">
-              <div class="row justify-content-md-center  mb-2">
-                <div class=" col-1  img-r">
-                  <img src="../../../assets/img/Group 3234.svg" class="img-fluid">
-                </div>
-                <div class="col-auto title-r">
-                  <span>Patient Personal Info </span>
-                </div>
-              </div>
-              <div class="row ml-3 mt-2 ">
-
-                <div class="col-md-7  ">
-                  <h5>Name : {{selectedRequest.req_p_name}} </h5>
-                  <h5> Phone : {{selectedRequest.req_p_phone}}</h5>
-                  <h5> Email : {{patientData.email}} </h5>
-                </div>
-                <div class="col-md-5 ">
-                  <h5>Birthday: {{patientData.date}} </h5>
-                  <h5> SNN : {{patientData.snn}}</h5>
-                  <h5> City : {{patientData.location}} </h5>
-                </div>
-              </div>
-
-
-              <hr class="solid">
-
-              <div class="row justify-content-md-center mb-2">
-                <div class=" col-1  img-r">
-                  <img src="../../../assets/img/Group 3235.svg" class="img-fluid">
-                </div>
-                <div class="col-auto title-r">
-                  <span>Patient Medical Info </span>
-                </div>
-              </div>
-
-              <div class="row ml-3 mt-2">
-                <div class="col-md-10">
-                  <h5><span>patient Medicine : </span>{{patientData.medicines_name}}</h5>
-
-                  <h5>patient comment : <span class="rrrr"></span>{{selectedRequest.req_comment}}</h5>
-
-                </div>
-              </div>
-
-              <hr class="solid">
-
-              <div class="row justify-content-md-center  mb-2">
-                <div class=" col-1  img-r">
-                  <img src="../../../assets/img/test.svg" class="img-fluid">
-                </div>
-                <div class="col-auto title-r">
-                  <span> Medical Test Info. </span>
-                </div>
-              </div>
-
-              <div class="row ml-3 mt-2">
-                <div class="col-md-6">
-                  <h5><span> Medical Category : </span>{{selectedRequest.req_category}}</h5>
-                  <h5><span> Medical Name : </span> {{selectedRequest.req_test}}</h5>
-                  <h5><span> Medical Period : </span> {{selectedRequest.req_testPeriod}}</h5>
-                </div>
-                <div class="col-md-6">
-                  <h5><span> Medical Price : </span> {{selectedRequest.req_testPrice}}</h5>
-                  <h5><span> Medical Desc : </span>{{selectedRequest.req_testDesc}}</h5>
-                  <h5><span> Medical Status : </span>{{selectedRequest.req_status}}</h5>
-
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="b-mod">
-
-          </div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-3 col-2 d-flex flex-row-reverse">
+            <h3>Requests</h3>
         </div>
-      </div>
+    </div>
+    <div class="row d-flex flex-row-revers ">
+        <table class="  table table-hover table-trapped mt-3 ml-3">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Phone</th>
+                    <th>Time</th>
+                    <th>Date</th>
+                    <th>Medical Analysis</th>
+                    <th>Show</th>
+                    <th>Delete</th>
+                    <th></th>
+                    <th>status</th>
+                    <th></th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let p of requests;  let i=index; ">
+                    <td>{{i+1}}</td>
+                    <td>{{p.req_p_name}}</td>
+                    <td>{{p.req_p_phone}}</td>
+                    <td>{{p.req_time}}</td>
+                    <td>{{p.req_date}}</td>
+                    <td>{{p.req_test}}</td>
+                    <td>
+
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary px-4" (click)="getcurrentRowData(p)" data-toggle="modal" data-target=".bd-example-modal-lg ">Check</button>
+
+                    </td>
+
+
+                    <td>
+                        <button type="button" class="btn btn-outline-danger" data-toggle="modal" data-target="#staticBackdrop">
+                            Delete
+                        </button>
+
+                        <div class="modal fade" id="staticBackdrop" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <span class="sppp ">Are you Sure delete request.</span>
+                                        <small class="form-text text-muted">Check request before doing anything </small>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
+                                        <button type="button" (click)="deleteRequest()" data-dismiss="modal" class="btn btn-primary">Delete</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+
+
+                    <td>
+                        <button data-toggle="modal" data-target="#staticBackdrop" (click)="AcceptedStatus()" class="status btn "><i style="color: darkgreen;"
+                                class="far fa-calendar-check i-status"></i></button>
+                        <div class="modal fade" id="staticBackdrop" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <span class="sppp">Are you Sure accept request.</span>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary">accept</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+
+                    <td>
+                        <button data-toggle="modal" data-target="#staticBackdrop" (click)="RejectedStatus() " class="status btn  "><i style="color:darkred; " class=" fas fa-calendar-times i-status"></i>
+                        </button>
+                        <div class="modal fade" id="staticBackdrop" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <span class="sppp">Are you Sure reject request.</span>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary">Reject</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+
+
+                    <td>
+                        <button data-toggle="modal" data-target="#staticBackdrop" (click)="PendingStatus()" class="status btn "> <i class="fas fa-exclamation-circle i-status"></i>
+                        </button>
+                        <div class="modal fade" id="staticBackdrop" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <span class="sppp">Are you Sure panding request.</span>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary">panding</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+
+                </tr>
+            </tbody>
+        </table>
+        <!-- Modal   -->
+        <!-------------------------------------------------------------------------------------->
+        <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header" style="background-color: #19769F
+                 ; ">
+                        <h5 class="modal-title" style="margin-left: auto;"> Time : {{selectedRequest.req_time}} Date : {{selectedRequest.req_date}}
+                        </h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="contaniner  ">
+                            <div class="row justify-content-md-center  mb-2">
+                                <div class=" col-1  img-r">
+                                    <img src="../../../assets/img/Group 3234.svg" class="img-fluid">
+                                </div>
+                                <div class="col-auto title-r">
+                                    <span>Patient Personal Info </span>
+                                </div>
+                            </div>
+                            <div class="row ml-3 mt-2 ">
+
+                                <div class="col-md-7  ">
+                                    <h5>Name : {{selectedRequest.req_p_name}} </h5>
+                                    <h5> Phone : {{selectedRequest.req_p_phone}}</h5>
+                                    <h5> Email : {{patientData.email}} </h5>
+                                </div>
+                                <div class="col-md-5 ">
+                                    <h5>Birthday: {{patientData.date}} </h5>
+                                    <h5> SNN : {{patientData.snn}}</h5>
+                                    <h5> City : {{patientData.location}} </h5>
+                                </div>
+                            </div>
+
+
+                            <hr class="solid">
+
+                            <div class="row justify-content-md-center mb-2">
+                                <div class=" col-1  img-r">
+                                    <img src="../../../assets/img/Group 3235.svg" class="img-fluid">
+                                </div>
+                                <div class="col-auto title-r">
+                                    <span>Patient Medical Info </span>
+                                </div>
+                            </div>
+
+                            <div class="row ml-3 mt-2">
+                                <div class="col-md-10">
+                                    <h5><span>patient Medicine : </span>{{patientData.medicines_name}}</h5>
+
+                                    <h5>patient comment : <span class="rrrr"></span>{{selectedRequest.req_comment}}</h5>
+
+                                </div>
+                            </div>
+
+                            <hr class="solid">
+
+                            <div class="row justify-content-md-center  mb-2">
+                                <div class=" col-1  img-r">
+                                    <img src="../../../assets/img/test.svg" class="img-fluid">
+                                </div>
+                                <div class="col-auto title-r">
+                                    <span> Medical Test Info. </span>
+                                </div>
+                            </div>
+
+                            <div class="row ml-3 mt-2">
+                                <div class="col-md-6">
+                                    <h5><span> Medical Category : </span>{{selectedRequest.req_category}}</h5>
+                                    <h5><span> Medical Name : </span> {{selectedRequest.req_test}}</h5>
+                                    <h5><span> Medical Period : </span> {{selectedRequest.req_testPeriod}}</h5>
+                                </div>
+                                <div class="col-md-6">
+                                    <h5><span> Medical Price : </span> {{selectedRequest.req_testPrice}}</h5>
+                                    <h5><span> Medical Desc : </span>{{selectedRequest.req_testDesc}}</h5>
+                                    <h5><span> Medical Status : </span>{{selectedRequest.req_status}}</h5>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="b-mod">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 
 
+</div>
 
 
 
@@ -263,26 +251,23 @@
 
 
 
-
-
-
-    <!--
-  <ng-template #deleteModel let-modal>
-    <div class="modal-header">
-      <h4 class="modal-title" id="modal-title"> Request Deletion</h4>
-      <button type="button" class="close" aria-describedby="modal-title" (click)="modal.dismiss('Cross click')">
-        <span aria-hidden="true">&times;</span>
-      </button>
-    </div>
-    <div class="modal-body">
-      <p>hhh</p>
-
-    </div>
-    <div class="modal-footer">
-      <button type="button" class="btn btn-outline-secondary" (click)="modal.dismiss('cancel click')">Cancel</button>
-      <button type="button" class="btn btn-danger" (click)="modal.dismiss('Ok click')">Ok</button>
-
-    </div>
-
-
-  </ng-template> -->
+<!--
+     <ng-template #deleteModel let-modal>
+       <div class="modal-header">
+         <h4 class="modal-title" id="modal-title"> Request Deletion</h4>
+         <button type="button" class="close" aria-describedby="modal-title" (click)="modal.dismiss('Cross click')">
+           <span aria-hidden="true">&times;</span>
+         </button>
+       </div>
+       <div class="modal-body">
+         <p>hhh</p>
+   
+       </div>
+       <div class="modal-footer">
+         <button type="button" class="btn btn-outline-secondary" (click)="modal.dismiss('cancel click')">Cancel</button>
+         <button type="button" class="btn btn-danger" (click)="modal.dismiss('Ok click')">Ok</button>
+   
+       </div>
+   
+   
+     </ng-template> -->

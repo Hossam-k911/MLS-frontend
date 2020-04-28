@@ -1,43 +1,46 @@
 <nav>
-  <div class="containar fluid">
-    <div class="row">
-      <div class=" col-2 ">
-        <div class="sileder">
-          <ul>
-            <li class="item">
-              <a class="nav-link mt-4" [routerLink]="['/home/patients']">
-                <i class="far fa-user sileder-icon"> </i> Patients
-              </a>
-            </li>
-            <li class="item">
-              <a class="nav-link" [routerLink]="['/home/requests']">
-                <i class="far fa-question-circle sileder-icon"></i> Requests
-              </a>
-            </li>
-            <li class="item">
-              <a class="nav-link" [routerLink]="['/home/Medicines']">
-                <i class="far fa-file-alt sileder-icon"></i> Medicines
-              </a>
-            </li>
-            <li class="item">
-              <a class="nav-link" [routerLink]="['/home/hospital']">
-                <i class="far fa-hospital sileder-icon"></i> Hospital
-              </a>
-            </li>
-            <li class="item">
-              <a class="nav-link" [routerLink]="['/home/category']">
-                <i class="far fa-clipboard"></i> Categories
-              </a>
-            </li>
-            <li class="item">
-              <a class="nav-link" [routerLink]="['/home/editcategory/',cat_id]">
-                <i class="fas fa-notes-medical"></i> Medical Analysis
-              </a>
-            </li>
-          </ul>
+    <div class="containar fluid">
+        <div class="row">
+            <div class=" col-2 ">
+                <div class="sileder">
+                    <ul>
+                        <li class="item">
+                            <a class="nav-link mt-4" [routerLink]="['/home/patients']">
+                                <i class="far fa-user sileder-icon"> </i> Patients
+                            </a>
+                        </li>
+                        <li class="item">
+                            <a class="nav-link" [routerLink]="['/home/requests']">
+                                <i class="far fa-question-circle sileder-icon"></i> Requests
+                            </a>
+                        </li>
+                        <li class="item">
+                            <a class="nav-link" [routerLink]="['/home/Medicines']">
+                                <i class="far fa-file-alt sileder-icon"></i> Medicines
+                            </a>
+                        </li>
 
+                        <li class="item">
+                            <a class="nav-link" [routerLink]="['/home/category']">
+                                <i class="far fa-clipboard sileder-icon"></i> Categories
+                            </a>
+                        </li>
+                        <li class="item">
+                            <a class="nav-link" [routerLink]="['/home/editcategory/',cat_id]">
+                                <i class="fas fa-notes-medical sileder-icon"></i> Medical Analysis
+                            </a>
+                        </li>
+
+                        <li class="item">
+                            <a class="nav-link" [routerLink]="['/home/hospital']">
+                                <i class="far fa-hospital sileder-icon"></i> Hospital
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 </nav>

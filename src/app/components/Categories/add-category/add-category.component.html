@@ -1,31 +1,31 @@
 <section>
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col">
-        <button [routerLink]="['../category']" class="btn btn-light b-back mt-2 "> <i
-            class="fas fa-arrow-left pr-2"></i>Back</button>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-12 col-12 mt-4 ">
-        <form id="form-medicine" class="form-med">
-          <div class="form-group">
-            <label for="Medicine"> Title</label>
-            <input type="text" id="title" class="form-control" (keyup)="handleTextInput($event)" name=" Medicine">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <button [routerLink]="['../category']" class="btn btn-light b-back mt-2 "> <i
+                        class="fas fa-arrow-left pr-2"></i>Back</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 col-12 mt-4 ">
+                <form id="form-medicine" class="form-med">
+                    <div class="form-group">
+                        <label for="Medicine"> Title</label>
+                        <input type="text" id="title" class="form-control" (keyup)="handleTextInput($event)" name=" Medicine">
 
 
-            <label for="Description"> Image URL </label>
-            <input type="text" id="url" class="form-control" (keyup)="handleTextInput($event)" name="
+                        <label for="Description"> Image URL </label>
+                        <input type="text" id="url" class="form-control" (keyup)="handleTextInput($event)" name="
               Description">
 
 
-          </div>
-          <button type="submit" class="btn btn-info " (click)="onSubmit()">
-            Submit
-          </button>
-        </form>
-      </div>
+                    </div>
+                    <button type="submit" class="btn btn-info " (click)="onSubmit()">
+                        Submit
+                    </button>
+                </form>
+            </div>
+        </div>
     </div>
-  </div>
 
 </section>
