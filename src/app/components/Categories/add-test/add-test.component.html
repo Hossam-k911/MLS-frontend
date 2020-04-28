@@ -1,49 +1,49 @@
 <section>
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col">
-        <button [routerLink]="['../../editcategory',cat_id]" class="btn btn-light b-back mt-2 "> <i
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <button [routerLink]="['../../editcategory',cat_id]" class="btn btn-light b-back mt-2 "> <i
             class="fas fa-arrow-left pr-2"></i>Back</button>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-12 col-12 mt-4 ">
-        <form id="form-medicine" class="form-med">
-          <div class="form-group">
-            <label for="Medicine"> Title</label>
-            <input type="text" id="title" class="form-control" (keyup)="handleTextInput($event)" name=" Medicine">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-12 mt-4 ">
+                <form id="form-medicine" class="form-med">
+                    <div class="form-group">
+                        <label for="Medicine"> Title</label>
+                        <input type="text" id="title" class="form-control" (keyup)="handleTextInput($event)" name=" Medicine">
 
 
-            <label for="Description"> Period </label>
-            <input type="text" id="period" class="form-control" (keyup)="handleTextInput($event)" name="
+                        <label for="Description"> Period </label>
+                        <input type="text" id="period" class="form-control" (keyup)="handleTextInput($event)" name="
               Description">
 
-            <label for="Description"> Description </label>
-            <input type="text" id="description" class="form-control" (keyup)="handleTextInput($event)" name="
+                        <label for="Description"> Description </label>
+                        <input type="text" id="description" class="form-control" (keyup)="handleTextInput($event)" name="
               Description">
 
-            <label for="Description"> Price </label>
-            <input type="text" id="price" class="form-control" (keyup)="handleTextInput($event)" name="
+                        <label for="Description"> Price </label>
+                        <input type="text" id="price" class="form-control" (keyup)="handleTextInput($event)" name="
                 Description">
 
-            <label for="Description"> precautions_en </label>
-            <input type="text" id="en" class="form-control" (keyup)="handleTextInput($event)" name="
+                        <label for="Description"> precautions_en </label>
+                        <input type="text" id="en" class="form-control" (keyup)="handleTextInput($event)" name="
                 Description">
 
-            <label for="Description"> precautions_ar </label>
-            <input type="text" id="ar" class="form-control" (keyup)="handleTextInput($event)" name="
+                        <label for="Description"> precautions_ar </label>
+                        <input type="text" id="ar" class="form-control" (keyup)="handleTextInput($event)" name="
                 Description">
 
 
 
 
-          </div>
-          <button type="submit" class="btn btn-info " (click)="onSubmit()">
+                    </div>
+                    <button type="submit" class="btn btn-info " (click)="onSubmit()">
             Submit
           </button>
-        </form>
-      </div>
+                </form>
+            </div>
+        </div>
     </div>
-  </div>
 
 </section>
