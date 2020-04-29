@@ -7,11 +7,9 @@
 }
 
 .sileder {
-    margin-top: 2px;
     position: fixed;
-    top: 12%;
-    height: 90%;
-    width: 13%;
+    height: 100%;
+    width: 14%;
     background-color: #19769f;
     border-bottom-right-radius: 20px;
     border-top-right-radius: 20px;
