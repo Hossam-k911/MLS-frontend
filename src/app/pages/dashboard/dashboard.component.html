@@ -1,12 +1,20 @@
-<ng-container style="display:  flex; ">
-  <app-header></app-header>
+<ng-container class="container-fluid ">
+    <div class="row">
 
+        <div class="col-12 h">
+            <app-header></app-header>
 
-  <app-side-bar></app-side-bar>
-  <div style="display: flex ; flex-flow: wrap row; align-items: center; justify-content: center ; ">
-    <app-content></app-content>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-2 s">
+            <app-side-bar></app-side-bar>
+        </div>
 
-  </div>
+        <div class="c col-md-10">
+            <app-content></app-content>
+        </div>
+    </div>
 
 
 </ng-container>
