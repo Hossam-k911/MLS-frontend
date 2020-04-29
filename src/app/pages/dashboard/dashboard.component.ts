@@ -9,7 +9,7 @@ import { SideBarComponent } from '../../components/side-bar/side-bar.component'
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
-
+  wtf: any
   constructor(/*private toastr:ToastrService*/) { }
   show = false;
   autohide = true;
