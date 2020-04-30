@@ -1,0 +1,25 @@
+.card {
+    margin: 20px;
+    background-color: #fafafa;
+}
+
+.b {
+    margin-top: 20px;
+}
+
+.p {
+    height: 100%;
+}
+
+.ppp {
+    height: 200px;
+    width: 400px;
+}
+
+.add {
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+}
