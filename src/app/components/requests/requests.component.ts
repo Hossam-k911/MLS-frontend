@@ -17,85 +17,49 @@ export class RequestsComponent implements OnInit {
   ) { }
 
   // Initialization
-  requests: any;
-  selectedRequest: any = {};
-  patientData: any = {};
-  req_status: any = "";
-  accepted_status: string = "Accepted";
-  rejected_status: string = "Rejected";
-  pending_status: string = "Pending";
-  req_id: any = "";
-  p_id: any = "";
-
+  Requests: any
+  selectedRequest: any
+  req_id: any
+  r_id: any
+  p_id: any
+  patientData: any
   // Getting Requests and fill in table
   ngOnInit() {
     this.getRequests();
   }
   getRequests() {
-    this.myAdminAuthService.getRequests().subscribe((response: any) => {
-      this.requests = response;
-    });
+    this.myAdminAuthService.getRequests().subscribe((resp: any) => {
+      this.Requests = resp;
+
+    })
   }
+
   getcurrentRowData(row) {
     this.selectedRequest = row;
-    this.req_id = row._id;
+    this.r_id = row._id;
     this.p_id = row.req_p_id;
-    this.getPatientData(row._id);
+    this.getPatientData();
+    console.log(this.selectedRequest)
   }
 
   // Adding Patient data
-  getPatientData(row) {
-    const { req_id } = this;
-    const reqData = { req_id };
+  getPatientData() {
+    const { r_id } = this;
+    const reqData = { r_id };
 
     this.myAdminAuthService
       .reqPatientData(reqData)
       .subscribe((response: any) => {
         this.patientData = response;
       });
-    console.log(this.patientData);
+    // console.log(this.patientData);
   }
-  //(accept-penting-reject ) status
-  AcceptedStatus() {
-    const { req_id, req_status } = this;
-    const data = {
-      req_id,
-      req_status
-    };
-    this.myAdminAuthService.statusChange(data).subscribe((response: any) => {
-      this.req_status = this.accepted_status;
-      this.ngOnInit();
-      // console.log(this.req_status);
-    });
-  }
-  PendingStatus() {
-    const { req_id, req_status } = this;
-    const data = {
-      req_id,
-      req_status
-    };
-    this.myAdminAuthService.statusChange(data).subscribe((response: any) => {
-      this.req_status = this.pending_status;
-      this.ngOnInit();
-      // console.log(this.req_status);
-      // this.ngOnInit();
-    });
-  }
-  RejectedStatus() {
-    const { req_id, req_status } = this;
-    const data = {
-      req_id,
-      req_status
-    };
-    this.myAdminAuthService.statusChange(data).subscribe((response: any) => {
-      this.req_status = this.rejected_status;
-      this.ngOnInit();
-      // console.log(this.req_status);
-      // this.ngOnInit();
-    });
-  }
-
   // Request Deletion
+  matchId(id) {
+    this.req_id = id;
+    console.log(this.req_id)
+    console.log(id);
+  }
   deleteRequest() {
     const { req_id, p_id } = this;
     const reqData = { req_id, p_id };
@@ -105,4 +69,51 @@ export class RequestsComponent implements OnInit {
         this.ngOnInit();
       });
   }
+
+
+
+  AcceptedStatus() {
+    const { req_id } = this;
+    const data = {
+      req_id
+    };
+    this.myAdminAuthService.acceptStatus(data).subscribe((response: any) => {
+      this.ngOnInit();
+    });
+
+  }
+  RejectedStatus() {
+    const { req_id } = this;
+    const data = {
+      req_id
+    };
+    this.myAdminAuthService.rejectStatus(data).subscribe((response: any) => {
+      this.ngOnInit();
+    });
+  }
+  PendingStatus() {
+    const { req_id } = this;
+    const data = {
+      req_id
+    };
+    this.myAdminAuthService.pendingStatus(data).subscribe((response: any) => {
+      this.ngOnInit();
+    });
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

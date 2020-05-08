@@ -51,11 +51,21 @@ export class AdminAuthService {
     return this.myHttpClient.get(`${this.BASE_URL}/getmedicines`, this.httpOptions)
   }
 
-  statusChange(data) {
 
-    return this.myHttpClient.put(this.BASE_URL + '/editreq', JSON.stringify(data), this.httpOptions)
+
+  acceptStatus(data) {
+
+    return this.myHttpClient.post(this.BASE_URL + '/acceptreq', JSON.stringify(data), this.httpOptions)
+  }
+  rejectStatus(data) {
+
+    return this.myHttpClient.post(this.BASE_URL + '/rejectreq', JSON.stringify(data), this.httpOptions)
   }
 
+  pendingStatus(data) {
+
+    return this.myHttpClient.post(this.BASE_URL + '/pendreq', JSON.stringify(data), this.httpOptions)
+  }
 
   reqPatientData(id) {
     return this.myHttpClient.post(this.BASE_URL + '/reqpatientinfo', JSON.stringify(id), this.httpOptions)
@@ -85,7 +95,7 @@ export class AdminAuthService {
   }
 
   deleteMedicine(data) {
-    console.log("id : ", data);
+
     return this.myHttpClient.post(this.BASE_URL + '/delmedicine', JSON.stringify(data), this.httpOptions)
   }
 

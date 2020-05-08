@@ -23,7 +23,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let p of requests;  let i=index; ">
+        <tr *ngFor="let p of Requests ;  let i=index; ">
           <td>{{i+1}}</td>
           <td>{{p.req_p_name}}</td>
           <td>{{p.req_p_phone}}</td>
@@ -33,135 +33,49 @@
           <td>
 
             <!-- Button trigger modal -->
-            <button type="button" class="btn btn-primary px-4" (click)="getcurrentRowData(p)" data-toggle="modal"
-              data-target=".bd-example-modal-lg ">Check</button>
+            <button type="button" class="btn btn-primary px-4" data-toggle="modal" data-target="#datadisplay"
+              (click)="getcurrentRowData(p)">Check</button>
+
+
+
 
           </td>
 
 
           <td>
-            <button type="button" class="btn btn-outline-danger" data-toggle="modal" data-target="#deleteModal">
+            <button type="button" class="btn btn-outline-danger" (click)="matchId(p._id)" data-toggle="modal"
+              data-target="#deleteModal">
               Delete
             </button>
 
-            <div class="modal fade" id="deleteModal" data-backdrop="static" tabindex="-1" role="dialog"
-              aria-labelledby="staticBackdropLabel" aria-hidden="true">
-              <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                  <div class="modal-header">
-
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
-                  </div>
-                  <div class="modal-body">
-                    <span class="sppp ">Are you Sure delete request.</span>
-                    <small class="form-text text-muted">Check request before doing anything </small>
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" (click)="deleteRequest()" data-dismiss="modal"
-                      class="btn btn-primary">Delete</button>
-                  </div>
-                </div>
-              </div>
-            </div>
           </td>
-
 
           <td>
             <button data-toggle="modal" data-target="#AcceptReq" class="status btn "><i style="color: darkgreen;"
-                class="far fa-calendar-check i-status"></i></button>
-            <div class="modal fade" id="AcceptReq" data-backdrop="static" tabindex="-1" role="dialog"
-              aria-labelledby="staticBackdropLabel" aria-hidden="true">
-              <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                  <div class="modal-header">
-
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
-                  </div>
-                  <div class="modal-body">
-                    <span class="sppp">Are you Sure accept request.</span>
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" (click)="AcceptedStatus()" data-dismiss="modal"
-                      class="btn btn-success">accept</button>
-                  </div>
-                </div>
-              </div>
-            </div>
+                class="far fa-calendar-check i-status" (click)="matchId(p._id)"></i></button>
           </td>
-
           <td>
             <button data-toggle="modal" data-target="#Rejectreq" class="status btn  "><i style="color:darkred; "
-                class=" fas fa-calendar-times i-status"></i>
+                class=" fas fa-calendar-times i-status" (click)="matchId(p._id)"></i>
             </button>
-            <div class="modal fade" id="Rejectreq" data-backdrop="static" tabindex="-1" role="dialog"
-              aria-labelledby="staticBackdropLabel" aria-hidden="true">
-              <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                  <div class="modal-header">
-
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
-                  </div>
-                  <div class="modal-body">
-                    <span class="sppp">Are you Sure reject request.</span>
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" (click)="RejectedStatus() " data-dismiss="modal"
-                      class="btn btn-danger">Reject</button>
-                  </div>
-                </div>
-              </div>
-            </div>
           </td>
-
-
           <td>
             <button data-toggle="modal" data-target="#pendingreq" class="status btn "> <i
-                class="fas fa-exclamation-circle i-status"></i>
+                class="fas fa-exclamation-circle i-status" (click)="matchId(p._id)"></i>
             </button>
-            <div class="modal fade" id="pendingreq" data-backdrop="static" tabindex="-1" role="dialog"
-              aria-labelledby="staticBackdropLabel" aria-hidden="true">
-              <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
-                  </div>
-                  <div class="modal-body">
-                    <span class="sppp">Are you Sure panding request.</span>
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" (click)="PendingStatus()" data-dismiss="modal"
-                      class="btn btn-primary">panding</button>
-                  </div>
-                </div>
-              </div>
-            </div>
           </td>
-
         </tr>
       </tbody>
     </table>
-    <!-- Modal   -->
-    <!-------------------------------------------------------------------------------------->
-    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
-      aria-hidden="true">
+    <!-- check modal  -->
+    <div class="modal fade bd-example-modal-lg" id="datadisplay" tabindex="-1" role="dialog"
+      aria-labelledby="myLargeModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
           <div class="modal-header" style="background-color: #19769F
-                 ; ">
-            <h5 class="modal-title" style="margin-left: auto;"> Time : {{selectedRequest.req_time}} Date :
+               ; ">
+            <h5 class="modal-title" style="margin-left: auto;">
+              Time : {{selectedRequest.req_time}} Date :
               {{selectedRequest.req_date}}
             </h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -245,42 +159,92 @@
         </div>
       </div>
     </div>
+    <!-- Delete Modal  -->
+    <div class="modal fade" id="deleteModal" data-backdrop="static" tabindex="-1" role="dialog"
+      aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
 
-  </div>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <span class="sppp ">Are you Sure delete request.</span>
+            <small class="form-text text-muted">Check request before doing anything </small>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
+            <button type="button" (click)="deleteRequest(req_id)" data-dismiss="modal"
+              class="btn btn-primary">Delete</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Accept req modal -->
+    <div class="modal fade" id="AcceptReq" data-backdrop="static" tabindex="-1" role="dialog"
+      aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
 
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <span class="sppp">Are you Sure accept request.</span>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
+            <button type="button" (click)="AcceptedStatus()" data-dismiss="modal"
+              class="btn btn-success">accept</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- reject req modal  -->
+    <div class="modal fade" id="Rejectreq" data-backdrop="static" tabindex="-1" role="dialog"
+      aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
 
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--
-     <ng-template #deleteModel let-modal>
-       <div class="modal-header">
-         <h4 class="modal-title" id="modal-title"> Request Deletion</h4>
-         <button type="button" class="close" aria-describedby="modal-title" (click)="modal.dismiss('Cross click')">
-           <span aria-hidden="true">&times;</span>
-         </button>
-       </div>
-       <div class="modal-body">
-         <p>hhh</p>
-
-       </div>
-       <div class="modal-footer">
-         <button type="button" class="btn btn-outline-secondary" (click)="modal.dismiss('cancel click')">Cancel</button>
-         <button type="button" class="btn btn-danger" (click)="modal.dismiss('Ok click')">Ok</button>
-
-       </div>
-
-
-     </ng-template> -->
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <span class="sppp">Are you Sure reject request.</span>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
+            <button type="button" (click)="RejectedStatus() " data-dismiss="modal"
+              class="btn btn-danger">Reject</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- pending req modal  -->
+    <div class="modal fade" id="pendingreq" data-backdrop="static" tabindex="-1" role="dialog"
+      aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <span class="sppp">Are you Sure panding request.</span>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
+            <button type="button" (click)="PendingStatus()" data-dismiss="modal"
+              class="btn btn-primary">panding</button>
+          </div>
+        </div>
+      </div>
+    </div>
