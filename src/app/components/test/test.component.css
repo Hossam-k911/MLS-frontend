@@ -1,25 +1,22 @@
-.card {
-    margin: 20px;
-    background-color: #fafafa;
+.title {
+    margin: auto;
 }
 
-.b {
-    margin-top: 20px;
-}
-
-.p {
-    height: 100%;
-}
-
-.ppp {
+.med-card {
+    background-color: brown;
     height: 200px;
-    width: 400px;
+    width: 100%;
+    margin: auto;
 }
 
-.add {
-    border-radius: 12px;
-    -webkit-border-radius: 12px;
-    -moz-border-radius: 12px;
-    -ms-border-radius: 12px;
-    -o-border-radius: 12px;
+.mid-info {
+    background-color: burlywood;
+    height: 100px;
+    width: 100%;
+}
+
+.pic {
+    height: 100px;
+    width: 100%;
+    background-color: cornsilk;
 }

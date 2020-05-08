@@ -5,19 +5,24 @@
     z-index: 1;
 }
 
-.logo {
-    color: blanchedalmond;
+.logo span {
+    color: #fff;
+    font-size: 32px;
     padding: 0px 10px;
-    font-family: "Anton", sans-serif;
+    font-family: "Pacifico", cursive;
+    font-weight: 300 !important;
 }
 
 .smal {
+    color: #fff;
+    font-family: "Raleway", sans-serif;
     position: absolute;
     top: 40px;
-    left: 59%;
+    left: 20%;
 }
 
-.search-box {
+
+/* .search-box {
     background-color: #fff;
     height: 50px;
     width: 100%;
@@ -41,7 +46,7 @@
     color: #19769f;
     font-size: 20px;
     padding-left: 20px;
-}
+} */
 
 .btn-logout {
     height: 45px;

@@ -1,0 +1,65 @@
+.container-fluid {
+    height: 600px;
+}
+
+.title {
+    margin-top: 20px;
+}
+
+.title h2 {
+    padding-left: 30px;
+    color: #fff;
+    font-family: "Raleway", sans-serif;
+}
+
+
+/* .title h2::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 410px;
+    background-color: #fff;
+    top: 50%;
+    right: 30px;
+}
+
+.title h2::before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 400px;
+    background-color: #fff;
+    top: 50%;
+    left: 30px;
+} */
+
+.patient {
+    background-color: white;
+    margin: auto;
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    height: 60px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.data-patient {
+    text-align: center;
+}
+
+.data-patient i {
+    font-size: 18px;
+    color: #19769f;
+}
+
+.data-patient span {
+    font-size: 19px;
+    font-family: "Raleway", sans-serif;
+    padding-left: 8px;
+}

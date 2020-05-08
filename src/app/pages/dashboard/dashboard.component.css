@@ -1,7 +1,12 @@
 .h {
-    height: 76px;
+    height: 74px;
+    background-color: #19769f;
 }
 
-.s {}
+.side {
+    background-color: #19769f;
+}
 
-.c {}
+.content {
+    background-color: #19769f;
+}

@@ -9,8 +9,8 @@
 .sileder {
     position: fixed;
     height: 100%;
-    width: 14%;
-    background-color: #19769f;
+    width: 16%;
+    background-color: #fff;
     border-bottom-right-radius: 20px;
     border-top-right-radius: 20px;
     z-index: 1;
@@ -18,12 +18,18 @@
 
 .item {
     font-size: 18px;
+    margin: 10px 10px;
     padding: 10px 0px;
-    border-bottom: solid 1px #fff;
+    border: solid 0.5px rgb(25, 118, 159, 0.2);
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
 }
 
 .nav-link {
-    color: #fff;
+    color: #455571;
     transition: all 0.1s;
     -webkit-transition: all 0.1s;
     -moz-transition: all 0.1s;
@@ -33,8 +39,29 @@
 
 .sileder-icon {
     margin-left: 10px;
+    padding-right: 10px;
     font-size: 20px;
-    color: #fff;
+    color: #19769f;
+}
+
+.i-1 {
+    color: #11cdef;
+}
+
+.i-2 {
+    color: #7764e4;
+}
+
+.i-3 {
+    color: #5fe5bc;
+}
+
+.i-4 {
+    color: #ff7474;
+}
+
+.i-6 {
+    color: #0acc6b;
 }
 
 .nav-link:hover {

@@ -1,46 +1,28 @@
 <section>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6 mt-4">
-                <h3>Medicines</h3>
-            </div>
-            <div class="col-md-4 text-right mt-4">
-                <a href="javascript:;" [routerLink]="['../addmedicine']" class="btn btn-primary add">
-                    <div>+ add new medicines</div>
-                </a>
-            </div>
-
-        </div>
-        <div class="row">
-            <div class="col-md-10 col-12 card mt-4 " *ngFor="let m of medicine">
-                <div class="row">
-                    <div class="col-md-6">
-                        <h5> <samp>Title</samp> : {{m.medicine_Name}} </h5>
-                        <h5> <samp>Price</samp> : {{m.medicine_Price}} </h5>
-                        <h5> <samp>Quantity</samp> : {{m.medicine_Quantity}} </h5>
-                        <!-- <h5> <samp>Description</samp> : {{m.medicine_Description}} </h5> -->
-
-                        <div class="b  col-md-12">
-
-                            <button class="   btn btn-info m-1"> Edit </button>
-                            <button class="  btn btn-outline-danger m-1"> Delete </button>
-
-                        </div>
-
-                    </div>
-                    <div class="col-md-6 p">
-                        <img src="{{m.medicine_ImageUrl}}" class="img-fluid ppp">
-                    </div>
-
-
-
-
+    <div class="container-fluid">
+        <div class="row mt-3">
+            <div class="col-md-10 title">
+                <div class="col-6 ">
+                    <h2>Medicines</h2>
+                </div>
+                <div class=" col-6  ">
+                    <a href="javascript:;" [routerLink]="['../addmedicine']" class="btn btn-primary">
+                        <div>+ add new medicines</div>
+                    </a>
                 </div>
             </div>
 
         </div>
+        <div class="row">
+            <div class="col-md-10 med-card">
+                <div class="col-6 mid-info">
 
+
+                </div>
+
+                <div class="col-4 pic"></div>
+            </div>
+
+        </div>
     </div>
-
-
 </section>
