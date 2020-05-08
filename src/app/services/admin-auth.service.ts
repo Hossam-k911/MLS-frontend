@@ -12,7 +12,7 @@ export class AdminAuthService {
   public httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json',
-      // 'x-auth-token': this.token,
+      'x-auth-token': this.token
       // " Access-Control-Allow-Origin": "*"
       // 'cors': 'Access-Control-Allow-Origin'
     }),
