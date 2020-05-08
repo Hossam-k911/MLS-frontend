@@ -15,6 +15,7 @@ import { EditCategoryComponent } from './components/Categories/edit-category/edi
 import { AddTestComponent } from './components/Categories/add-test/add-test.component';
 import { HospitalEditComponent } from './components/hospital/hospital-edit/hospital-edit.component';
 import { TestComponent } from './components/test/test.component';
+import { ResultsComponent } from './components/results/results.component';
 
 const routes: Routes = [
   {
@@ -44,7 +45,9 @@ const routes: Routes = [
       { path: "editcategory/:id", component: EditCategoryComponent },
       { path: "addtest/:id", component: AddTestComponent },
       { path: "edithospital", component: HospitalEditComponent },
-      { path: "test", component: TestComponent }
+      { path: "test", component: TestComponent },
+      { path: "results", component: ResultsComponent }
+
 
     ]
   },
