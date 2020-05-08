@@ -1,47 +1,112 @@
+.container-fluid {
+    background-color: #19769f;
+}
+
+.content-lf {
+    position: relative;
+    height: 635px;
+    width: 100%;
+    /* background-color: darkcyan; */
+}
+
+.vertical {
+    height: 350px;
+    width: 100%;
+    /* background-color: darkgreen; */
+    margin: 0px;
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+}
+
 .fo {
-    border: 3px solid rgba(79, 194, 89, 0.918);
-    box-shadow: 1px 1px rgba(79, 194, 89, 0.918);
-    border-radius: 4%;
+    background-color: #f7fafc;
+    width: 60%;
+    margin: auto;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
 }
 
-.wave {
-    width: 100%;
-    height: 130px;
+.fo h1 {
+    font-family: "Pacifico", cursive;
 }
 
-.pic-wave {
-    width: 100%;
-    height: 100%;
+.fo span {
+    font-family: "Raleway", sans-serif;
+}
+
+.dash {
+    font-size: 12px;
+}
+
+.inputs-sign {
+    position: relative;
+}
+
+.i-1 {
+    font-size: 21px;
+    position: absolute;
+    top: 9%;
+    left: 12%;
+}
+
+.i-2 {
+    font-size: 17px;
+    position: absolute;
+    bottom: 10%;
+    left: 12%;
+}
+
+.inpt {
+    width: 80%;
+    padding-inline-start: 40px;
+    height: 40px;
+    border: none;
+    box-shadow: 0px 0px 3px grey;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.btn-info {
+    background-color: #19769f;
 }
 
 .colom-right {
-    height: 450px;
-    margin: auto;
     position: relative;
 }
 
 .pic-one {
-    width: 100%;
+    top: 12px;
+    left: 15%;
     position: absolute;
+    height: 310px;
 }
 
 .pic-two {
-    width: 20%;
+    left: 44%;
     position: absolute;
-    bottom: 20px;
-    left: 30%;
+    top: 66px;
 }
 
 .pic-three {
-    width: 20%;
     position: absolute;
-    bottom: 20px;
-    right: 30px;
+    right: 20%;
+    top: 64px;
 }
 
 .pic-four {
-    width: 15%;
+    left: 20%;
     position: absolute;
-    bottom: 10px;
-    left: 10%;
+    top: 160px;
 }

@@ -1,0 +1,21 @@
+* {
+    box-sizing: border-box;
+}
+
+.con-med {
+    background-color: #fff;
+    margin: auto 20px !important;
+}
+
+.data-med {
+    background-color: cornsilk;
+}
+
+.data-med li {
+    display: block;
+}
+
+.med-pic {
+    height: 200px;
+    width: 400px;
+}

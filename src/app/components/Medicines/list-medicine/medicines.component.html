@@ -1,76 +1,32 @@
-<div class="container ">
-    <div class="row">
-        <div class="col-md-6">
-            <h3>Medicines</h3>
-        </div>
-        <div class="col-md-6 text-right mt-3">
-            <a href="javascript:;" [routerLink]="['../addmedicine']" class="btn btn-primary"><i
-                    class="fa fa-plus fa-lg"></i></a>
-        </div>
-
-    </div>
-
-
-    <div class="container-fluid ">
-        <div class="row ">
-            <div class=" col-lg-12 col-12  ">
-                <table class="table table-striped  mt-4">
-                    <thead>
-                        <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">Medicine</th>
-                            <th scope="col">Quantity</th>
-                            <th scope="col">Description</th>
-                            <th scope="col">Price</th>
-                            <th scope="col">Actions</th>
-
-
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr *ngFor="let m of medicinesData let i=index;">
-                            <td>{{i+1}}</td>
-                            <!-- <td>{{m.medicine_Name}}</td> -->
-                            <td> {{(m.medicine_Name.length >50) ? (m.medicine_Name|slice:0:50)+'...':m.medicine_Name}}
-                            </td>
-                            <td>{{m.medicine_Price}}</td>
-                            <td>
-                                {{(m.medicine_Description.length >50) ? (m.medicine_Description|slice:0:50)+'...':m.medicine_Description}}
-                            </td>
-                            <td>{{m.medicine_Quantity}}</td>
-                            <td style="width: 180px;">
-                                <!-- <i href="#" class="btn btn-default text primary" [routerLink]="['']"> <i class="fa fa-eye"></i></a> -->
-                                <a href="#" class="btn btn-default text success" [routerLink]="['../editmedicine',m._id]"> <i class="fa fa-edit"></i></a>
-                                <a href="javascript:;" (click)="matchId(m._id)" class="btn btn-default text-danger" data-toggle="modal" data-target="#delModal">
-                                    <i class="fas fa-trash"></i></a>
-
-
-                                <div class="modal fade" id="delModal" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                                    <div class="modal-dialog" role="document">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-
-                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                    <span aria-hidden="true">&times;</span>
-                                                </button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <span class="sppp ">Are you Sure delete request.</span>
-                                                <small class="form-text text-muted">Check request before doing anything
-                                                </small>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
-                                                <button type="button" (click)="deleteMedicine()" data-dismiss="modal" class="btn btn-primary">Delete</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                    </tbody>
-                </table>
+<section>
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-9 d-flex justify-content-between m-auto ">
+                <div class="mid-title">
+                    <h2>Medicines</h2>
+                </div>
+                <div class="add-mid">
+                    <a href="javascript:;" [routerLink]="['../addmedicine']" class="btn btn-primary ">
+                        <div>+ add new medicines</div>
+                    </a>
+                </div>
 
             </div>
-        </div>
+            <div class="row m-auto">
+                <div class="col-9 d-inline-flex m-auto con-med" *ngFor="let m of medicinesData">
+                    <div class="data-med">
+                        <ul>
+                            <li><samp>Title</samp> : {{m.medicine_Name}}</li>
+                            <li><samp>Price</samp> : {{m.medicine_Price}}</li>
+                            <li><samp>Quantity</samp>: {{m.medicine_Quantity}}</li>
+                        </ul>
+                    </div>
+                    <div class="med-pic">
+                        <img src="{{m.medicine_ImageUrl}}" class="img-fluid ">
+                    </div>
+                </div>
+            </div>
 
+        </div>
     </div>
-</div>
+</section>
