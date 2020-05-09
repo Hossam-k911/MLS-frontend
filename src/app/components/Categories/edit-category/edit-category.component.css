@@ -108,10 +108,10 @@
 }
 
 .mid-sitting .btn {
-    color: #ff7474;
-    background-color: #fff;
+    color: #fff;
+    background-color: #ff7474;
     padding: 5px 15px;
     font-size: 20px;
-    font-weight: 500;
+    font-weight: 400;
     border: none;
 }

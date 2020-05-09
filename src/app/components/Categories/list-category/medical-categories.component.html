@@ -16,7 +16,7 @@
             <div class="col-md-4 category-data">
                 <ul>
 
-                    <li><i class="fas fa-prescription-bottle-alt i1"></i><span>Title</span> : {{c.category_title}}</li>
+                    <li><i class="fas fa-prescription-bottle-zalt i1"></i><span>Title</span> : {{c.category_title}}</li>
                     <li><i class="fas fa-link i2"></i><span>URL</span> :
                         <p>{{c.category_imgLink}}</p>
                     </li>
@@ -24,10 +24,10 @@
                 <div class="category-setting">
 
                     <a href="#" class="btn  bb " [routerLink]="['../editcategory',c._id]">
-                        Edit </a>
+            Edit </a>
 
                     <a href="javascript:;" (click)="matchId(c._id)" class="btn btn-danger" data-toggle="modal" data-target="#delModal">
-                        Delete</a>
+            Delete</a>
                 </div>
 
             </div>
