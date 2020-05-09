@@ -1,21 +1,82 @@
-* {
-    box-sizing: border-box;
+.mid-title {
+    color: #fff;
+    font-family: "Raleway", sans-serif;
 }
 
-.con-med {
+.add-mid {
+    font-family: "Raleway", sans-serif;
+    text-align: end;
+}
+
+.add-mid a {
+    width: 60%;
     background-color: #fff;
-    margin: auto 20px !important;
+    border-radius: 20px;
+    color: #000;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
 }
 
-.data-med {
-    background-color: cornsilk;
+.add-mid a:hover {
+    color: #19769f;
 }
 
-.data-med li {
-    display: block;
+.med-data {
+    background-color: #f7fafc;
+    padding: 20px 5px 10px 0px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border: none;
 }
 
-.med-pic {
+.med-data ul {
+    list-style-type: none;
+}
+
+.med-data ul li {
+    font-size: 18px;
+}
+
+.med-data ul li i {
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+
+.med-data ul li span {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.i-1 {
+    color: #ff7474;
+    padding-right: 10px;
+}
+
+.i-2 {
+    color: #56dab2;
+    padding-right: 5px;
+}
+
+.i-3 {
+    color: #19769f;
+    padding-right: 10px;
+}
+
+.med-sitting .btn-primary {
+    background-color: #19769f;
+}
+
+.mod-pic {
+    background-color: #f7fafc;
+    width: 100%;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border: none;
+}
+
+.mod-pic img {
     height: 200px;
-    width: 400px;
+    width: 350px;
 }

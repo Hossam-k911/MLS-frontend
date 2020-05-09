@@ -2,11 +2,11 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col">
-                <button [routerLink]="['../../editcategory',cat_id]" class="btn btn-light b-back mt-2 "> <i
-            class="fas fa-arrow-left pr-2"></i>Back</button>
+                <button [routerLink]="['../../editcategory',cat_id]" class="btn btn-light b-back mt-4 "> <i
+                        class="fas fa-arrow-left pr-2"></i>Back</button>
             </div>
         </div>
-        <div class="row">
+        <div class="row  justify-content-md-center">
             <div class="col-md-6 col-12 mt-4 ">
                 <form id="form-medicine" class="form-med">
                     <div class="form-group">
@@ -39,8 +39,8 @@
 
                     </div>
                     <button type="submit" class="btn btn-info " (click)="onSubmit()">
-            Submit
-          </button>
+                        Submit
+                    </button>
                 </form>
             </div>
         </div>

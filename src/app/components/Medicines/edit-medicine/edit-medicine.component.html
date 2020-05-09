@@ -1,59 +1,53 @@
 <section>
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col">
-        <button [routerLink]="['../../Medicines']" class="btn btn-light b-back mt-2 "> <i
+    <div class="container">
+        <div class="row">
+            <div class="col ml-3">
+                <button [routerLink]="['../../Medicines']" class="btn btn-light b-back mt-2 "> <i
             class="fas fa-arrow-left pr-2"></i>Back</button>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-12 col-12  ">
-        <form id="form-medicine" class="form-med">
-          <div class="form-group">
-            <label for="Medicine"> Medicine</label>
-            <input type="text" id="name" class="form-control" name=" Medicine" value="{{medicineInfo.medicine_Name}}"
-              (keyup)="handleTextInput($event)">
+            </div>
+        </div>
+        <div class="row justify-content-md-center">
+            <div class="col-md-6 col-12 mt-4  ">
+                <form id="form-medicine" class="form-med">
+                    <div class="form-group">
+                        <label for="Medicine"> Medicine</label>
+                        <input type="text" id="name" class="form-control" name=" Medicine" value="{{medicineInfo.medicine_Name}}" (keyup)="handleTextInput($event)">
 
-            <label for="Description"> Description</label>
-            <input type="text" id="description" class="form-control" name="
-              Description" value="{{medicineInfo.medicine_Description}}" (keyup)="handleTextInput($event)">
-            <label for="Description"> Image URL </label>
-            <input type="text" id="imageURL" class="form-control " (keyup)="handleTextInput($event)" name="
+
+                        <label for="Description"> Image URL </label>
+                        <input type="text" id="imageURL" class="form-control " (keyup)="handleTextInput($event)" name="
               Description" value="{{medicineInfo.medicine_ImageUrl}}">
 
 
 
-            <img src="{{medicineInfo.medicine_ImageUrl}}" class="img-fluid m-1 img-prodact">
-            <div class=" row">
-              <div class="col">
-                <label for="Quantity"> Quantity</label>
-                <input type="number" id="quantity" class="form-control" placeholder=" 2
-                  ,3 or more" name="Quantity" value="{{medicineInfo.medicine_Quantity}}"
-                  (keyup)="handleTextInput($event)">
-              </div>
-              <div class=" col">
-                <label for="Price"> Price</label>
-                <input type="number" id="price" class="form-control" placeholder=" 000" name="Price"
-                  value="{{medicineInfo.medicine_Price}}" (keyup)="handleTextInput($event)">
-              </div>
-              <div class="col">
-                <label for="Price"> Unit</label>
-                <input type="text" id="unit" class="form-control" (keyup)="handleTextInput($event)" placeholder=" "
-                  name="Price" value="{{medicineInfo.medicine_Unit}}">
-              </div>
-            </div>
+                        <img src="{{medicineInfo.medicine_ImageUrl}}" class="img-fluid m-1 img-prodact">
+                        <div class=" row">
+                            <div class="col">
+                                <label for="Quantity"> Quantity</label>
+                                <input type="number" id="quantity" class="form-control" placeholder=" 2
+                  ,3 or more" name="Quantity" value="{{medicineInfo.medicine_Quantity}}" (keyup)="handleTextInput($event)">
+                            </div>
+                            <div class=" col">
+                                <label for="Price"> Price</label>
+                                <input type="number" id="price" class="form-control" placeholder=" 000" name="Price" value="{{medicineInfo.medicine_Price}}" (keyup)="handleTextInput($event)">
+                            </div>
+                            <div class="col">
+                                <label for="Price"> Unit</label>
+                                <input type="text" id="unit" class="form-control" (keyup)="handleTextInput($event)" placeholder=" " name="Price" value="{{medicineInfo.medicine_Unit}}">
+                            </div>
+                        </div>
 
 
 
-          </div>
+                    </div>
 
 
-          <button type=" submit" class="btn btn-info " (click)="onSubmit()">
+                    <button type=" submit" class="btn btn-info " (click)="onSubmit()">
             Submit
           </button>
-        </form>
-      </div>
+                </form>
+            </div>
+        </div>
     </div>
-  </div>
 
 </section>
