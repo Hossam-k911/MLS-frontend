@@ -1,1 +1,59 @@
-<p>accepted-request works!</p>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12 col-12 title">
+            <h2>Accept-tap</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-11 col-sm-12 patient " *ngFor="let p of AcceptedRequests">
+            <div class="data-patient">
+                <i class="far fa-user i-1"></i> <span>{{p.req_p_name}}</span>
+            </div>
+            <div class="data-patient">
+                <i class="far fa-envelope i-2 "></i> <span>{{p.req_status}}</span>
+            </div>
+            <div class="data-patient">
+                <i class="far fa-clock"></i> <span>{{p.req_time}}</span>
+            </div>
+
+            <div class="data-patient">
+                <i class="fas fa-venus-mars "></i> <span>{{p.gender}}</span>
+            </div>
+
+            <div class="data-patient">
+                <i class="fas fa-exclamation-circle i-status i-4"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12 col-12 title">
+            <h2>Request-tap</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-11 col-sm-12 patient " *ngFor="let p of AcceptedRequests">
+            <div class="data-patient">
+                <i class="far fa-user i-1"></i> <span>{{p.req_p_name}}</span>
+            </div>
+            <div class="data-patient">
+                <i class="far fa-envelope i-2 "></i> <span>{{p.req_status}}</span>
+            </div>
+            <div class="data-patient">
+                <i class="far fa-clock"></i> <span>{{p.req_time}}</span>
+            </div>
+
+            <div class="data-patient">
+                <i class="fas fa-venus-mars "></i> <span>{{p.gender}}</span>
+            </div>
+
+            <div class="data-patient">
+                <i class="far fa-check-circle i-4-rq"></i>
+            </div>
+        </div>
+    </div>
+</div>
