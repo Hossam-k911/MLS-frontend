@@ -1,13 +1,13 @@
-//imports
-import { Component, OnInit } from "@angular/core";
-import { AdminAuthService } from "src/app/services/admin-auth.service";
+// imports
+import { Component, OnInit } from '@angular/core';
+import { AdminAuthService } from 'src/app/services/admin-auth.service';
 
-//configurations
+// configurations
 declare var $: any;
 @Component({
-  selector: "app-requests",
-  templateUrl: "./requests.component.html",
-  styleUrls: ["./requests.component.css"]
+  selector: 'app-requests',
+  templateUrl: './requests.component.html',
+  styleUrls: ['./requests.component.css']
 })
 export class RequestsComponent implements OnInit {
 
@@ -17,12 +17,15 @@ export class RequestsComponent implements OnInit {
   ) { }
 
   // Initialization
-  Requests: any
-  selectedRequest: any
-  req_id: any
-  r_id: any
-  p_id: any
-  patientData: any
+  Requests: any;
+  selectedRequest: any;
+  // tslint:disable-next-line: variable-name
+  req_id: any;
+  // tslint:disable-next-line: variable-name
+  r_id: any;
+  // tslint:disable-next-line: variable-name
+  p_id: any;
+  patientData: any;
   // Getting Requests and fill in table
   ngOnInit() {
     this.getRequests();
@@ -31,7 +34,7 @@ export class RequestsComponent implements OnInit {
     this.myAdminAuthService.getRequests().subscribe((resp: any) => {
       this.Requests = resp;
 
-    })
+    });
   }
 
   getcurrentRowData(row) {
@@ -39,7 +42,7 @@ export class RequestsComponent implements OnInit {
     this.r_id = row._id;
     this.p_id = row.req_p_id;
     this.getPatientData();
-    console.log(this.selectedRequest)
+    console.log(this.selectedRequest);
   }
 
   // Adding Patient data
@@ -57,7 +60,7 @@ export class RequestsComponent implements OnInit {
   // Request Deletion
   matchId(id) {
     this.req_id = id;
-    console.log(this.req_id)
+    console.log(this.req_id);
     console.log(id);
   }
   deleteRequest() {
@@ -69,8 +72,6 @@ export class RequestsComponent implements OnInit {
         this.ngOnInit();
       });
   }
-
-
 
   AcceptedStatus() {
     const { req_id } = this;
@@ -100,20 +101,4 @@ export class RequestsComponent implements OnInit {
       this.ngOnInit();
     });
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }

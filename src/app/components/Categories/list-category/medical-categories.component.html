@@ -1,42 +1,66 @@
 <section>
-    <div class="container">
-        <div class="row mt-5">
-            <div class="col-md-8 d-flex justify-content-between m-auto">
-                <div class="category-title">
-                    <h2>Categories</h2>
-                </div>
-                <div class="add-category">
-                    <a href="javascript:;" [routerLink]="['../addcategory']" class="btn btn-primary ">
-                        <div>+ add new category</div>
-                    </a>
-                </div>
-            </div>
+  <div class="container">
+    <div class="row mt-5">
+      <div class="col-md-8 d-flex justify-content-between m-auto">
+        <div class="category-title">
+          <h2>Categories</h2>
         </div>
-        <div class="row justify-content-md-center my-5 " *ngFor="let c of category ">
-            <div class="col-md-4 category-data">
-                <ul>
+        <div class="add-category">
+          <a href="javascript:;" [routerLink]="['../addcategory']" class="btn btn-primary ">
+            <div>+ add new category</div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-md-center my-5 " *ngFor="let c of category ">
+      <div class="col-md-4 category-data">
+        <ul>
 
-                    <li><i class="fas fa-prescription-bottle-zalt i1"></i><span>Title</span> : {{c.category_title}}</li>
-                    <li><i class="fas fa-link i2"></i><span>URL</span> :
-                        <p>{{c.category_imgLink}}</p>
-                    </li>
-                </ul>
-                <div class="category-setting">
+          <li><i class="fas fa-prescription-bottle-zalt i1"></i><span>Title</span> : {{c.category_title}}</li>
+          <li><i class="fas fa-link i2"></i><span>URL</span> :
+            <p>{{c.category_imgLink}}</p>
+          </li>
+        </ul>
+        <div class="category-setting">
 
-                    <a href="#" class="btn  bb " [routerLink]="['../editcategory',c._id]">
+          <a href="#" class="btn  bb " [routerLink]="['../editcategory',c._id]">
             Edit </a>
 
-                    <a href="javascript:;" (click)="matchId(c._id)" class="btn btn-danger" data-toggle="modal" data-target="#delModal">
+          <a href="javascript:;" (click)="matchId(c._id)" class="btn btn-danger" data-toggle="modal"
+            data-target="#delModal">
             Delete</a>
-                </div>
-
-            </div>
-            <div class="col-md-5 category-pic">
-
-                <img src="https://firebasestorage.googleapis.com/v0/b/doctroid-be47d.appspot.com/o/Category%2FSerum.jpg?alt=media&token=23bc758c-6f77-476b-8497-0152d948faf0" class=" pic">
-
-            </div>
         </div>
+
+      </div>
+      <div class="col-md-5 category-pic">
+
+        <img
+          src="https://firebasestorage.googleapis.com/v0/b/doctroid-be47d.appspot.com/o/Category%2FSerum.jpg?alt=media&token=23bc758c-6f77-476b-8497-0152d948faf0"
+          class=" pic">
+
+      </div>
     </div>
+  </div>
+  <div class="modal fade" id="delModal" data-backdrop="static" tabindex="-1" role="dialog"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <span class="sppp ">Are you Sure delete category : </span>
+          <!-- <small class="form-text text-muted">Check request before doing anything </small> -->
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
+          <button type="button" data-dismiss="modal" (click)="deleteCategory()" class="btn btn-danger">Delete</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
 </section>
