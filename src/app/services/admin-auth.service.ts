@@ -20,7 +20,7 @@ export class AdminAuthService {
 
   };
   constructor(public myHttpClient: HttpClient) { }
-
+  //admin
   userSignUp(data) {
     return this.myHttpClient.post(this.BASE_URL + '/dashboard/signup', data)
   }
@@ -32,6 +32,10 @@ export class AdminAuthService {
     // };
     return this.myHttpClient.post(this.BASE_URL + '/dashboard/signin', JSON.stringify(data), this.httpOptions)
   }
+
+
+
+  //
   getPatients() {
 
     return this.myHttpClient.get(`${this.BASE_URL}/getpatients/`, this.httpOptions)
@@ -128,5 +132,8 @@ export class AdminAuthService {
   getHospital() {
 
     return this.myHttpClient.get(this.BASE_URL + `/gethospital `, this.httpOptions)
+  }
+  getAccepted() {
+    return this.myHttpClient.get(this.BASE_URL + `/getreqs`, this.httpOptions)
   }
 }

@@ -18,7 +18,7 @@ export class MedicinesComponent implements OnInit {
   getMedicines() {
     this.myAdminAuthService.getMediciensinfo().subscribe((Response: any) => {
       this.medicinesData = Response;
-      console.log(Response);
+
     });
 
   }
