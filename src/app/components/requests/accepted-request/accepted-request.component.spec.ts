@@ -1,17 +1,14 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
+import { AcceptedRequestComponent } from "./accepted-request.component";
 
-import { AcceptedRequestComponent } from './accepted-request.component';
-
-
-describe('AcceptedRequestComponent', () => {
+describe("AcceptedRequestComponent", () => {
   let component: AcceptedRequestComponent;
   let fixture: ComponentFixture<AcceptedRequestComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AcceptedRequestComponent ]
-    })
-    .compileComponents();
+      declarations: [AcceptedRequestComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -20,7 +17,7 @@ describe('AcceptedRequestComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });
