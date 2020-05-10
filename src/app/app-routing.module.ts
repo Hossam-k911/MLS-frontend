@@ -4,7 +4,7 @@ import { SigninComponent } from "./pages/signin/signin.component";
 import { DashboardComponent } from "./pages/dashboard/dashboard.component";
 import { ErrorComponent } from "./pages/error/error.component";
 import { PatientsComponentComponent } from "./components/patients-component/patients-component.component";
-import { RequestsComponent } from "./components/requests/requests.component";
+import { RequestsComponent } from "./components/requests/list-requests/requests.component";
 import { HospitalComponent } from "./components/hospital/hospital-view/hospital.component";
 import { MedicinesComponent } from "./components/Medicines/list-medicine/medicines.component";
 import { AddMedicineComponent } from "./components/Medicines/add-medicine/add-medicine.component";

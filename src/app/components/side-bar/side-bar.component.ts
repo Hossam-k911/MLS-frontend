@@ -13,7 +13,7 @@ export class SideBarComponent implements OnInit {
   ngOnInit() {
     this.myAdminAuthService.listCategories().subscribe((response: any) => {
       this.cat_id = response[0]._id
-      console.log(this.cat_id)
+      // console.log(this.cat_id)
     })
   }
 

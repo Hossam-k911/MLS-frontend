@@ -35,28 +35,18 @@ export class AdminAuthService {
 
 
 
-  //
+  //patient componenet
   getPatients() {
 
     return this.myHttpClient.get(`${this.BASE_URL}/getpatients/`, this.httpOptions)
   }
+
+
+  //requests component
   getRequests() {
 
     return this.myHttpClient.get(`${this.BASE_URL}/getreq`, this.httpOptions)
   }
-  getHospitalInfo() {
-
-    return this.myHttpClient.get(`${this.BASE_URL}/hospitalinfo`, this.httpOptions)
-  }
-
-
-  getMediciensinfo() {
-
-    return this.myHttpClient.get(`${this.BASE_URL}/getmedicines`, this.httpOptions)
-  }
-
-
-
   acceptStatus(data) {
 
     return this.myHttpClient.post(this.BASE_URL + '/acceptreq', JSON.stringify(data), this.httpOptions)
@@ -85,6 +75,36 @@ export class AdminAuthService {
 
     return this.myHttpClient.put(this.BASE_URL + '/editreq', JSON.stringify(data), this.httpOptions)
   }
+  getAccepted() {
+    return this.myHttpClient.get(this.BASE_URL + `/getreqs`, this.httpOptions)
+  }
+  getAcceptedRequests() {
+    return this.myHttpClient.get(this.BASE_URL + '/accepted', this.httpOptions)
+  }
+
+  //hospital component
+  getHospitalInfo() {
+
+    return this.myHttpClient.get(`${this.BASE_URL}/hospitalinfo`, this.httpOptions)
+  }
+
+
+  editHospital(data) {
+
+    return this.myHttpClient.put(this.BASE_URL + `/edithospital `, JSON.stringify(data), this.httpOptions)
+  }
+  getHospital() {
+
+    return this.myHttpClient.get(this.BASE_URL + `/gethospital `, this.httpOptions)
+  }
+
+
+
+  //medicines component
+  getMediciensinfo() {
+
+    return this.myHttpClient.get(`${this.BASE_URL}/getmedicines`, this.httpOptions)
+  }
   addMedicine(data) {
 
     return this.myHttpClient.post(this.BASE_URL + '/addmedicine', JSON.stringify(data), this.httpOptions)
@@ -103,6 +123,9 @@ export class AdminAuthService {
     return this.myHttpClient.post(this.BASE_URL + '/delmedicine', JSON.stringify(data), this.httpOptions)
   }
 
+
+
+  //category component
   listCategories() {
 
     return this.myHttpClient.get(this.BASE_URL + `/listcategories `, this.httpOptions)
@@ -118,22 +141,14 @@ export class AdminAuthService {
 
     return this.myHttpClient.get(this.BASE_URL + `/getcategorybyid/${id} `, this.httpOptions)
   }
+
+
+  //tests component
   deleteTest(data) {
     return this.myHttpClient.post(this.BASE_URL + '/deltest', JSON.stringify(data), this.httpOptions)
   }
   addTest(data) {
 
     return this.myHttpClient.post(this.BASE_URL + '/addtest', JSON.stringify(data), this.httpOptions)
-  }
-  editHospital(data) {
-
-    return this.myHttpClient.put(this.BASE_URL + `/edithospital `, JSON.stringify(data), this.httpOptions)
-  }
-  getHospital() {
-
-    return this.myHttpClient.get(this.BASE_URL + `/gethospital `, this.httpOptions)
-  }
-  getAccepted() {
-    return this.myHttpClient.get(this.BASE_URL + `/getreqs`, this.httpOptions)
   }
 }

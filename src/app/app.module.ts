@@ -13,7 +13,7 @@ import { PatientsComponentComponent } from './components/patients-component/pati
 import { ContentComponent } from './components/content/content.component';
 import { HeaderComponent } from './components/header/header.component';
 import { SideBarComponent } from './components/side-bar/side-bar.component';
-import { RequestsComponent } from './components/requests/requests.component';
+import { RequestsComponent } from './components/requests/list-requests/requests.component';
 import { HospitalComponent } from './components/hospital/hospital-view/hospital.component';
 import { MedicinesComponent } from './components/Medicines/list-medicine/medicines.component';
 // import { ToastrModule, ToastContainerModule } from 'ngx-toastr'
