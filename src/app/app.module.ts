@@ -27,6 +27,7 @@ import { AddTestComponent } from './components/Categories/add-test/add-test.comp
 import { HospitalEditComponent } from './components/hospital/hospital-edit/hospital-edit.component';
 import { TestComponent } from './components/test/test.component';
 import { ResultsComponent } from './components/results/results.component';
+import { AcceptedRequestComponent } from './components/requests/accepted-request/accepted-request.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import { ResultsComponent } from './components/results/results.component';
     AddTestComponent,
     HospitalEditComponent,
     TestComponent,
-    ResultsComponent
+    ResultsComponent,
+    AcceptedRequestComponent
   ],
   imports: [
     BrowserModule,

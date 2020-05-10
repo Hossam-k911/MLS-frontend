@@ -16,6 +16,8 @@ import { AddTestComponent } from './components/Categories/add-test/add-test.comp
 import { HospitalEditComponent } from './components/hospital/hospital-edit/hospital-edit.component';
 import { TestComponent } from './components/test/test.component';
 import { ResultsComponent } from './components/results/results.component';
+import { AcceptedRequestComponent } from './components/requests/accepted-request/accepted-request.component';
+
 
 const routes: Routes = [
   {
@@ -38,7 +40,6 @@ const routes: Routes = [
         component: MedicinesComponent
       },
       { path: "addmedicine", component: AddMedicineComponent },
-
       { path: "editmedicine/:id", component: EditMedicineComponent },
       { path: "category", component: MedicalCategoriesComponent },
       { path: "addcategory", component: AddCategoryComponent },
@@ -46,7 +47,8 @@ const routes: Routes = [
       { path: "addtest/:id", component: AddTestComponent },
       { path: "edithospital", component: HospitalEditComponent },
       { path: "test", component: TestComponent },
-      { path: "results", component: ResultsComponent }
+      { path: "results", component: ResultsComponent },
+      { path: "acceptreq", component: AcceptedRequestComponent }
 
 
     ]

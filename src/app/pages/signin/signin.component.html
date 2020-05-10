@@ -1,49 +1,48 @@
 <section>
-  <div class="container-fluid ">
-    <div class="row ">
-      <div class="  col-lg-6 col-md-4 col-sm-6 content-lf ">
-        <div class="vertical">
-          <form class="fo">
-            <div class="text-center m pt-4">
-              <h1 class="animated fadeInDown delay-2s">Doctoroid <span class="dash">Dashboard.</span></h1>
+    <div class="container-fluid ">
+        <div class="row ">
+            <div class="  col-lg-6 col-md-4 col-sm-6 content-lf ">
+                <div class="vertical">
+                    <form class="fo">
+                        <div class="text-center m pt-4">
+                            <h1 class="animated fadeInDown delay-2s">Doctoroid <span class="dash">Dashboard.</span></h1>
+                        </div>
+                        <div class="inputs-sign mt-5">
+                            <div class=" text-center ">
+                                <input class="inpt" id="email" placeholder="Email" (keyup)="handleTextInput($event)">
+                                <i class="far fa-envelope i-1"></i>
+                            </div>
+                            <div class=" text-center pt-5">
+                                <input class="inpt" id="password" type="password" placeholder="Password" (keyup)="handleTextInput($event)">
+                                <i class="fas fa-lock fa-lg pr-1 i-2"></i>
+                            </div>
+                        </div>
+                        <div class="text-center mt-5 pb-5">
+                            <button (click)="handleSignIn()" class="btn btn-info">Sign in</button>
+                        </div>
+                    </form>
+                </div>
             </div>
-            <div class="inputs-sign mt-5">
-              <div class=" text-center ">
-                <input class="inpt" id="email" placeholder="Email" (keyup)="handleTextInput($event)">
-                <i class="far fa-envelope i-1"></i>
-              </div>
-              <div class=" text-center pt-5">
-                <input class="inpt" id="password" type="password" placeholder="Password"
-                  (keyup)="handleTextInput($event)">
-                <i class="fas fa-lock fa-lg pr-1 i-2"></i>
-              </div>
+
+
+
+
+
+            <div class=" col-lg-6 col-md-6 col-sm-6  ">
+                <div class="vertical">
+                    <div class="colom-right">
+                        <img src="assets/img/Group 3003.svg" class="img-fluid pic-one animated fadeIn">
+                        <img src="assets/img/Group 3004.svg" class="img-fluid pic-two animated fadeInLeft delay-1s">
+                        <img src="assets/img/Group 3005.svg" class="img-fluid pic-three animated fadeInRight delay-1s">
+                        <img src="assets/img/Group 3006.svg" class=" img-fluid pic-four animated fadeInDown delay-2s">
+                    </div>
+
+                </div>
+
             </div>
-            <div class="text-center mt-5 pb-5">
-              <button (click)="handleSignIn()" class="btn btn-info">Sign in</button>
-            </div>
-          </form>
         </div>
-      </div>
 
-
-
-
-
-      <div class=" col-lg-6 col-md-6 col-sm-6  ">
-        <div class="vertical">
-          <div class="colom-right">
-            <img src="assets/img/Group 3003.svg" class="img-fluid pic-one animated fadeIn">
-            <img src="assets/img/Group 3004.svg" class="img-fluid pic-two animated fadeInLeft delay-1s">
-            <img src="assets/img/Group 3005.svg" class="img-fluid pic-three animated fadeInRight delay-1s">
-            <img src="assets/img/Group 3006.svg" class=" img-fluid pic-four animated fadeInDown delay-2s">
-          </div>
-
-        </div>
-
-      </div>
     </div>
-
-  </div>
 
 
 </section>
