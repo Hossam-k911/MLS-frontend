@@ -1,32 +1,37 @@
 <section>
-    <div class="container mt-4">
-        <div class="row">
+    <div class="container">
+        <div class="row mt-4">
             <div class="col-9 d-flex justify-content-between m-auto ">
-                <div class="mid-title">
+                <div class="mid-title " style="flex-grow: 4;">
                     <h2>Medicines</h2>
                 </div>
-                <div class="add-mid">
+                <div class="add-mid" style="flex-grow: 4;">
                     <a href="javascript:;" [routerLink]="['../addmedicine']" class="btn btn-primary ">
                         <div>+ add new medicines</div>
                     </a>
                 </div>
 
             </div>
-            <div class="row m-auto">
-                <div class="col-9 d-inline-flex m-auto con-med" *ngFor="let m of medicinesData">
-                    <div class="data-med">
-                        <ul>
-                            <li><samp>Title</samp> : {{m.medicine_Name}}</li>
-                            <li><samp>Price</samp> : {{m.medicine_Price}}</li>
-                            <li><samp>Quantity</samp>: {{m.medicine_Quantity}}</li>
-                        </ul>
-                    </div>
-                    <div class="med-pic">
-                        <img src="{{m.medicine_ImageUrl}}" class="img-fluid ">
-                    </div>
-                </div>
-            </div>
+        </div>
+        <div class="row justify-content-md-center my-5" *ngFor="let m of medicinesData">
+            <div class="col-md-4 med-data ">
+                <ul>
+                    <li><i class="fas fa-prescription-bottle-alt i-1"></i><span>Title</span>: {{m.medicine_Name}}</li>
+                    <li><i class="far fa-money-bill-alt i-2"></i> <span>Price</span>: {{m.medicine_Price}} </li>
+                    <li><i class="fas fa-thermometer-quarter i-3"></i><span>Quantity</span>: {{m.medicine_Quantity}}
+                    </li>
+                </ul>
+                <div class="med-sitting ml-4">
+                    <button href="javascript:;" (click)="matchId(m._id)" class="  btn btn-danger m-1"> Delete </button>
+                    <button [routerLink]="['../editmedicine',m._id]" class="   btn  btn-primary px-4 m-1"> Edit
+                    </button>
 
+                </div>
+
+            </div>
+            <div class="col-md-4 mod-pic ">
+                <img src="{{m.medicine_ImageUrl}}" class="img-fluid ">
+            </div>
         </div>
     </div>
 </section>
