@@ -17,8 +17,8 @@
     margin: 20px auto;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    height: 120px;
+    justify-content: space-between;
+    height: 140px;
     align-items: center;
     border-radius: 5px;
     -webkit-border-radius: 5px;
@@ -78,8 +78,17 @@ hr.solid {
 
 .btn-primary {
     background-color: #19769f !important;
+    border: none;
+    margin-right: 10px;
+    padding: 0.375rem 0.9rem;
 }
 
 .i-4-rq {
     color: darkblue;
+}
+
+.btn-danger {
+    border: none;
+    background-color: #ff7474;
+    padding: 0.31rem 0.6rem;
 }

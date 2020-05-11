@@ -80,3 +80,8 @@
     height: 200px;
     width: 350px;
 }
+
+.btn-danger {
+    background-color: #ff7474;
+    border: none;
+}

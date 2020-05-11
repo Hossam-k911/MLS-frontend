@@ -32,3 +32,8 @@
     padding: 0px;
     margin: 0px;
 }
+
+.btn-info {
+    background-color: #19769f;
+    border: none;
+}

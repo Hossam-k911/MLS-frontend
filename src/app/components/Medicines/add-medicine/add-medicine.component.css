@@ -13,3 +13,8 @@
 .b-back {
     padding: 8px 25px;
 }
+
+.btn-info {
+    background-color: #19769f;
+    border: none;
+}
