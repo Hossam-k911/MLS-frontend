@@ -115,3 +115,16 @@
     font-weight: 400;
     border: none;
 }
+
+.vartecal {
+    margin: 3px auto;
+    width: 30%;
+    height: 2px;
+    border: none;
+    background-color: #19769f;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
