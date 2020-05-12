@@ -81,6 +81,9 @@ export class AdminAuthService {
   getAcceptedRequests() {
     return this.myHttpClient.get(this.BASE_URL + '/accepted', this.httpOptions)
   }
+  uploadResFile(data) {
+    return this.myHttpClient.post(this.BASE_URL + '/upload', JSON.stringify(data), this.httpOptions)
+  }
 
   //hospital component
   getHospitalInfo() {
