@@ -1,4 +1,4 @@
-<section>
+<!-- <section>
   <div class="container-fluid">
     <div class="row">
 
@@ -44,4 +44,106 @@
     </div>
   </div>
 
-</section>
+</section> -->
+
+
+<!-- <section>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-6">
+        <h3></h3>
+      </div>
+
+      <div class="col">
+        <button _ngcontent-mwi-c2="" class="btn btn-outline-dark mt-2 btn-logout" tabindex="0" ng-reflect-router-link=""
+          [routerLink]="['../edithospital']">Edit </button>
+      </div>
+
+    </div>
+    <div class="row">
+      <div class="col-md-12 col-12 mt-4 ">
+        <form id="form-medicine" class="form-med">
+          <div class="form-group">
+            <label for="Medicine"> Laboratory Name</label>
+            <input type="text" class="form-control" name=" Medicine" value="{{hospitalData.hospital_name}}">
+
+            <label for="Description"> Laboratory Website</label>
+            <input type="text" class="form-control" name="
+              Description" value="{{hospitalData.hospital_website}}">
+            <label for="Description">Laboratory Phone </label>
+            <input type="text" class="form-control" name="
+              Description" value="{{hospitalData.hospital_phone}}">
+            <label for="Description"> Laboratory Location </label>
+            <input type="text" class="form-control" name="
+                Description" value="{{hospitalData.hospital_location}}">
+
+
+
+
+            <label for="Description"> FaceBook </label>
+            <input type="text" class="form-control" name="
+                Description" value="{{hospitalData.hospital_facebook}}">
+
+            <label for="Description"> Email </label>
+            <input type="text" class="form-control" name="
+                    Description" value="{{hospitalData.hospital_email}}">
+
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+</section> -->
+
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center ">
+        <div class="col-md-12  my-3">
+            <div class="title">
+                <button [routerLink]="['../hospital']" class="btn btn-light b-back mt-2 "> <i
+            class="fas fa-arrow-left pr-2"></i>Back</button>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="row justify-content-md-center ">
+        <div class="col-md-6">
+
+            <form id="form-medicine" class="form-med">
+                <div class="form-group">
+                    <label for="Medicine"> Laboratory Name</label>
+                    <input type="text" id="name" class="form-control" name=" Medicine" value="{{hospitalData.hospital_name}}" (keyup)="handleTextInput($event)">
+
+                    <label for=" Description"> Laboratory Website </label>
+                    <input type="text" id="website" class="form-control" name="
+              Description" value="{{hospitalData.hospital_website}}" (keyup)="handleTextInput($event)">
+                    <label for=" Description"> Laboratory Phone </label>
+                    <input type="text" id="phone" class="form-control" name="
+              Description" value="{{hospitalData.hospital_phone}}" (keyup)="handleTextInput($event)">
+                    <label for=" Description"> Laboratory Location </label>
+                    <input type="text" id="location" class="form-control" name="
+                Description" value="{{hospitalData.hospital_location}}" (keyup)="handleTextInput($event)">
+
+
+                    <label for=" Description"> FaceBook </label>
+                    <input type="text" id="fb" class="form-control" name="
+                Description" value="{{hospitalData.hospital_facebook}}" (keyup)="handleTextInput($event)">
+
+                    <label for=" Description"> Email </label>
+                    <input type="text" id="email" class="form-control" name="
+                    Description" value="{{hospitalData.hospital_email}}" (keyup)="handleTextInput($event)">
+
+                </div>
+                <button type=" submit" class="btn bb " (click)="onSubmit()">
+          Submit
+        </button>
+            </form>
+        </div>
+    </div>
+
+</div>

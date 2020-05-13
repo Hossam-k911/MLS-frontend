@@ -12,11 +12,11 @@
     background-color: #f7fafc;
     margin: auto;
     margin-top: 10px;
+    padding: 15px 15px 15px 15px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    height: 60px;
     border-radius: 5px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
@@ -25,7 +25,7 @@
 }
 
 .data-patient {
-    text-align: center;
+    width: 25%;
 }
 
 .data-patient i {
@@ -49,4 +49,24 @@
 
 .data-patient .i-4 {
     color: #e7ff14;
+}
+
+.bb {
+    background-color: #19769f;
+    color: #fff;
+    padding: 6px 30px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.note {
+    height: 15px;
+    padding: 4px;
+}
+
+.note i {
+    color: #f4d03f;
 }

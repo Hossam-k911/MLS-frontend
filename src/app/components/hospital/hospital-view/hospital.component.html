@@ -1,8 +1,8 @@
-<section>
+<!-- <section>
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-6">
-        <h3>Laboratory</h3>
+        <h3></h3>
       </div>
 
       <div class="col">
@@ -47,4 +47,50 @@
   </div>
 
 
-</section>
+</section> -->
+
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center ">
+        <div class="col-md-10 d-flex justify-content-between my-3">
+            <div class="title">
+                <h2>Laboratory</h2>
+            </div>
+            <div>
+                <button _ngcontent-mwi-c2="" class="btn btn-lap-edit" tabindex="0" ng-reflect-router-link="" [routerLink]="['../edithospital']">Edit </button>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row justify-content-md-center ">
+        <div class="col-md-6">
+
+            <form id="form-medicine" class="form-med">
+                <div class="form-group">
+
+                    <label for="Medicine"> Laboratory Name</label>
+                    <input type="text" class="form-control" name=" Medicine" value="{{hospitalData.hospital_name}}">
+                    <label for="Description"> Laboratory Website</label>
+                    <input type="text" class="form-control" name="
+          Description" value="{{hospitalData.hospital_website}}">
+                    <label for="Description">Laboratory Phone </label>
+                    <input type="text" class="form-control" name="
+          Description" value="{{hospitalData.hospital_phone}}">
+                    <label for="Description"> Laboratory Location </label>
+                    <input type="text" class="form-control" name="
+            Description" value="{{hospitalData.hospital_location}}">
+                    <label for="Description"> FaceBook </label>
+                    <input type="text" class="form-control" name="
+            Description" value="{{hospitalData.hospital_facebook}}">
+                    <label for="Description"> Email </label>
+                    <input type="text" class="form-control" name="
+                Description" value="{{hospitalData.hospital_email}}">
+
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+</div>

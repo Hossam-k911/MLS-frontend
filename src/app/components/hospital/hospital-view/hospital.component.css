@@ -1,23 +1,33 @@
+.title h2 {
+    color: #fff;
+    font-family: "Raleway", sans-serif;
+}
+
+.b {
+    background-color: brown;
+}
+
+.btn-lap-edit {
+    background-color: #fff;
+    color: #19769f;
+    padding: 6px 30px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
 .form-med {
-  margin: 30px;
-  padding: 20px 20px;
-  width: 500px;
-  border: 3px solid #19769f;
-  border-radius: 8px;
-  -webkit-border-radius: 8px;
-  -moz-border-radius: 8px;
-  -ms-border-radius: 8px;
-  -o-border-radius: 8px;
+    background-color: #f7fafc;
+    padding: 10px 10px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
 }
 
-.b-back {
-  padding: 8px 25px;
-}
-
-.emPic {
-  background-color: red;
-}
-.img-medUrl {
-  padding: 0px;
-  margin: 0px;
+.form-control {
+    margin-bottom: 8px;
 }
