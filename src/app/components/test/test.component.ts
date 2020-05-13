@@ -7,19 +7,19 @@ import { AdminAuthService } from 'src/app/services/admin-auth.service';
   styleUrls: ['./test.component.css']
 })
 export class TestComponent implements OnInit {
-  medicine: any
+  tests: any
   constructor(public myAdminAuthService: AdminAuthService) { }
 
   ngOnInit() {
-    this.getMedicines();
+    this.getFiles();
   }
-
-
-  getMedicines() {
-    this.myAdminAuthService.getMediciensinfo().subscribe((resp: any) => {
-      this.medicine = resp;
-      console.log(resp);
+  getFiles() {
+    this.myAdminAuthService.getResultsFiles().subscribe((res) => {
+      this.tests = res;
+      console.log(res);
     })
   }
+
+
 
 }

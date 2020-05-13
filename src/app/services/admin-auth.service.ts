@@ -154,4 +154,10 @@ export class AdminAuthService {
 
     return this.myHttpClient.post(this.BASE_URL + '/addtest', JSON.stringify(data), this.httpOptions)
   }
+
+  //get results files
+  getResultsFiles() {
+
+    return this.myHttpClient.get(this.BASE_URL + `/files `, this.httpOptions)
+  }
 }
