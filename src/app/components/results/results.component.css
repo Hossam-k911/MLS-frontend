@@ -1,0 +1,72 @@
+.title {
+  margin-top: 20px;
+}
+
+.title h2 {
+  padding-left: 30px;
+  color: #fff;
+  font-family: "Raleway", sans-serif;
+}
+
+.patient {
+  background-color: #f7fafc;
+  margin: auto;
+  margin-top: 10px;
+  padding: 15px 15px 15px 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.data-patient {
+  width: 25%;
+}
+
+.data-patient i {
+  font-size: 18px;
+  color: #19769f;
+}
+
+.data-patient span {
+  font-size: 19px;
+  font-family: "Raleway", sans-serif;
+  padding-left: 8px;
+}
+
+.data-patient .i-1 {
+  color: #11cdef;
+}
+
+.data-patient .i-2 {
+  color: #31b68e;
+}
+
+.data-patient .i-4 {
+  color: #e7ff14;
+}
+
+.bb {
+  background-color: #19769f;
+  color: #fff;
+  padding: 6px 30px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.note {
+  height: 15px;
+  padding: 4px;
+}
+
+.note i {
+  color: #f4d03f;
+}

@@ -1,0 +1,24 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12 col-12 title">
+      <h2>Accept-tap</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-11 col-sm-12 patient " *ngFor="let p of tests">
+      <div class="data-patient">
+        <i class="far fa-user i-1"></i> <span>{{p.file.originalname}}</span>
+      </div>
+      <div class="data-patient">
+        <i class="far fa-envelope i-2 "></i> <span>{{p.contentType}}</span>
+      </div>
+
+
+      <div class="data-patient">
+        <i class="fas fa-exclamation-circle i-status i-4"></i>
+      </div>
+
+
+    </div>
+  </div>
+</div>
