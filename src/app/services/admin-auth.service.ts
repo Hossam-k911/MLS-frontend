@@ -173,4 +173,8 @@ export class AdminAuthService {
 
     return this.myHttpClient.get(this.BASE_URL + `/files `, this.httpOptions)
   }
+  getResults() {
+    return this.myHttpClient.get(this.BASE_URL + `/getreqs `, this.httpOptions)
+
+  }
 }
