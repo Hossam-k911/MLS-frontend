@@ -84,6 +84,19 @@ export class AdminAuthService {
   uploadResFile(data) {
     return this.myHttpClient.post(this.BASE_URL + '/upload', JSON.stringify(data), this.httpOptions)
   }
+  existedAcceptedObject(data) {
+
+    return this.myHttpClient.post(this.BASE_URL + '/resbyaccid', JSON.stringify(data), this.httpOptions)
+  }
+  AddFile(data) {
+
+    return this.myHttpClient.post(this.BASE_URL + '/addfile', JSON.stringify(data), this.httpOptions)
+  }
+  AddresultToPatient(data) {
+
+    return this.myHttpClient.post(this.BASE_URL + '/addresulttopatient', JSON.stringify(data), this.httpOptions)
+  }
+
 
   //hospital component
   getHospitalInfo() {

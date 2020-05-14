@@ -1,46 +1,49 @@
 <div class="container-fluid">
-    <div class="row">
-        <div class="col-md-12 col-12 title">
-            <h2>Accept-tap</h2>
-        </div>
+  <div class="row">
+    <div class="col-md-12 col-12 title">
+      <h2>Accept-tap</h2>
     </div>
-    <div class="row">
-        <div class="col-md-11 col-sm-12 patient " *ngFor="let p of AcceptedRequests">
-            <div class="data-patient">
-                <i class="far fa-user i-1"></i> <span>{{p.req_p_name}}</span>
+  </div>
+  <div class="row">
+    <div class="col-md-11 col-sm-12 patient " *ngFor="let p of AcceptedRequests">
+      <div class="data-patient">
+        <i class="far fa-user i-1"></i> <span>{{p.req_p_name}}</span>
+      </div>
+      <div class="data-patient">
+        <i class="far fa-envelope i-2 "></i> <span>{{p.req_status}}</span>
+      </div>
+      <div class="data-patient">
+        <i class="far fa-clock"></i> <span>{{p.req_time}}</span>
+      </div>
+
+      <div class="data-patient">
+        <i class="fas fa-venus-mars "></i> <span>{{p.gender}}</span>
+      </div>
+
+
+      <div class="data-patient pt-3" style="flex-grow: 8;">
+        <form class="d-flex justify-content-between" [formGroup]="myForm" (ngSubmit)="submit(p._id)">
+          <div>
+            <!-- <label for="file">File</label> -->
+            <input formControlName="file" id="file" type="file" class="form-control" (change)="onFileChange($event)">
+            <div *ngIf="f.file.touched && f.file.invalid" class="note ">
+              <div *ngIf="f.file.errors.required"><i class="fas fa-exclamation-circle "> </i> file is requred
+              </div>
             </div>
-            <div class="data-patient">
-                <i class="far fa-envelope i-2 "></i> <span>{{p.req_status}}</span>
-            </div>
-            <div class="data-patient">
-                <i class="far fa-clock"></i> <span>{{p.req_time}}</span>
-            </div>
+          </div>
 
-            <div class="data-patient">
-                <i class="fas fa-venus-mars "></i> <span>{{p.gender}}</span>
-            </div>
+          <div class=" text-right ">
+            <button class="btn bb" type="submit">Submit</button>
+            <br>
 
 
-            <div class="data-patient pt-3" style="flex-grow: 8;">
-                <form class="d-flex justify-content-between" [formGroup]="myForm" (ngSubmit)="submit()">
-                    <div>
-                        <!-- <label for="file">File</label> -->
-                        <input formControlName="file" id="file" type="file" class="form-control" (change)="onFileChange($event)">
-                        <div *ngIf="f.file.touched && f.file.invalid" class="note ">
-                            <div *ngIf="f.file.errors.required"><i class="fas fa-exclamation-circle "> </i> file is requred
-                            </div>
-                        </div>
-                    </div>
+          </div>
 
-                    <div class=" text-right ">
-                        <button class="btn bb" type="submit">Submit</button>
-                    </div>
+        </form>
 
-                </form>
+        <button class="btn bb" (click)="addFileToResult()">AddFile</button>
+      </div>
 
-
-            </div>
-
-        </div>
     </div>
+  </div>
 </div>
