@@ -1,0 +1,73 @@
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col ml-3">
+        <button [routerLink]="['../../patients']" class="btn btn-light b-back mt-2 "> <i
+            class="fas fa-arrow-left pr-2"></i>Back</button>
+      </div>
+    </div>
+    <div class="row justify-content-md-center">
+      <div class="col-md-6 col-12 mt-4  ">
+        <form id="form-medicine" class="form-med">
+          <div class="form-group">
+            <label for="Medicine"> FirstName</label>
+            <input type="text" id="f_name" class="form-control" name=" Medicine" value="{{pateintData.firstName}}"
+              (keyup)="handleTextInput($event)">
+
+
+            <label for="Medicine"> LastName</label>
+            <input type="text" id="l_name" class="form-control" name=" Medicine" value="{{pateintData.lastName}}"
+              (keyup)="handleTextInput($event)">
+
+
+            <label for="Description"> email </label>
+            <input type="text" id="email" class="form-control " (keyup)="handleTextInput($event)" name="
+            Description" value="{{pateintData.email}}">
+
+
+            <label for="Description"> Password </label>
+            <input type="text" id="password" class="form-control " (keyup)="handleTextInput($event)" name="
+            Description" value="{{pateintData.password}}">
+
+            <label for="Description"> gender </label>
+            <input type="text" id="gender" class="form-control " (keyup)="handleTextInput($event)" name="
+            Description" value="{{pateintData.gender}}">
+
+
+            <label for="Description"> location </label>
+            <input type="text" id="location" class="form-control " (keyup)="handleTextInput($event)" name="
+            Description" value="{{pateintData.location
+            }}">
+
+
+            <label for="Description"> date </label>
+            <input type="text" id="date" class="form-control " (keyup)="handleTextInput($event)" name="
+            Description" value="{{pateintData.date
+            }}">
+
+
+            <label for="Description"> phone </label>
+            <input type="text" id="phone" class="form-control " (keyup)="handleTextInput($event)" name="
+            Description" value="{{pateintData.phone
+            }}">
+
+
+
+
+            <label for="Description"> snn </label>
+            <input type="text" id="snn" class="form-control " (keyup)="handleTextInput($event)" name="
+            Description" value="{{pateintData.snn
+            }}">
+
+          </div>
+
+
+          <button type=" submit" class="btn btn-info " (click)="onSubmit()">
+            Submit
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+</section>

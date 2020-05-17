@@ -2,7 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { AdminAuthService } from "src/app/services/admin-auth.service";
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
-
+import { saveAs } from 'file-saver'
 @Component({
   selector: "app-accepted-request",
   templateUrl: "./accepted-request.component.html",
@@ -20,6 +20,7 @@ export class AcceptedRequestComponent implements OnInit {
   res_id: any;
   p_id: any;
   req_id: any
+  filename: any
   //form init
   myForm = new FormGroup({
     file: new FormControl('', [Validators.required]),
@@ -61,6 +62,7 @@ export class AcceptedRequestComponent implements OnInit {
         this.match();
         this.acc_id = id;
         this.existedObject();
+        this.filename = this.selectedFile.file.filename;
 
       })
 
@@ -114,4 +116,19 @@ export class AcceptedRequestComponent implements OnInit {
         this.ngOnInit();
       });
   }
+  // DownloadFile() {
+  //   const { filename } = this;
+  //   const file = { filename };
+  //   // this.myAdminAuthService.Downlaodfile(file).subscribe(
+  //   //   data => saveAs(data, filename),
+  //   //   error => console.error(error)
+  //   // )
+  //   this.http.post(`https://lms-doctoroid.herokuapp.com/down/{$filename}`, this.myAdminAuthService.httpOptions)
+  //     .subscribe(
+  //       data => saveAs(data),
+  //       error => console.error(error)
+
+  //     )
+
+  // }
 }

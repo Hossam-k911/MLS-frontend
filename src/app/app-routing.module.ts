@@ -3,7 +3,7 @@ import { Routes, RouterModule } from "@angular/router";
 import { SigninComponent } from "./pages/signin/signin.component";
 import { DashboardComponent } from "./pages/dashboard/dashboard.component";
 import { ErrorComponent } from "./pages/error/error.component";
-import { PatientsComponentComponent } from "./components/patients-component/patients-component.component";
+import { PatientsComponent } from "./components/patients/list-patients/patients-component.component";
 import { RequestsComponent } from "./components/requests/list-requests/requests.component";
 import { HospitalComponent } from "./components/hospital/hospital-view/hospital.component";
 import { MedicinesComponent } from "./components/Medicines/list-medicine/medicines.component";
@@ -17,6 +17,7 @@ import { HospitalEditComponent } from './components/hospital/hospital-edit/hospi
 import { TestComponent } from './components/test/test.component';
 import { ResultsComponent } from './components/results/results.component';
 import { AcceptedRequestComponent } from './components/requests/accepted-request/accepted-request.component';
+import { EditPatientsComponent } from './components/patients/edit-patients/edit-patients.component';
 
 
 const routes: Routes = [
@@ -32,7 +33,9 @@ const routes: Routes = [
     path: "home",
     component: DashboardComponent,
     children: [
-      { path: "patients", component: PatientsComponentComponent },
+      { path: "patients", component: PatientsComponent },
+      { path: "editpatient/:id", component: EditPatientsComponent },
+
       { path: "requests", component: RequestsComponent },
       { path: "hospital", component: HospitalComponent },
       {

@@ -40,6 +40,18 @@ export class AdminAuthService {
 
     return this.myHttpClient.get(`${this.BASE_URL}/getpatients/`, this.httpOptions)
   }
+  editPatients(data, id) {
+
+    return this.myHttpClient.put(this.BASE_URL + `/editpatient/${id} `, JSON.stringify(data), this.httpOptions)
+  }
+  deletePatient(data) {
+
+    return this.myHttpClient.post(this.BASE_URL + '/removepatient', JSON.stringify(data), this.httpOptions)
+  }
+  getPatientById(id) {
+    return this.myHttpClient.get(this.BASE_URL + `/getpatient/${id} `, this.httpOptions)
+
+  }
 
 
   //requests component
@@ -84,6 +96,11 @@ export class AdminAuthService {
   uploadResFile(data) {
     return this.myHttpClient.post(this.BASE_URL + '/upload', JSON.stringify(data), this.httpOptions)
   }
+  Downlaodfile(data) {
+
+    return this.myHttpClient.post(this.BASE_URL + '/download', JSON.stringify(data), this.httpOptions)
+  }
+
   existedAcceptedObject(data) {
 
     return this.myHttpClient.post(this.BASE_URL + '/resbyaccid', JSON.stringify(data), this.httpOptions)

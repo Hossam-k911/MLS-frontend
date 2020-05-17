@@ -9,7 +9,7 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { FormsModule, FormBuilder } from '@angular/forms'
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { PatientsComponentComponent } from './components/patients-component/patients-component.component';
+import { PatientsComponent } from './components/patients/list-patients/patients-component.component';
 import { ContentComponent } from './components/content/content.component';
 import { HeaderComponent } from './components/header/header.component';
 import { SideBarComponent } from './components/side-bar/side-bar.component';
@@ -28,6 +28,7 @@ import { HospitalEditComponent } from './components/hospital/hospital-edit/hospi
 import { TestComponent } from './components/test/test.component';
 import { ResultsComponent } from './components/results/results.component';
 import { AcceptedRequestComponent } from './components/requests/accepted-request/accepted-request.component';
+import { EditPatientsComponent } from './components/patients/edit-patients/edit-patients.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,7 @@ import { AcceptedRequestComponent } from './components/requests/accepted-request
     SigninComponent,
     ErrorComponent,
     DashboardComponent,
-    PatientsComponentComponent,
+    PatientsComponent,
     ContentComponent,
     HeaderComponent,
     SideBarComponent,
@@ -51,7 +52,8 @@ import { AcceptedRequestComponent } from './components/requests/accepted-request
     HospitalEditComponent,
     TestComponent,
     ResultsComponent,
-    AcceptedRequestComponent
+    AcceptedRequestComponent,
+    EditPatientsComponent
   ],
   imports: [
     BrowserModule,
