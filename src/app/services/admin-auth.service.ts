@@ -13,10 +13,8 @@ export class AdminAuthService {
     headers: new HttpHeaders({
       'Content-Type': 'application/json',
       'x-auth-token': this.token
-      // " Access-Control-Allow-Origin": "*"
-      // 'cors': 'Access-Control-Allow-Origin'
     }),
-    // withCredentials: true,
+
 
   };
   constructor(public myHttpClient: HttpClient) { }

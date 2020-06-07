@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router'
 import { AdminAuthService } from '../../services/admin-auth.service'
-import { HttpResponse } from '@angular/common/http'
 @Component({
   selector: 'app-signin',
   templateUrl: './signin.component.html',
@@ -42,7 +41,6 @@ export class SigninComponent implements OnInit {
         this.token = response.token;
         this.myAdminAuthService.loggedIn = true
         this.myRouter.navigate(['home'])
-        // console.log(this.token);
       })
     }
 

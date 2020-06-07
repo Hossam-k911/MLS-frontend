@@ -21,14 +21,8 @@ import { EditPatientsComponent } from './components/patients/edit-patients/edit-
 
 
 const routes: Routes = [
-  {
-    path: "",
-    component: SigninComponent
-  },
-  {
-    path: "signin",
-    component: SigninComponent
-  },
+  { path: "", component: SigninComponent },
+  { path: "signin", component: SigninComponent },
   {
     path: "home",
     component: DashboardComponent,
@@ -38,10 +32,7 @@ const routes: Routes = [
 
       { path: "requests", component: RequestsComponent },
       { path: "hospital", component: HospitalComponent },
-      {
-        path: "Medicines",
-        component: MedicinesComponent
-      },
+      { path: "Medicines", component: MedicinesComponent },
       { path: "addmedicine", component: AddMedicineComponent },
       { path: "editmedicine/:id", component: EditMedicineComponent },
       { path: "category", component: MedicalCategoriesComponent },
@@ -52,8 +43,6 @@ const routes: Routes = [
       { path: "test", component: TestComponent },
       { path: "results", component: ResultsComponent },
       { path: "acceptreq", component: AcceptedRequestComponent }
-
-
     ]
   },
 

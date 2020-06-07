@@ -2,7 +2,6 @@ import { Component, OnInit } from "@angular/core";
 import { AdminAuthService } from "src/app/services/admin-auth.service";
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
-import { saveAs } from 'file-saver'
 @Component({
   selector: "app-accepted-request",
   templateUrl: "./accepted-request.component.html",
@@ -10,7 +9,6 @@ import { saveAs } from 'file-saver'
 })
 export class AcceptedRequestComponent implements OnInit {
   AcceptedRequests: any;
-  // @ViewChild('fileInput', { static: false }) fileInput: ElementRef;
   constructor(public myAdminAuthService: AdminAuthService, public http: HttpClient) { }
   selectedFile: any;
   file_name: any;
