@@ -13,10 +13,8 @@ export class AdminAuthService {
     headers: new HttpHeaders({
       'Content-Type': 'application/json',
       'x-auth-token': this.token
-      // " Access-Control-Allow-Origin": "*"
-      // 'cors': 'Access-Control-Allow-Origin'
     }),
-    // withCredentials: true,
+
 
   };
   constructor(public myHttpClient: HttpClient) { }
@@ -39,6 +37,18 @@ export class AdminAuthService {
   getPatients() {
 
     return this.myHttpClient.get(`${this.BASE_URL}/getpatients/`, this.httpOptions)
+  }
+  editPatients(data, id) {
+
+    return this.myHttpClient.put(this.BASE_URL + `/editpatient/${id} `, JSON.stringify(data), this.httpOptions)
+  }
+  deletePatient(data) {
+
+    return this.myHttpClient.post(this.BASE_URL + '/removepatient', JSON.stringify(data), this.httpOptions)
+  }
+  getPatientById(id) {
+    return this.myHttpClient.get(this.BASE_URL + `/getpatient/${id} `, this.httpOptions)
+
   }
 
 
@@ -84,6 +94,11 @@ export class AdminAuthService {
   uploadResFile(data) {
     return this.myHttpClient.post(this.BASE_URL + '/upload', JSON.stringify(data), this.httpOptions)
   }
+  Downlaodfile(data) {
+
+    return this.myHttpClient.post(this.BASE_URL + '/download', JSON.stringify(data), this.httpOptions)
+  }
+
   existedAcceptedObject(data) {
 
     return this.myHttpClient.post(this.BASE_URL + '/resbyaccid', JSON.stringify(data), this.httpOptions)
@@ -175,6 +190,5 @@ export class AdminAuthService {
   }
   getResults() {
     return this.myHttpClient.get(this.BASE_URL + `/getreqs `, this.httpOptions)
-
   }
 }

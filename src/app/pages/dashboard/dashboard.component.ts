@@ -1,7 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-// import {ToastrService} from 'ngx-toastr'
-import { HeaderComponent } from '../../components/header/header.component'
-import { SideBarComponent } from '../../components/side-bar/side-bar.component'
 
 @Component({
   selector: 'app-dashboard',
@@ -9,14 +6,8 @@ import { SideBarComponent } from '../../components/side-bar/side-bar.component'
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
-  wtf: any
-  constructor(/*private toastr:ToastrService*/) { }
-  show = false;
-  autohide = true;
+  constructor() { }
+
   ngOnInit() {
   }
-  // showSuccess(){
-  //   this.toastr.success('Hello world!','Toastr Fun ! ');
-  // }
-
 }

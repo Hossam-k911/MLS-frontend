@@ -17,7 +17,7 @@
       </div>
 
       <div class="data-patient">
-        <i class="fas fa-venus-mars "></i> <span>{{p.gender}}</span>
+        <!-- <i class="fas fa-venus-mars "></i> <span>{{p.gender}}</span> -->
       </div>
 
 
@@ -27,7 +27,7 @@
             <!-- <label for="file">File</label> -->
             <input formControlName="file" id="file" type="file" class="form-control" (change)="onFileChange($event)">
             <div *ngIf="f.file.touched && f.file.invalid" class="note ">
-              <div *ngIf="f.file.errors.required"><i class="fas fa-exclamation-circle "> </i> file is requred
+              <div *ngIf="f.file.errors.required"><i class="fas fa-exclamation-circle "> </i> file is required
               </div>
             </div>
           </div>
@@ -40,8 +40,10 @@
           </div>
 
         </form>
+        <br>
+        <button class="btn bb" (click)="addFileToResult()">Add File</button>
+        <!-- <button class="btn bb" (click)="DownloadFile()">Download</button> -->
 
-        <button class="btn bb" (click)="addFileToResult()">AddFile</button>
       </div>
 
     </div>

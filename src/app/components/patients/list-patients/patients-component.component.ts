@@ -6,8 +6,9 @@ import { AdminAuthService } from 'src/app/services/admin-auth.service';
   templateUrl: './patients-component.component.html',
   styleUrls: ['./patients-component.component.css']
 })
-export class PatientsComponentComponent implements OnInit {
+export class PatientsComponent implements OnInit {
   patients: any
+  p_id: any
   constructor(public myAdminAuthService: AdminAuthService) { }
 
   ngOnInit() {
@@ -15,5 +16,23 @@ export class PatientsComponentComponent implements OnInit {
       this.patients = response;
     })
   }
+  matchId(id) {
+    this.p_id = id;
+    console.log(this.p_id); 5
+    // console.log(id);
+  }
+  //delete medicine
+  deletePatient() {
+    const { p_id } = this;
+    const patientData = { p_id };
 
+    this.myAdminAuthService.deletePatient(patientData).subscribe(
+      (Response: any) => {
+        this.ngOnInit();
+      },
+      err => {
+        console.log(err);
+      }
+    );
+  }
 }
