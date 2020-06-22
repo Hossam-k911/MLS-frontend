@@ -1,58 +1,56 @@
 <div class="container-fluid">
-  <div class="row">
-    <div class="col-md-12 col-12 title">
-      <h2>Patients</h2>
+    <div class="row">
+        <div class="col-md-12 col-12 title">
+            <h2>Patients</h2>
+        </div>
     </div>
-  </div>
-  <div class="row">
-    <div class="col-md-11 col-sm-12 patient " *ngFor="let p of patients">
-      <div class="data-patient">
-        <i class="far fa-user i-1"></i> <span>{{p.firstName}} {{p.lastName}}</span>
-      </div>
-      <div class="data-patient">
-        <i class="far fa-envelope i-2 "></i> <span>{{p.email}}</span>
-      </div>
-      <div class="data-patient">
-        <i class="fas fa-phone-alt i-3"></i> <span>{{p.phone}}</span>
-      </div>
+    <div class="row">
+        <div class="col-md-11 col-sm-12 patient " *ngFor="let p of patients">
+            <div class="data-patient">
+                <i class="far fa-user i-1"></i> <span>{{p.firstName}} {{p.lastName}}</span>
+            </div>
+            <div class="data-patient">
+                <i class="far fa-envelope i-2 "></i> <span>{{p.email}}</span>
+            </div>
+            <div class="data-patient">
+                <i class="fas fa-phone-alt i-3"></i> <span>{{p.phone}}</span>
+            </div>
 
-      <div class="data-patient">
-        <i class="fas fa-venus-mars i-4"></i> <span>{{p.gender}}</span>
-      </div>
+            <div class="data-patient">
+                <i class="fas fa-venus-mars i-4"></i> <span>{{p.gender}}</span>
+            </div>
 
-      <div class="data-patient">
-        <i class="far fa-calendar-alt "></i> <span>{{p.date}}</span>
-      </div>
-      <div class="med-sitting ml-4">
-        <button [routerLink]="['../editpatient',p._id]" class="   btn  btn-primary  m-1"> Edit
+            <div class="data-patient">
+                <i class="far fa-calendar-alt "></i> <span>{{p.date}}</span>
+            </div>
+            <div class="med-sitting ml-4">
+                <button [routerLink]="['../editpatient',p._id]" class="   btn   bb  m-1"> Edit
         </button>
-        <button type="button" class="btn btn-danger " (click)="matchId(p._id)" data-toggle="modal"
-          data-target="#deleteModal">
+                <button type="button" class="btn  bbb " (click)="matchId(p._id)" data-toggle="modal" data-target="#deleteModal">
           Delete
         </button>
 
-      </div>
+            </div>
+        </div>
     </div>
-  </div>
 </div>
-<div class="modal fade" id="deleteModal" data-backdrop="static" tabindex="-1" role="dialog"
-  aria-labelledby="staticBackdropLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
+<div class="modal fade" id="deleteModal" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
 
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
-      </div>
-      <div class="modal-body">
-        <span class="sppp ">Are you Sure delete request.</span>
-        <small class="form-text text-muted">Check request before doing anything </small>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
-        <button type="button" (click)="deletePatient()" data-dismiss="modal" class="btn btn-primary">Delete</button>
-      </div>
+            </div>
+            <div class="modal-body">
+                <span class="sppp ">Are you Sure delete request.</span>
+                <small class="form-text text-muted">Check request before doing anything </small>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
+                <button type="button" (click)="deletePatient()" data-dismiss="modal" class="btn btn-primary">Delete</button>
+            </div>
+        </div>
     </div>
-  </div>
 </div>

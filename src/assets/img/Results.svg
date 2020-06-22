@@ -1,8 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="13.178" height="13.178" viewBox="0 0 13.178 13.178">
-  <g id="Group_3237" data-name="Group 3237" transform="translate(-24 -299.413)">
-    <g id="question-list" transform="translate(24 -37.539)">
-      <path id="Path_8223" data-name="Path 8223" d="M11,336.952H2.179A2.182,2.182,0,0,0,0,339.131v8.819a2.182,2.182,0,0,0,2.179,2.18H11a2.182,2.182,0,0,0,2.179-2.18v-8.819A2.182,2.182,0,0,0,11,336.952ZM1.42,339.131a.76.76,0,0,1,.759-.76H11a.761.761,0,0,1,.76.76v8.819a.761.761,0,0,1-.76.76H2.179a.761.761,0,0,1-.759-.76Z" transform="translate(0 0)" fill="#5fe5bc"/>
-      <path id="Path_8221" data-name="Path 8221" d="M27.9,371.316a.615.615,0,0,0,.87,0l5.253-5.244a.616.616,0,1,0-.87-.871L28.464,370l-1.642-1.879a.616.616,0,1,0-.87.871C27.578,370.946,27.783,371.2,27.9,371.316Z" transform="translate(-23.521 -24.717)" fill="#5fe5bc"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="68.168" height="84.219" viewBox="0 0 68.168 84.219">
+  <g id="Group_2978" data-name="Group 2978" transform="translate(-3790.935 1581.672)">
+    <path id="Path_8933" data-name="Path 8933" d="M54.511,49.621a4.538,4.538,0,0,1,4.72-4.139c2.4,0,4.9,1.6,4.878,4.139v26.42c-.021,1.709-.723,8.393-9.6,8.505H31.566V76.042H52.057c2.561.045,2.326-1.336,2.455-2.441C54.512,73.6,54.511,58.563,54.511,49.621Z" transform="translate(3788.272 -1582)" fill="#60bf00"/>
+    <path id="Path_8942" data-name="Path 8942" d="M41.164,49.621a4.538,4.538,0,0,0-4.72-4.139c-2.4,0-4.9,1.6-4.877,4.139v26.42c.021,1.709.723,8.393,9.6,8.505H64.106V76.042H43.617c-2.561.045-2.325-1.336-2.455-2.441C41.163,73.6,41.164,58.563,41.164,49.621Z" transform="translate(3759.369 -1582)" fill="#60bf00"/>
+    <g id="Group_2977" data-name="Group 2977">
+      <rect id="Rectangle_1883" data-name="Rectangle 1883" width="34" height="7" rx="3.5" transform="translate(3804 -1516)" fill="#96e300"/>
+      <rect id="Rectangle_1884" data-name="Rectangle 1884" width="34" height="7" rx="3.5" transform="matrix(0.996, 0.087, -0.087, 0.996, 3804.37, -1528.468)" fill="#96e300"/>
+      <rect id="Rectangle_1885" data-name="Rectangle 1885" width="34" height="7" rx="3.5" transform="matrix(0.966, 0.259, -0.259, 0.966, 3806.485, -1543.281)" fill="#96e300"/>
+      <rect id="Rectangle_1886" data-name="Rectangle 1886" width="34" height="7" rx="3.5" transform="matrix(0.839, 0.545, -0.545, 0.839, 3814.649, -1560.694)" fill="#96e300"/>
+      <rect id="Rectangle_1887" data-name="Rectangle 1887" width="34" height="7" rx="3.5" transform="matrix(0.643, 0.766, -0.766, 0.643, 3827.754, -1573.772)" fill="#96e300"/>
+      <rect id="Rectangle_1888" data-name="Rectangle 1888" width="34" height="7" rx="3.5" transform="matrix(0.342, 0.94, -0.94, 0.342, 3847.474, -1581.672)" fill="#96e300"/>
     </g>
   </g>
 </svg>
