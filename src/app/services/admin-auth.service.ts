@@ -190,6 +190,5 @@ export class AdminAuthService {
   }
   getResults() {
     return this.myHttpClient.get(this.BASE_URL + `/getreqs `, this.httpOptions)
-
   }
 }
