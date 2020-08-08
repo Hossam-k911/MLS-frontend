@@ -1,38 +1,60 @@
 <section>
-    <div class="container">
-        <div class="row mt-4">
-            <div class="col-9 d-flex justify-content-between m-auto ">
-                <div class="mid-title " style="flex-grow: 4;">
-                    <h2>Medicines</h2>
-                </div>
-                <div class="add-mid" style="flex-grow: 4;">
-                    <a href="javascript:;" [routerLink]="['../addmedicine']" class="btn btn-primary ">
-                        <div>+ add new medicines</div>
-                    </a>
-                </div>
-
-            </div>
+  <div class="container">
+    <div class="row mt-4">
+      <div class="col-9 d-flex justify-content-between m-auto ">
+        <div class="mid-title " style="flex-grow: 4;">
+          <h2>Medicines</h2>
         </div>
-        <div class="row justify-content-md-center my-5" *ngFor="let m of medicinesData">
-            <div class="col-md-4 med-data ">
-                <ul>
-                    <li><i class="fas fa-prescription-bottle-alt i-1"></i><span>Title</span>: {{m.medicine_Name}}</li>
-                    <li><i class="far fa-money-bill-alt i-2"></i> <span>Price</span>: {{m.medicine_Price}} </li>
-                    <li><i class="fas fa-thermometer-quarter i-3"></i><span>Quantity</span>: {{m.medicine_Quantity}}
-                    </li>
-                </ul>
-                <div class="med-sitting ml-4">
-                    <button [routerLink]="['../editmedicine',m._id]" class="   btn  btn-primary  m-1"> Edit
-                    </button>
-                    <button href="javascript:;" (click)="matchId(m._id)" class="  btn btn-danger m-1"> Delete </button>
-
-
-                </div>
-
-            </div>
-            <div class="col-md-4 mod-pic ">
-                <img src="{{m.medicine_ImageUrl}}" class="img-fluid ">
-            </div>
+        <div class="add-mid" style="flex-grow: 4;">
+          <a href="javascript:;" [routerLink]="['../addmedicine']" class="btn btn-primary ">
+            <div>+ add new medicines</div>
+          </a>
         </div>
+
+      </div>
     </div>
+    <div class="row justify-content-md-center my-5" *ngFor="let m of medicinesData">
+      <div class="col-md-4 med-data ">
+        <ul>
+          <li><i class="fas fa-prescription-bottle-alt i-1"></i><span>Title</span>: {{m.medicine_Name}}</li>
+          <li><i class="far fa-money-bill-alt i-2"></i> <span>Price</span>: {{m.medicine_Price}} </li>
+          <li><i class="fas fa-thermometer-quarter i-3"></i><span>Quantity</span>: {{m.medicine_Quantity}}
+          </li>
+        </ul>
+        <div class="med-sitting ml-4">
+          <button [routerLink]="['../editmedicine',m._id]" class="   btn  btn-primary  m-1"> Edit
+          </button>
+          <button href="javascript:;" (click)="matchId(m._id)" class="  btn btn-danger m-1" data-toggle="modal"
+            data-target="#deleteModal"> Delete </button>
+
+
+        </div>
+
+      </div>
+      <div class="col-md-4 mod-pic ">
+        <img src="{{m.medicine_ImageUrl}}" class="img-fluid ">
+      </div>
+    </div>
+  </div>
 </section>
+<div class="modal fade" id="deleteModal" data-backdrop="static" tabindex="-1" role="dialog"
+  aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <span class="sppp ">Are you Sure delete Medicine.</span>
+        <!-- <small class="form-text text-muted">Check request before doing anything </small> -->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
+        <button type="button" (click)="deleteMedicine()" data-dismiss="modal" class="btn btn-primary">Delete</button>
+      </div>
+    </div>
+  </div>
+</div>

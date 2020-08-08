@@ -1,65 +1,66 @@
 <nav>
-    <div class="containar fluid">
-        <div class="row">
-            <div class=" col-2 ">
-                <div class="sileder">
-                    <ul>
-                        <li class="item">
-                            <a class="nav-link " [routerLink]="['/home/patients']">
-                                <i class="far fa-user sileder-icon i-1"> </i> Patients
-                            </a>
-                        </li>
-                        <li class="item">
-                            <a class="nav-link" [routerLink]="['/home/requests']">
-                                <i class="far fa-question-circle sileder-icon i-2"></i> Requests
-                            </a>
-                        </li>
-                        <li class="item">
-                            <a class="nav-link" [routerLink]="['/home/acceptreq']">
-                                <img src="../../../assets/img/Results.svg" class="i-5 " />Accepted
-                            </a>
-                        </li>
-                        <li class="item">
-                            <a class="nav-link" [routerLink]="['/home/results']">
-                                <img src="../../../assets/img/results.svg" class="res img-fluid"> Results
-                            </a>
-                        </li>
+  <div class="containar fluid">
+    <div class="row">
+      <div class=" col-2 ">
+        <div class="sileder">
+          <ul>
+            <li class="item">
+              <a class="nav-link " [routerLink]="['/home/patients']">
+                <i class="far fa-user sileder-icon i-1"> </i> Patients
+              </a>
+            </li>
+            <li class="item">
+              <a class="nav-link" [routerLink]="['/home/requests']">
+                <i class="far fa-question-circle sileder-icon i-2"></i> Requests
+              </a>
+            </li>
 
-                        <li class="item">
-                            <a class="nav-link" [routerLink]="['/home/category']">
-                                <i class="far fa-clipboard sileder-icon i-4"></i> Categories
-                            </a>
-                        </li>
-                        <li class="item">
-                            <a class="nav-link" [routerLink]="['/home/editcategory/',cat_id]">
-                                <img src="../../../assets/img/dropper.svg" class="i-5" /> Medical Analysis
-                            </a>
-                        </li>
+            <li class="item">
+              <a class="nav-link" [routerLink]="['/home/acceptreq']">
+                <img src="../../../assets/img/Accepted.svg" class="i-5 " /> Accepted
+              </a>
+            </li>
+            <li class="item">
+              <a class="nav-link" [routerLink]="['/home/results']">
+                <img src="../../../assets/img/Results.svg" class="res img-fluid"> Results
+              </a>
+            </li>
 
-                        <li class="item">
-                            <a class="nav-link" [routerLink]="['/home/Medicines']">
-                                <img src="../../../assets/img/medicine.svg" class="i-5" /> Medicines
-                            </a>
-                        </li>
+            <li class="item">
+              <a class="nav-link" [routerLink]="['/home/category']">
+                <i class="far fa-clipboard sileder-icon i-4"></i> Categories
+              </a>
+            </li>
+            <li class="item">
+              <a class="nav-link" [routerLink]="['/home/editcategory/',cat_id]">
+                <img src="../../../assets/img/dropper.svg" class="i-5" /> Medical Analysis
+              </a>
+            </li>
 
-                        <li class="item">
-                            <a class="nav-link" [routerLink]="['/home/hospital']">
-                                <i class="far fa-hospital sileder-icon"></i> Laboratory
-                            </a>
-                        </li>
+            <li class="item">
+              <a class="nav-link" [routerLink]="['/home/Medicines']">
+                <img src="../../../assets/img/medicine.svg" class="i-5" /> Medicines
+              </a>
+            </li>
+
+            <li class="item">
+              <a class="nav-link" [routerLink]="['/home/hospital']">
+                <i class="far fa-hospital sileder-icon"></i> Laboratory
+              </a>
+            </li>
 
 
 
-                        <!-- <li class="item">
+            <!-- <li class="item">
               <a class="nav-link" [routerLink]="['/home/test']">
                 test
               </a>
             </li> -->
 
-                    </ul>
+          </ul>
 
-                </div>
-            </div>
         </div>
+      </div>
     </div>
+  </div>
 </nav>
